@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Price Calculator | Epoxy Floor & Concrete Coating Estimates | Crete Creations LLC</title>
+  <meta name="description" content="Get an instant concrete coating estimate from Crete Creations LLC. Serving Joplin, Lamar, Webb City, Mount Vernon, Springfield, Carthage, Neosho, Grove, Grand Lake Oklahoma, Pittsburg Kansas and surrounding areas." />
+  <meta name="og:title" content="Price Calculator | Crete Creations LLC" />
+  <meta name="og:description" content="Instant concrete coating estimate — full flake or metallic epoxy. Crete Creations LLC · Joplin, MO · (417) 483-7082." />
+  <meta name="og:type" content="website" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --accent: #d9241d;
+      --accent-dark: #8f100d;
+      --accent-rgb: 217, 36, 29;
+      --bg: #070707;
+      --card: #121212;
+      --text: #f5f1eb;
+      --muted: #d6c9bd;
+      --border: rgba(255,255,255,.12);
+      --nav-bg: #0a0a0a;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .wrap {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* ── TOP BAR ── */
+    .topbar {
+      background: #000;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+      padding: 9px 0;
+      font-size: 13px;
+      color: var(--muted);
+      text-align: center;
+    }
+    .topbar a { color: #fff; font-weight: 700; }
+    .topbar span { margin: 0 12px; opacity: .4; }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--nav-bg);
+      border-bottom: 1px solid rgba(255,255,255,.09);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 66px;
+      gap: 20px;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .nav-logo img {
+      height: 38px;
+      width: auto;
+    }
+    .nav-logo-text {
+      line-height: 1.15;
+    }
+    .nav-logo-text strong {
+      display: block;
+      font-size: 14px;
+      font-weight: 900;
+      letter-spacing: .03em;
+      color: #fff;
+    }
+    .nav-logo-text small {
+      font-size: 11px;
+      color: var(--muted);
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      list-style: none;
+    }
+    .nav-links a {
+      padding: 8px 11px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--muted);
+      border-radius: 6px;
+      transition: color .15s, background .15s;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      white-space: nowrap;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: #fff;
+      background: rgba(255,255,255,.06);
+    }
+    .nav-links a.active { color: var(--accent); }
+    .nav-cta {
+      display: inline-block;
+      background: linear-gradient(135deg, #e62b24, #9d1410);
+      color: #fff !important;
+      padding: 10px 18px !important;
+      border-radius: 8px !important;
+      font-weight: 900 !important;
+      font-size: 13px !important;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { filter: brightness(1.1); background: linear-gradient(135deg, #e62b24, #9d1410) !important; }
+
+    /* ── PAGE HERO ── */
+    .page-hero {
+      background: linear-gradient(135deg, rgba(var(--accent-rgb), .18), rgba(0,0,0,.92) 52%), var(--bg);
+      padding: 52px 0 40px;
+      border-bottom: 2px solid var(--accent-dark);
+      text-align: center;
+    }
+    .page-eyebrow {
+      display: inline-block;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: rgba(var(--accent-rgb), .14);
+      border: 1px solid var(--accent);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 14px;
+    }
+    .page-hero h1 {
+      font-size: clamp(32px, 5vw, 58px);
+      font-weight: 900;
+      letter-spacing: -.04em;
+      line-height: 1.04;
+      margin-bottom: 14px;
+    }
+    .page-hero h1 em { color: var(--accent); font-style: normal; }
+    .page-hero p {
+      color: var(--muted);
+      font-size: 17px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    /* ── CALCULATOR SECTION ── */
+    .calc-section {
+      padding: 52px 0 70px;
+    }
+    .calc-grid {
+      display: grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 36px;
+      align-items: start;
+    }
+
+    /* left column: intro + features */
+    .calc-intro h2 {
+      font-size: 28px;
+      font-weight: 900;
+      margin-bottom: 12px;
+      letter-spacing: -.02em;
+    }
+    .calc-intro h2 span { color: var(--accent); }
+    .calc-intro .lead {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 28px;
+    }
+
+    .feature-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+    .feature-list li {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 16px 18px;
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,.09);
+      border-radius: 12px;
+    }
+    .feature-icon {
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: rgba(var(--accent-rgb), .15);
+      border: 1px solid rgba(var(--accent-rgb), .3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+    .feature-text strong { display: block; font-size: 14px; color: #fff; margin-bottom: 3px; }
+    .feature-text span { font-size: 13px; color: var(--muted); }
+
+    .trust-row {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 12px;
+      margin-top: 28px;
+    }
+    .trust-item {
+      text-align: center;
+      padding: 14px 10px;
+      border-radius: 10px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .trust-item strong { display: block; font-size: 20px; font-weight: 900; color: #fff; margin-bottom: 4px; }
+    .trust-item span { font-size: 12px; color: var(--muted); }
+
+    /* right column: calculator card */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: 0 18px 50px rgba(0,0,0,.4);
+    }
+    .calc-card { padding: 28px; }
+
+    .progress-wrap {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 22px;
+    }
+    .progress-step {
+      padding: 11px 12px;
+      border-radius: 9px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.12);
+      font-size: 12px;
+      font-weight: 900;
+      text-align: center;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .progress-step.active {
+      border-color: rgba(var(--accent-rgb), .75);
+      background: rgba(var(--accent-rgb), .14);
+      color: #fff;
+    }
+    .progress-arrow { color: rgba(255,255,255,.35); font-size: 16px; font-weight: 800; text-align: center; }
+
+    .calc-card h2 { font-size: 22px; font-weight: 900; margin-bottom: 6px; }
+    .calc-muted { color: var(--muted); font-size: 14px; margin-bottom: 20px; }
+
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+
+    .field { margin-bottom: 12px; }
+    .field label {
+      display: block;
+      margin-bottom: 7px;
+      font-size: 13px;
+      color: #f2e9df;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .field input, .field select {
+      width: 100%;
+      padding: 13px 14px;
+      border-radius: 9px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: #0a0a0a;
+      color: #fff;
+      font-size: 15px;
+      outline: none;
+      transition: border-color .15s, box-shadow .15s;
+    }
+    .field input:focus, .field select:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px rgba(var(--accent-rgb), .2);
+    }
+    .field select option { background: #121212; }
+
+    .pricing-note {
+      margin-bottom: 16px;
+      padding: 14px 16px;
+      border-radius: 10px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.09);
+    }
+    .pricing-note p { font-size: 13px; color: var(--muted); margin-bottom: 5px; }
+    .pricing-note p:last-child { margin-bottom: 0; }
+    .pricing-note strong { color: #fff; }
+    .pricing-note .fine { font-size: 12px; }
+
+    /* locked preview */
+    .locked-preview {
+      margin-bottom: 16px;
+      padding: 18px;
+      border-radius: 14px;
+      background: linear-gradient(180deg, rgba(var(--accent-rgb), .18), rgba(var(--accent-rgb), .05));
+      border: 1px solid rgba(var(--accent-rgb), .3);
+      position: relative;
+      overflow: hidden;
+    }
+    .locked-badge {
+      display: inline-block;
+      padding: 6px 11px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      background: rgba(var(--accent-rgb), .16);
+      border: 1px solid rgba(var(--accent-rgb), .45);
+      color: #fff;
+      margin-bottom: 8px;
+    }
+    .small { font-size: 13px; color: var(--muted); }
+    .preview-range-wrap { position: relative; margin: 6px 0 10px; }
+    .preview-range {
+      font-size: clamp(28px, 4vw, 44px);
+      font-weight: 900;
+      line-height: 1;
+      color: #fff;
+      filter: blur(7px);
+      user-select: none;
+      pointer-events: none;
+    }
+    .preview-overlay-text {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 900;
+      text-align: center;
+      color: #fff;
+      background: linear-gradient(90deg, rgba(7,7,7,.15), rgba(7,7,7,.03), rgba(7,7,7,.15));
+    }
+    .live-status {
+      margin-top: 10px;
+      padding: 10px 13px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.1);
+      color: #f1f1f1;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .info-highlight {
+      margin-top: 10px;
+      padding: 10px 13px;
+      border-radius: 8px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.09);
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* buttons */
+    .btn {
+      display: block;
+      width: 100%;
+      border: 0;
+      border-radius: 10px;
+      padding: 15px 18px;
+      font-size: 16px;
+      font-weight: 900;
+      cursor: pointer;
+      transition: .2s ease;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      text-align: center;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, #e62b24, #9d1410);
+      color: #fff;
+    }
+    .btn-primary:hover { transform: translateY(-1px); filter: brightness(1.06); }
+    .btn-secondary {
+      background: transparent;
+      color: var(--muted);
+      border: 1px solid rgba(255,255,255,.15);
+      margin-top: 10px;
+      font-size: 13px;
+      padding: 11px;
+    }
+    .btn-secondary:hover { color: #fff; border-color: rgba(255,255,255,.3); }
+
+    /* unlock card */
+    .unlock-card {
+      margin-top: 18px;
+      padding: 22px;
+      border-radius: 14px;
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(255,255,255,.1);
+    }
+    .unlock-card h3 { font-size: 19px; font-weight: 900; margin-bottom: 6px; }
+    .unlock-sub { color: var(--muted); font-size: 14px; margin-bottom: 18px; }
+
+    /* result box */
+    .result-box {
+      margin-top: 18px;
+      padding: 20px;
+      border-radius: 14px;
+      background: linear-gradient(180deg, rgba(var(--accent-rgb), .18), rgba(var(--accent-rgb), .05));
+      border: 1px solid rgba(var(--accent-rgb), .3);
+    }
+    .range {
+      font-size: clamp(30px, 4vw, 46px);
+      font-weight: 900;
+      line-height: 1;
+      color: #fff;
+      margin: 6px 0 12px;
+    }
+    .includes {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 16px;
+      margin-top: 14px;
+      font-size: 13px;
+      color: #f2e9df;
+    }
+
+    .hidden { display: none !important; }
+
+    /* ── TRUST SECTION ── */
+    .trust-section {
+      padding: 56px 0;
+      border-top: 1px solid rgba(255,255,255,.07);
+    }
+    .trust-section .section-label {
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+    .trust-section h2 {
+      font-size: clamp(26px, 4vw, 40px);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      margin-bottom: 36px;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 16px;
+    }
+    .feat-card {
+      padding: 22px;
+      border-radius: 14px;
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,.09);
+    }
+    .feat-card h3 { font-size: 17px; margin-bottom: 8px; color: #fff; }
+    .feat-card p { font-size: 14px; color: var(--muted); }
+
+    /* ── CTA STRIP ── */
+    .cta-strip {
+      padding: 56px 0 70px;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,.07);
+    }
+    .cta-strip h2 {
+      font-size: clamp(26px, 4vw, 42px);
+      font-weight: 900;
+      letter-spacing: -.03em;
+      margin-bottom: 12px;
+    }
+    .cta-strip p { color: var(--muted); font-size: 16px; margin-bottom: 28px; }
+    .cta-btns { display: flex; justify-content: center; gap: 14px; flex-wrap: wrap; }
+    .cta-btn-main {
+      display: inline-block;
+      background: linear-gradient(135deg, #e62b24, #9d1410);
+      color: #fff;
+      padding: 16px 30px;
+      border-radius: 10px;
+      font-weight: 900;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      transition: .2s;
+    }
+    .cta-btn-main:hover { transform: translateY(-1px); filter: brightness(1.07); }
+    .cta-btn-sec {
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,.2);
+      color: #fff;
+      padding: 16px 30px;
+      border-radius: 10px;
+      font-weight: 900;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      transition: .2s;
+    }
+    .cta-btn-sec:hover { background: rgba(255,255,255,.06); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #000;
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding: 50px 0 30px;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr 1fr 1fr;
+      gap: 36px;
+      margin-bottom: 40px;
+    }
+    .footer-brand img { height: 42px; margin-bottom: 12px; }
+    .footer-brand strong { display: block; font-size: 15px; font-weight: 900; margin-bottom: 4px; }
+    .footer-brand p { font-size: 13px; color: var(--muted); margin-bottom: 14px; line-height: 1.6; }
+    .footer-contact a {
+      display: block;
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 5px;
+      transition: color .15s;
+    }
+    .footer-contact a:hover { color: #fff; }
+    .footer-col h4 {
+      font-size: 12px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    .footer-col a {
+      display: block;
+      font-size: 13px;
+      color: rgba(255,255,255,.55);
+      margin-bottom: 7px;
+      transition: color .15s;
+    }
+    .footer-col a:hover { color: #fff; }
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,.07);
+      padding-top: 22px;
+      font-size: 12px;
+      color: rgba(255,255,255,.35);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    /* ── FLOATING CTA ── */
+    .float-cta {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: linear-gradient(135deg, #e62b24, #9d1410);
+      color: #fff;
+      padding: 14px 20px;
+      border-radius: 50px;
+      font-weight: 900;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      box-shadow: 0 8px 28px rgba(var(--accent-rgb), .45);
+      z-index: 200;
+      transition: .2s;
+    }
+    .float-cta:hover { transform: translateY(-2px); filter: brightness(1.08); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      .calc-grid { grid-template-columns: 1fr; }
+      .calc-intro { order: 2; }
+      .calc-card-wrap { order: 1; }
+      .feature-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 700px) {
+      .nav-links { display: none; }
+      .grid-2 { grid-template-columns: 1fr; }
+      .progress-wrap { grid-template-columns: 1fr 1fr; }
+      .progress-arrow { display: none; }
+      .feature-grid { grid-template-columns: 1fr; }
+      .trust-row { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: 1fr; }
+      .includes { grid-template-columns: 1fr; }
+      .cta-btns { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="topbar">
+    <span>📍 Joplin, MO &amp; The Four State Area</span>
+    <span>·</span>
+    <span>24+ Years Experience</span>
+    <span>·</span>
+    <a href="tel:4174837082">(417) 483-7082</a>
+  </div>
+
+  <!-- NAV -->
+  <nav>
+    <div class="wrap nav-inner">
+      <a href="https://cretecreationsllc.netlify.app/" class="nav-logo">
+        <img src="https://cretecreationsllc.netlify.app/logo.png" alt="Crete Creations LLC Logo" />
+        <div class="nav-logo-text">
+          <strong>CRETE CREATIONS LLC</strong>
+          <small>Arturo Escalante · Concrete Studio · Joplin, MO</small>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="https://cretecreationsllc.netlify.app/">Home</a></li>
+        <li><a href="https://cretecreationsllc.netlify.app/services">Services</a></li>
+        <li><a href="https://cretecreationsllc.netlify.app/gallery">Gallery</a></li>
+        <li><a href="https://cretecreationsllc.netlify.app/colors">Colors</a></li>
+        <li><a href="https://cretecreationsllc.netlify.app/about">About</a></li>
+        <li><a href="https://cretecreationsllc.netlify.app/locations">Service Areas</a></li>
+        <li><a href="https://cretecreationsllc.netlify.app/blog">Blog</a></li>
+        <li><a href="https://cretecreationsllc.netlify.app/faq">FAQ</a></li>
+        <li><a href="https://cretecreationsllc.netlify.app/calculator" class="active">Calculator</a></li>
+        <li><a href="https://cretecreationsllc.netlify.app/contact" class="nav-cta">Get Free Quote</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <div class="wrap">
+      <div class="page-eyebrow">Crete Creations LLC · Instant Project Calculator</div>
+      <h1>Get a fast ballpark price for your<br><em>concrete coating</em> project.</h1>
+      <p>Build your project below in under a minute — then unlock your ballpark range. Final pricing confirmed after Arturo's free on-site assessment.</p>
+    </div>
+  </div>
+
+  <!-- CALCULATOR SECTION -->
+  <section class="calc-section">
+    <div class="wrap">
+      <div class="calc-grid">
+
+        <!-- LEFT: context + features -->
+        <div class="calc-intro">
+          <h2>Why use this<br><span>calculator?</span></h2>
+          <p class="lead">Most homeowners want a number before they schedule anything. This tool gives you a realistic pricing range based on your specific project — so you walk into your estimate with clarity.</p>
+
+          <ul class="feature-list">
+            <li>
+              <div class="feature-icon">⏱</div>
+              <div class="feature-text">
+                <strong>Done in under a minute</strong>
+                <span>Pick your project type, square footage, system, and condition. That's it.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-icon">💧</div>
+              <div class="feature-text">
+                <strong>Prep is always included</strong>
+                <span>Every Crete Creations job includes diamond grinding and concrete prep. No shortcuts.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-icon">🎨</div>
+              <div class="feature-text">
+                <strong>Full flake or metallic epoxy</strong>
+                <span>Both systems are available — each has its own price range and look. Calculator covers both.</span>
+              </div>
+            </li>
+            <li>
+              <div class="feature-icon">📋</div>
+              <div class="feature-text">
+                <strong>Ballpark, not a binding quote</strong>
+                <span>Final pricing is confirmed after Arturo visits the site, measures the space, and evaluates the concrete.</span>
+              </div>
+            </li>
+          </ul>
+
+          <div class="trust-row">
+            <div class="trust-item">
+              <strong>24+</strong>
+              <span>Years Experience</span>
+            </div>
+            <div class="trust-item">
+              <strong>500+</strong>
+              <span>Projects Done</span>
+            </div>
+            <div class="trust-item">
+              <strong>4 States</strong>
+              <span>MO · KS · OK · AR</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: calculator card -->
+        <div class="calc-card-wrap">
+          <div class="card calc-card">
+
+            <div class="progress-wrap">
+              <div class="progress-step active" id="progressStep1">Step 1: Project Details ✅</div>
+              <div class="progress-arrow">→</div>
+              <div class="progress-step" id="progressStep2">Step 2: Unlock Your Price 🔒</div>
+            </div>
+
+            <h2>Step 1: Enter Project Details</h2>
+            <p class="calc-muted">Build your project so the calculator can start working immediately.</p>
+
+            <div class="grid-2">
+              <div class="field">
+                <label for="projectType">Project Type</label>
+                <select id="projectType">
+                  <option value="Garage Floor">Garage Floor</option>
+                  <option value="Basement">Basement</option>
+                  <option value="Shop / Outbuilding">Shop / Outbuilding</option>
+                  <option value="Commercial Floor">Commercial Floor</option>
+                  <option value="Patio / Porch">Patio / Porch</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="sqft">Square Footage</label>
+                <input id="sqft" type="number" min="1" placeholder="Example: 550" />
+              </div>
+            </div>
+
+            <div class="grid-2">
+              <div class="field">
+                <label for="system">Coating System</label>
+                <select id="system">
+                  <option value="Full Broadcast Flake">Full Broadcast Flake</option>
+                  <option value="Metallic Epoxy">Metallic Epoxy</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="condition">Concrete Condition</label>
+                <select id="condition">
+                  <option value="Good Condition">Good Condition</option>
+                  <option value="Average / Minor Repairs">Average / Minor Repairs</option>
+                  <option value="Cracks / Pitting / More Prep">Cracks / Pitting / More Prep</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="difficulty">Project Layout</label>
+              <select id="difficulty">
+                <option value="Standard Open Area">Standard Open Area</option>
+                <option value="Some Edges / Obstacles">Some Edges / Obstacles</option>
+                <option value="Tight / Detailed Layout (More Labor Required)">Tight / Detailed Layout (More Labor Required)</option>
+              </select>
+            </div>
+
+            <div class="pricing-note">
+              <p><strong>Full Broadcast Flake:</strong> $5.75 – $7.50 per sq ft</p>
+              <p><strong>Metallic Epoxy:</strong> $12.00 – $16.00 per sq ft</p>
+              <p class="fine">Final pricing depends on square footage, slab condition, repairs, moisture concerns, and project complexity.</p>
+            </div>
+
+            <div class="locked-preview" id="lockedPreview">
+              <div class="locked-badge">🔒 Live Estimate Preview</div>
+              <div class="small">Your Estimated Price Range</div>
+              <div class="preview-range-wrap">
+                <div class="preview-range" id="previewRange">$5,750 – $7,500</div>
+                <div class="preview-overlay-text" id="previewOverlayText">Enter your project details to start calculating…</div>
+              </div>
+              <div class="live-status" id="liveStatus">Estimated Range: Calculating…</div>
+              <div class="info-highlight">Enter your info below to reveal your exact price range + available install dates.</div>
+            </div>
+
+            <button class="btn btn-primary" type="button" id="showUnlockBtn">
+              Unlock Your Exact Quote → Takes 10 Seconds
+            </button>
+            <button class="btn btn-secondary" type="button" onclick="resetCalc()">Reset Calculator</button>
+
+            <!-- STEP 2: contact form -->
+            <div class="unlock-card hidden" id="unlockCard">
+              <h3>Step 2: Unlock Your Price</h3>
+              <p class="unlock-sub">You're one step away — enter your information below to instantly reveal your ballpark quote.</p>
+
+              <div class="grid-2">
+                <div class="field">
+                  <label for="name">Full Name</label>
+                  <input id="name" type="text" placeholder="John Smith" />
+                </div>
+                <div class="field">
+                  <label for="phone">Phone Number</label>
+                  <input id="phone" type="tel" placeholder="(417) 555-1234" />
+                </div>
+              </div>
+              <div class="grid-2">
+                <div class="field">
+                  <label for="email">Email Address</label>
+                  <input id="email" type="email" placeholder="you@email.com" />
+                </div>
+                <div class="field">
+                  <label for="zip">ZIP Code</label>
+                  <input id="zip" type="text" placeholder="64801" />
+                </div>
+              </div>
+
+              <button class="btn btn-primary" type="button" id="unlockBtn" onclick="submitLead()">
+                Reveal My Exact Ballpark Price
+              </button>
+            </div>
+
+            <!-- RESULT -->
+            <div class="result-box hidden" id="resultBox">
+              <div class="small">Estimated Ballpark Investment</div>
+              <div class="range" id="priceRange">$0 – $0</div>
+              <div id="resultText" style="font-size:14px; color:var(--muted); line-height:1.6; margin-bottom:10px;"></div>
+              <div class="includes">
+                <div>✔ Full mechanical diamond grinding</div>
+                <div>✔ Crack &amp; surface repairs as needed</div>
+                <div>✔ Full flake or metallic epoxy system</div>
+                <div>✔ Durable long-term finish system</div>
+              </div>
+              <p class="small" style="margin-top:14px;">This is a ballpark estimate only. Final pricing is confirmed after measuring the project, evaluating slab condition, and reviewing the finish you want.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST / FEATURES SECTION -->
+  <section class="trust-section">
+    <div class="wrap">
+      <div class="section-label">Why Crete Creations LLC</div>
+      <h2>What's always included in every project</h2>
+      <div class="feature-grid">
+        <div class="feat-card">
+          <h3>Mechanical Diamond Grinding</h3>
+          <p>Industrial diamond grinding profiles every square foot of concrete before any coating goes down. This is where most contractors cut corners. We don't.</p>
+        </div>
+        <div class="feat-card">
+          <h3>Crack &amp; Slab Repairs</h3>
+          <p>Cracks, pitting, and surface damage are addressed before installation so the finished floor looks clean and performs the way it should — for years.</p>
+        </div>
+        <div class="feat-card">
+          <h3>Proven 24-Year Track Record</h3>
+          <p>Arturo Escalante personally oversees every project. Not a franchise crew. Not a sub-contractor. The same craftsman who quoted you does the work.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section class="cta-strip">
+    <div class="wrap">
+      <h2>Ready to take the next step?</h2>
+      <p>Call Arturo directly or request a free on-site quote. He answers, walks your project, and gives you a precise written estimate — no obligation.</p>
+      <div class="cta-btns">
+        <a href="tel:4174837082" class="cta-btn-main">📞 Call (417) 483-7082</a>
+        <a href="https://cretecreationsllc.netlify.app/contact" class="cta-btn-sec">Request Written Quote →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="https://cretecreationsllc.netlify.app/logo.png" alt="Crete Creations LLC" />
+          <strong>CRETE CREATIONS LLC</strong>
+          <p>Arturo Escalante · Concrete Studio<br>Joplin, Missouri's most experienced epoxy garage floor and decorative concrete contractor. 24+ years of artisan craftsmanship. Serving MO · KS · OK · AR.</p>
+          <div class="footer-contact">
+            <a href="#">📍 Joplin, Missouri</a>
+            <a href="tel:4174837082">📞 (417) 483-7082</a>
+            <a href="mailto:artvette68@yahoo.com">📧 artvette68@yahoo.com</a>
+            <a href="https://cretecreationsllc.com">🌐 cretecreationsllc.com</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="https://cretecreationsllc.netlify.app/epoxy-floors">Epoxy Garage Floors</a>
+          <a href="https://cretecreationsllc.netlify.app/polyaspartic">Polyaspartic Coatings</a>
+          <a href="https://cretecreationsllc.netlify.app/metallic-epoxy">Metallic Epoxy</a>
+          <a href="https://cretecreationsllc.netlify.app/driveways">Driveway Overlays</a>
+          <a href="https://cretecreationsllc.netlify.app/overlays">Decorative Overlays</a>
+          <a href="https://cretecreationsllc.netlify.app/commercial">Commercial Floors</a>
+        </div>
+        <div class="footer-col">
+          <h4>Service Areas</h4>
+          <a href="https://cretecreationsllc.netlify.app/joplin">Joplin, MO</a>
+          <a href="https://cretecreationsllc.netlify.app/carthage">Carthage, MO</a>
+          <a href="https://cretecreationsllc.netlify.app/neosho">Neosho, MO</a>
+          <a href="https://cretecreationsllc.netlify.app/grove">Grove, OK</a>
+          <a href="https://cretecreationsllc.netlify.app/miami-ok">Miami, OK</a>
+          <a href="https://cretecreationsllc.netlify.app/pittsburg">Pittsburg, KS</a>
+          <a href="https://cretecreationsllc.netlify.app/fayetteville">Fayetteville, AR</a>
+          <a href="https://cretecreationsllc.netlify.app/locations">All Areas →</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="https://cretecreationsllc.netlify.app/about">About Arturo</a>
+          <a href="https://cretecreationsllc.netlify.app/gallery">Photo Gallery</a>
+          <a href="https://cretecreationsllc.netlify.app/blog">Blog &amp; Tips</a>
+          <a href="https://cretecreationsllc.netlify.app/faq">FAQ</a>
+          <a href="https://cretecreationsllc.netlify.app/calculator">Price Calculator</a>
+          <a href="https://cretecreationsllc.netlify.app/contact">Free Quote</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 Crete Creations LLC — Joplin, MO. All rights reserved. Epoxy · Polyaspartic · Driveway Overlays · Four State Area · MO · KS · OK · AR</span>
+        <a href="https://cretecreationsllc.netlify.app/contact" style="color:var(--accent); font-weight:900;">🚀 Free Quote</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING CTA -->
+  <a href="https://cretecreationsllc.netlify.app/contact" class="float-cta">🚀 Free Quote</a>
+
+  <script>
+    const WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/lox6fivr9xQwDSwatx9d/webhook-trigger/1069527f-0ff3-4af4-8cd6-9cc422bbfd1b';
+
+    const showUnlockBtn = document.getElementById('showUnlockBtn');
+    const unlockCard    = document.getElementById('unlockCard');
+    const resultBox     = document.getElementById('resultBox');
+    const unlockBtn     = document.getElementById('unlockBtn');
+    const previewRange  = document.getElementById('previewRange');
+    const previewOverlayText = document.getElementById('previewOverlayText');
+    const liveStatus    = document.getElementById('liveStatus');
+    const progressStep2 = document.getElementById('progressStep2');
+
+    function fmt(v) { return '$' + Number(v).toLocaleString(); }
+    function sanitizePhone(p) { return p.replace(/[^\d+]/g, '').trim(); }
+
+    function getProjectData() {
+      const projectType = document.getElementById('projectType').value.trim();
+      const sqft = parseFloat(document.getElementById('sqft').value.trim());
+      const system    = document.getElementById('system').value.trim();
+      const condition = document.getElementById('condition').value.trim();
+      const difficulty = document.getElementById('difficulty').value.trim();
+
+      if (!sqft || sqft <= 0) return null;
+
+      let lo = system === 'Metallic Epoxy' ? 12.00 : 5.75;
+      let hi = system === 'Metallic Epoxy' ? 16.00 : 7.50;
+
+      if (condition === 'Average / Minor Repairs')       { lo += 0.50; hi += 0.50; }
+      if (condition === 'Cracks / Pitting / More Prep')  { lo += 1.00; hi += 1.00; }
+      if (difficulty === 'Some Edges / Obstacles')        { lo += 0.25; hi += 0.25; }
+      if (difficulty.startsWith('Tight'))                 { lo += 1.00; hi += 1.00; }
+
+      const lowEst  = Math.round(sqft * lo);
+      const highEst = Math.round(sqft * hi);
+
+      return {
+        projectType, sqft: String(sqft), system, condition, difficulty,
+        lowRate: lo.toFixed(2), highRate: hi.toFixed(2),
+        estimatedRange: `${fmt(lowEst)} – ${fmt(highEst)}`
+      };
+    }
+
+    function updateLivePreview() {
+      const data = getProjectData();
+      if (!data) {
+        previewRange.textContent = '$5,750 – $7,500';
+        previewOverlayText.textContent = 'Enter your project details to start calculating…';
+        liveStatus.textContent = 'Estimated Range: Calculating…';
+        return;
+      }
+      previewRange.textContent = data.estimatedRange;
+      previewOverlayText.textContent = 'Locked — complete step 2 to reveal';
+      liveStatus.textContent = `Estimated Range: Calculating… based on ${Number(data.sqft).toLocaleString()} sq ft · ${data.system}`;
+    }
+
+    ['projectType','sqft','system','condition','difficulty'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) { el.addEventListener('input', updateLivePreview); el.addEventListener('change', updateLivePreview); }
+    });
+
+    showUnlockBtn.addEventListener('click', function() {
+      const data = getProjectData();
+      if (!data) { alert('Please enter the approximate square footage.'); return; }
+      unlockCard.classList.remove('hidden');
+      progressStep2.classList.add('active');
+      unlockCard.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+
+    async function submitLead() {
+      const data = getProjectData();
+      if (!data) { alert('Please complete your project details first.'); return; }
+
+      const name  = document.getElementById('name').value.trim();
+      const phone = sanitizePhone(document.getElementById('phone').value.trim());
+      const email = document.getElementById('email').value.trim();
+      const zip   = document.getElementById('zip').value.trim();
+
+      if (!name || !phone || !email || !zip) { alert('Please complete all contact fields.'); return; }
+
+      const formData = new FormData();
+      formData.append('name', name);
+      formData.append('phone', phone);
+      formData.append('email', email);
+      formData.append('zip', zip);
+      formData.append('source', 'Crete Creations Instant Calculator');
+      formData.append('company', 'Crete Creations LLC');
+      formData.append('project_type', data.projectType);
+      formData.append('sq_ft', data.sqft);
+      formData.append('coating_system', data.system);
+      formData.append('concrete_condition', data.condition);
+      formData.append('project_layout', data.difficulty);
+      formData.append('estimated_range', data.estimatedRange);
+      formData.append('price_per_sqft_range', `$${data.lowRate} - $${data.highRate}`);
+      formData.append('website', data.projectType);
+      formData.append('meeting_notes', `${data.projectType} | ${data.system} | ${data.sqft} sq ft | ${data.condition} | ${data.difficulty} | Estimated Range: ${data.estimatedRange}`);
+
+      unlockBtn.disabled = true;
+      unlockBtn.textContent = 'Revealing Price...';
+
+      try { await fetch(WEBHOOK_URL, { method: 'POST', body: formData }); }
+      catch (e) { console.error('Webhook error:', e); }
+
+      document.getElementById('priceRange').textContent = data.estimatedRange;
+      document.getElementById('resultText').innerHTML =
+        `Based on <strong>${Number(data.sqft).toLocaleString()} sq ft</strong>, your selected <strong>${data.system}</strong> system, the condition of the concrete, and the amount of preparation required, your project currently falls within the range above.<br><br>The next step is a free on-site consultation so Crete Creations LLC can confirm measurements, evaluate the slab, review your finish options, and finalize the best system for your space.`;
+
+      resultBox.classList.remove('hidden');
+      resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      unlockBtn.disabled = false;
+      unlockBtn.textContent = 'Reveal My Exact Ballpark Price';
+    }
+
+    function resetCalc() {
+      ['projectType','system','condition','difficulty'].forEach(id => document.getElementById(id).selectedIndex = 0);
+      document.getElementById('sqft').value = '';
+      ['name','phone','email','zip'].forEach(id => document.getElementById(id).value = '');
+      unlockCard.classList.add('hidden');
+      resultBox.classList.add('hidden');
+      progressStep2.classList.remove('active');
+      updateLivePreview();
+    }
+
+    updateLivePreview();
+  </script>
+</body>
+</html>
