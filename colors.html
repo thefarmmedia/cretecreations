@@ -116,17 +116,20 @@
 
     /* FOOTER */
     footer{background:#000;border-top:1px solid rgba(255,255,255,.07);padding:50px 0 28px}
-    .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:36px;margin-bottom:40px}
+    .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px;margin-bottom:36px}
     .footer-brand img{height:40px;margin-bottom:12px;display:block}
     .footer-brand strong{display:block;font-size:14px;font-weight:900;margin-bottom:4px}
-    .footer-brand p{font-size:13px;color:var(--muted);margin-bottom:14px;line-height:1.6}
-    .footer-contact a,.footer-col a{display:block;font-size:13px;color:var(--muted);margin-bottom:5px}
-    .footer-contact a:hover,.footer-col a:hover{color:#fff}
-    .footer-col h4{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.09em;color:rgba(255,255,255,.4);margin-bottom:14px}
-    .footer-col a{color:rgba(255,255,255,.5)}
+    .footer-brand p{font-size:13px;color:#c8bbaf;margin-bottom:14px;line-height:1.6}
+    .footer-contact a{display:block;font-size:13px;color:#c8bbaf;margin-bottom:5px;transition:color .15s}
+    .footer-contact a:hover{color:#fff}
+    .footer-col h4{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.09em;color:rgba(255,255,255,.4);margin-bottom:10px}
+    .footer-col a{display:block;font-size:13px;color:rgba(255,255,255,.5);margin-bottom:6px;transition:color .15s}
+    .footer-col a:hover{color:#fff}
     .footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:20px;font-size:12px;color:rgba(255,255,255,.3);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
-    .float-cta{position:fixed;bottom:22px;right:22px;background:linear-gradient(135deg,#e62b24,#9d1410);color:#fff;padding:13px 20px;border-radius:50px;font-weight:900;font-size:14px;text-transform:uppercase;box-shadow:0 6px 24px rgba(217,36,29,.5);z-index:300;transition:.2s}
+    .float-cta{position:fixed;bottom:22px;right:22px;background:linear-gradient(135deg,#e62b24,#9d1410);color:#fff;padding:13px 20px;border-radius:50px;font-weight:900;font-size:14px;text-transform:uppercase;box-shadow:0 6px 24px rgba(217,36,29,.5);z-index:300;transition:.2s;text-decoration:none}
     .float-cta:hover{transform:translateY(-2px)}
+    @media(max-width:960px){.footer-grid{grid-template-columns:1fr 1fr 1fr}}
+    @media(max-width:640px){.footer-grid{grid-template-columns:1fr 1fr}}
 
     .hidden{display:none!important}
 
@@ -138,7 +141,6 @@
 <body>
 
 <div class="topbar"><span>📍 Joplin, MO &amp; The Four State Area</span><span class="sep">·</span><span>24+ Years Experience</span><span class="sep">·</span><a href="tel:4174837082">(417) 483-7082</a></div>
-
 <nav><div class="wrap nav-inner">
   <a href="https://cretecreationsllc.netlify.app/" class="nav-logo">
     <img src="https://cretecreationsllc.netlify.app/logo.png" alt="Crete Creations LLC" />
@@ -146,11 +148,57 @@
   </a>
   <ul class="nav-links">
     <li><a href="https://cretecreationsllc.netlify.app/">Home</a></li>
-    <li><a href="https://cretecreationsllc.netlify.app/services">Services</a></li>
+    <li>
+      <button onclick="void(0)">Services <span class="drop-arrow">▾</span></button>
+      <div class="dropdown">
+        <div class="drop-section">Floor Coatings</div>
+        <a href="https://cretecreationsllc.netlify.app/epoxy-floors">Epoxy Garage Floors</a>
+        <a href="https://cretecreationsllc.netlify.app/polyaspartic">Polyaspartic Coatings</a>
+        <a href="https://cretecreationsllc.netlify.app/metallic-epoxy">Metallic Epoxy Floors</a>
+        <a href="https://cretecreationsllc.netlify.app/commercial">Commercial Floor Coatings</a>
+        <div class="drop-divider"></div>
+        <div class="drop-section">Driveways &amp; Overlays</div>
+        <a href="https://cretecreationsllc.netlify.app/driveways">Driveway Overlay Systems</a>
+        <a href="https://cretecreationsllc.netlify.app/overlays">Decorative Overlays</a>
+        <div class="drop-divider"></div>
+        <a href="https://cretecreationsllc.netlify.app/services">All Services →</a>
+      </div>
+    </li>
     <li><a href="https://cretecreationsllc.netlify.app/gallery">Gallery</a></li>
-    <li><a href="https://cretecreationsllc.netlify.app/colors" class="active">Colors</a></li>
+    <li><a href="https://cretecreationsllc.netlify.app/colors">Colors</a></li>
     <li><a href="https://cretecreationsllc.netlify.app/about">About</a></li>
-    <li><a href="https://cretecreationsllc.netlify.app/locations">Service Areas</a></li>
+    <li>
+      <button onclick="void(0)">Service Areas <span class="drop-arrow">▾</span></button>
+      <div class="dropdown">
+        <div class="drop-section">Missouri</div>
+        <a href="https://cretecreationsllc.netlify.app/joplin">Joplin</a>
+        <a href="https://cretecreationsllc.netlify.app/carthage">Carthage</a>
+        <a href="https://cretecreationsllc.netlify.app/neosho">Neosho</a>
+        <a href="https://cretecreationsllc.netlify.app/webb-city">Webb City</a>
+        <a href="https://cretecreationsllc.netlify.app/carl-junction">Carl Junction</a>
+        <a href="https://cretecreationsllc.netlify.app/lamar">Lamar</a>
+        <a href="https://cretecreationsllc.netlify.app/granby">Granby</a>
+        <a href="https://cretecreationsllc.netlify.app/anderson">Anderson</a>
+        <div class="drop-divider"></div>
+        <div class="drop-section">Oklahoma</div>
+        <a href="https://cretecreationsllc.netlify.app/grove">Grove</a>
+        <a href="https://cretecreationsllc.netlify.app/miami-ok">Miami</a>
+        <a href="https://cretecreationsllc.netlify.app/vinita">Vinita</a>
+        <a href="https://cretecreationsllc.netlify.app/pryor">Pryor</a>
+        <div class="drop-divider"></div>
+        <div class="drop-section">Kansas</div>
+        <a href="https://cretecreationsllc.netlify.app/pittsburg">Pittsburg</a>
+        <a href="https://cretecreationsllc.netlify.app/galena">Galena</a>
+        <a href="https://cretecreationsllc.netlify.app/columbus-ks">Columbus</a>
+        <div class="drop-divider"></div>
+        <div class="drop-section">Arkansas</div>
+        <a href="https://cretecreationsllc.netlify.app/fayetteville">Fayetteville</a>
+        <a href="https://cretecreationsllc.netlify.app/bentonville">Bentonville</a>
+        <a href="https://cretecreationsllc.netlify.app/rogers-ar">Rogers</a>
+        <div class="drop-divider"></div>
+        <a href="https://cretecreationsllc.netlify.app/locations">All Service Areas →</a>
+      </div>
+    </li>
     <li><a href="https://cretecreationsllc.netlify.app/blog">Blog</a></li>
     <li><a href="https://cretecreationsllc.netlify.app/faq">FAQ</a></li>
     <li><a href="https://cretecreationsllc.netlify.app/calculator">Calculator</a></li>
@@ -508,7 +556,7 @@
     <div class="footer-brand">
       <img src="https://cretecreationsllc.netlify.app/logo.png" alt="Crete Creations LLC" />
       <strong>CRETE CREATIONS LLC</strong>
-      <p>Arturo Escalante · Concrete Studio<br>Joplin, MO's most experienced epoxy floor and decorative concrete contractor. 24+ years. MO · KS · OK · AR.</p>
+      <p>Arturo Escalante · Concrete Studio<br>Joplin, Missouri's most experienced epoxy floor and decorative concrete contractor. 24+ years. MO · KS · OK · AR.</p>
       <div class="footer-contact">
         <a href="#">📍 Joplin, Missouri</a>
         <a href="tel:4174837082">📞 (417) 483-7082</a>
@@ -516,7 +564,8 @@
         <a href="https://cretecreationsllc.com">🌐 cretecreationsllc.com</a>
       </div>
     </div>
-    <div class="footer-col"><h4>Services</h4>
+    <div class="footer-col">
+      <h4>Services</h4>
       <a href="https://cretecreationsllc.netlify.app/epoxy-floors">Epoxy Garage Floors</a>
       <a href="https://cretecreationsllc.netlify.app/polyaspartic">Polyaspartic Coatings</a>
       <a href="https://cretecreationsllc.netlify.app/metallic-epoxy">Metallic Epoxy</a>
@@ -524,18 +573,35 @@
       <a href="https://cretecreationsllc.netlify.app/overlays">Decorative Overlays</a>
       <a href="https://cretecreationsllc.netlify.app/commercial">Commercial Floors</a>
     </div>
-    <div class="footer-col"><h4>Service Areas</h4>
-      <a href="https://cretecreationsllc.netlify.app/joplin">Joplin, MO</a>
-      <a href="https://cretecreationsllc.netlify.app/carthage">Carthage, MO</a>
-      <a href="https://cretecreationsllc.netlify.app/grove">Grove, OK</a>
-      <a href="https://cretecreationsllc.netlify.app/pittsburg">Pittsburg, KS</a>
-      <a href="https://cretecreationsllc.netlify.app/fayetteville">Fayetteville, AR</a>
-      <a href="https://cretecreationsllc.netlify.app/locations">All Areas →</a>
+    <div class="footer-col footer-locations">
+      <h4>Missouri</h4>
+      <a href="https://cretecreationsllc.netlify.app/joplin">Joplin</a>
+      <a href="https://cretecreationsllc.netlify.app/carthage">Carthage</a>
+      <a href="https://cretecreationsllc.netlify.app/neosho">Neosho</a>
+      <a href="https://cretecreationsllc.netlify.app/webb-city">Webb City</a>
+      <a href="https://cretecreationsllc.netlify.app/carl-junction">Carl Junction</a>
+      <a href="https://cretecreationsllc.netlify.app/lamar">Lamar</a>
+      <a href="https://cretecreationsllc.netlify.app/granby">Granby</a>
+      <a href="https://cretecreationsllc.netlify.app/anderson">Anderson</a>
+      <h4 style="margin-top:14px">Oklahoma</h4>
+      <a href="https://cretecreationsllc.netlify.app/grove">Grove</a>
+      <a href="https://cretecreationsllc.netlify.app/miami-ok">Miami</a>
+      <a href="https://cretecreationsllc.netlify.app/vinita">Vinita</a>
+      <a href="https://cretecreationsllc.netlify.app/pryor">Pryor</a>
     </div>
-    <div class="footer-col"><h4>Company</h4>
+    <div class="footer-col footer-locations">
+      <h4>Kansas</h4>
+      <a href="https://cretecreationsllc.netlify.app/pittsburg">Pittsburg</a>
+      <a href="https://cretecreationsllc.netlify.app/galena">Galena</a>
+      <a href="https://cretecreationsllc.netlify.app/columbus-ks">Columbus</a>
+      <h4 style="margin-top:14px">Arkansas</h4>
+      <a href="https://cretecreationsllc.netlify.app/fayetteville">Fayetteville</a>
+      <a href="https://cretecreationsllc.netlify.app/bentonville">Bentonville</a>
+      <a href="https://cretecreationsllc.netlify.app/rogers-ar">Rogers</a>
+      <h4 style="margin-top:14px">Company</h4>
       <a href="https://cretecreationsllc.netlify.app/about">About Arturo</a>
-      <a href="https://cretecreationsllc.netlify.app/gallery">Photo Gallery</a>
-      <a href="https://cretecreationsllc.netlify.app/blog">Blog &amp; Tips</a>
+      <a href="https://cretecreationsllc.netlify.app/gallery">Gallery</a>
+      <a href="https://cretecreationsllc.netlify.app/blog">Blog</a>
       <a href="https://cretecreationsllc.netlify.app/faq">FAQ</a>
       <a href="https://cretecreationsllc.netlify.app/calculator">Price Calculator</a>
       <a href="https://cretecreationsllc.netlify.app/contact">Free Quote</a>
@@ -543,10 +609,9 @@
   </div>
   <div class="footer-bottom">
     <span>© 2025 Crete Creations LLC — Joplin, MO. All rights reserved.</span>
-    <a href="https://cretecreationsllc.netlify.app/contact" style="color:var(--accent);font-weight:900;">🚀 Free Quote</a>
+    <a href="https://cretecreationsllc.netlify.app/contact" style="color:#d9241d;font-weight:900;">🚀 Free Quote</a>
   </div>
 </div></footer>
-
 <a href="https://cretecreationsllc.netlify.app/contact" class="float-cta">🚀 Free Quote</a>
 
 <script>
