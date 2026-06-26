@@ -1,72 +1,49 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Core -->
-  <url><loc>https://cretecreationsllc.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://cretecreationsllc.com/services</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://cretecreationsllc.com/calculator</loc><changefreq>monthly</changefreq><priority>0.95</priority></url>
-  <url><loc>https://cretecreationsllc.com/gallery</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://cretecreationsllc.com/colors</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://cretecreationsllc.com/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://cretecreationsllc.com/contact</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://cretecreationsllc.com/locations</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://cretecreationsllc.com/blog</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://cretecreationsllc.com/faq</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <!-- Services -->
-  <url><loc>https://cretecreationsllc.com/epoxy-floors</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://cretecreationsllc.com/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://cretecreationsllc.com/epoxy-floors</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://cretecreationsllc.com/polyaspartic</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://cretecreationsllc.com/metallic-epoxy</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://cretecreationsllc.com/driveways</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://cretecreationsllc.com/overlays</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/commercial</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/basement-floors</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/pool-deck-coatings</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/shop-barn-floors</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/concrete-countertops</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://cretecreationsllc.com/water-features</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://cretecreationsllc.com/concrete-repair</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <!-- Blog -->
-  <url><loc>https://cretecreationsllc.com/blog-cost-guide-joplin</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/blog-epoxy-types-explained</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/blog-epoxy-garage-use</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/blog-epoxy-floor-longevity</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/blog-diy-vs-hire-epoxy</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/blog-epoxy-installation-timeline</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/blog-complete-system-guide</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/blog-epoxy-vs-polyaspartic</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/blog-surface-prep-matters</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/blog-choosing-your-floor</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/blog-driveway-overlays-guide</loc><changefreq>yearly</changefreq><priority>0.7</priority></url>
-  <!-- Missouri area pages -->
+  <url><loc>https://cretecreationsllc.com/commercial</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/overlays</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/basement-floors</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/pool-deck-coatings</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/shop-barn-floors</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/concrete-countertops</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/water-features</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/concrete-repair</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/about</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/contact</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/blog-cost-guide-joplin</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/blog-surface-prep-matters</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/blog-epoxy-vs-polyaspartic</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/blog-complete-system-guide</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/blog-choosing-your-floor</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/blog-driveway-overlays-guide</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/blog</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/gallery</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/services</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://cretecreationsllc.com/joplin</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://cretecreationsllc.com/carthage</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/neosho</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/webb-city</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/carl-junction</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/lamar</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/granby</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://cretecreationsllc.com/anderson</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <!-- Oklahoma -->
-  <url><loc>https://cretecreationsllc.com/grove</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/miami-ok</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/vinita</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://cretecreationsllc.com/pryor</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <!-- Kansas -->
-  <url><loc>https://cretecreationsllc.com/pittsburg</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/galena</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://cretecreationsllc.com/columbus-ks</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <!-- Arkansas -->
-  <url><loc>https://cretecreationsllc.com/fayetteville</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/bentonville</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/rogers-ar</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <!-- SEO landing pages -->
-  <url><loc>https://cretecreationsllc.com/garage-floor-coating-joplin-mo</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://cretecreationsllc.com/epoxy-garage-floor-cost-joplin</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://cretecreationsllc.com/driveway-overlay-joplin</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/metallic-epoxy-joplin</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/four-state-epoxy-contractor</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/epoxy-floors-near-me</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://cretecreationsllc.com/epoxy-floors-grand-lake-ok</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/epoxy-floors-rogers-ar</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/epoxy-floors-fayetteville-ar</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://cretecreationsllc.com/epoxy-floors-springfield-mo</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://cretecreationsllc.com/carthage</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/neosho</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/webb-city</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/carl-junction</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/lamar</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/granby</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/anderson</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/grove</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/miami-ok</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/vinita</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/pryor</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/pittsburg</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/galena</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/columbus-ks</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/fayetteville</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/bentonville</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/rogers-ar</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/locations</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/calculator</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/colors</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://cretecreationsllc.com/faq</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 </urlset>

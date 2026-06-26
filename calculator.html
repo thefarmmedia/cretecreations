@@ -719,87 +719,123 @@
 <body>
 
 <!-- TOP BAR -->
-<div class="topbar"><span>📍 Joplin, MO &amp; The Four State Area</span><span class="sep" style="margin:0 10px;opacity:.35">·</span><span>24+ Years Experience</span><span class="sep" style="margin:0 10px;opacity:.35">·</span><a href="tel:4174837082" style="color:#fff;font-weight:700">(417) 483-7082</a></div>
-<nav style="background:rgba(0,0,0,.97);border-bottom:1px solid rgba(255,255,255,.08);position:sticky;top:0;z-index:300;backdrop-filter:blur(10px)">
-<style>
-.nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px;gap:14px}
-.nav-logo{display:flex;align-items:center;gap:10px;flex-shrink:0}
-.nav-logo img{height:38px}
-.nav-logo-text strong{display:block;font-size:14px;font-weight:900;color:#fff}
-.nav-logo-text small{font-size:11px;color:#c8bbaf}
-.nav-links{display:flex;align-items:center;list-style:none;gap:0;position:relative}
-.nav-links>li{position:relative}
-.nav-links>li>a,.nav-links>li>button{padding:8px 10px;font-size:12px;font-weight:700;color:#c8bbaf;border-radius:6px;text-transform:uppercase;letter-spacing:.05em;white-space:nowrap;transition:color .15s,background .15s;background:none;border:none;cursor:pointer;font-family:inherit;display:flex;align-items:center;gap:4px}
-.nav-links>li>a:hover,.nav-links>li>button:hover{color:#fff;background:rgba(255,255,255,.05)}
-.nav-links>li>a.active{color:#d9241d}
-.nav-links .nav-cta{background:linear-gradient(135deg,#e62b24,#9d1410)!important;color:#fff!important;padding:10px 16px!important;border-radius:8px!important;margin-left:6px;border:none!important}
-.drop-arrow{font-size:9px;opacity:.6;transition:transform .2s}
-.nav-links>li:hover .drop-arrow{transform:rotate(180deg)}
-.dropdown{position:absolute;top:calc(100% + 6px);left:0;min-width:220px;background:#0d0d0d;border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:8px;box-shadow:0 16px 40px rgba(0,0,0,.6);opacity:0;pointer-events:none;transform:translateY(-6px);transition:opacity .18s,transform .18s;z-index:400}
-.nav-links>li:hover .dropdown{opacity:1;pointer-events:all;transform:translateY(0)}
-.dropdown a{display:block;padding:9px 12px;font-size:13px;font-weight:700;color:#c8bbaf;border-radius:8px;transition:color .12s,background .12s;white-space:nowrap;text-transform:none;letter-spacing:0}
-.dropdown a:hover{color:#fff;background:rgba(255,255,255,.07)}
-.drop-divider{height:1px;background:rgba(255,255,255,.08);margin:6px 0}
-.drop-section{font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.09em;color:rgba(255,255,255,.3);padding:6px 12px 2px}
-@media(max-width:900px){.nav-links{display:none}}
-</style>
-<div class="wrap nav-inner">
-  <a href="https://cretecreationsllc.netlify.app/" class="nav-logo">
-    <img src="logo.png" alt="Crete Creations LLC" />
-    <div class="nav-logo-text"><strong>CRETE CREATIONS LLC</strong><small>Arturo Escalante · Concrete Studio · Joplin, MO</small></div>
-  </a>
-  <ul class="nav-links">
-    <li><a href="https://cretecreationsllc.netlify.app/">Home</a></li>
-    <li><button>Services <span class="drop-arrow">▾</span></button>
-      <div class="dropdown">
-        <div class="drop-section">Floor Coatings</div>
-        <a href="epoxy-floors.html">Epoxy Garage Floors</a>
-        <a href="polyaspartic.html">Polyaspartic Coatings</a>
-        <a href="metallic-epoxy.html">Metallic Epoxy Floors</a>
-        <a href="commercial.html">Commercial Floor Coatings</a>
-        <div class="drop-divider"></div>
-        <div class="drop-section">Driveways &amp; Outdoors</div>
-        <a href="driveways.html">Driveway Overlay Systems</a>
-        <a href="overlays.html">Decorative Overlays</a>
-        <div class="drop-divider"></div>
-        <div class="drop-section">Specialty</div>
-        <a href="basement-floors.html">Basement Floors</a>
-        <a href="pool-deck-coatings.html">Pool Deck Coatings</a>
-        <a href="shop-barn-floors.html">Shop &amp; Barn Floors</a>
-        <a href="concrete-countertops.html">Concrete Countertops</a>
-        <div class="drop-divider"></div>
-        <a href="services.html">All Services →</a>
-      </div>
-    </li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="colors.html">Colors</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><button>Service Areas <span class="drop-arrow">▾</span></button>
-      <div class="dropdown">
-        <div class="drop-section">Missouri</div>
-        <a href="joplin.html">Joplin</a><a href="carthage.html">Carthage</a><a href="neosho.html">Neosho</a>
-        <a href="webb-city.html">Webb City</a><a href="carl-junction.html">Carl Junction</a>
-        <a href="lamar.html">Lamar</a><a href="granby.html">Granby</a><a href="anderson.html">Anderson</a>
-        <div class="drop-divider"></div>
-        <div class="drop-section">Oklahoma</div>
-        <a href="grove.html">Grove / Grand Lake</a><a href="miami-ok.html">Miami</a>
-        <a href="vinita.html">Vinita</a><a href="pryor.html">Pryor</a>
-        <div class="drop-divider"></div>
-        <div class="drop-section">Kansas</div>
-        <a href="pittsburg.html">Pittsburg</a><a href="galena.html">Galena</a><a href="columbus-ks.html">Columbus</a>
-        <div class="drop-divider"></div>
-        <div class="drop-section">Arkansas</div>
-        <a href="fayetteville.html">Fayetteville</a><a href="bentonville.html">Bentonville</a><a href="rogers-ar.html">Rogers</a>
-        <div class="drop-divider"></div>
-        <a href="locations.html">All Service Areas →</a>
-      </div>
-    </li>
-    <li><a href="blog.html">Blog</a></li>
-    <li><a href="faq.html">FAQ</a></li>
-    <li><a href="calculator.html">Calculator</a></li>
-    <li><a href="contact.html" class="nav-cta">Free Quote</a></li>
-  </ul>
-</div></nav>
+<div class="topbar">📍 Joplin, MO &amp; The Four State Area &nbsp;·&nbsp; 24+ Years Experience &nbsp;·&nbsp; <a href="tel:4174837082">(417) 483-7082</a></div>
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="Crete Creations LLC Logo" />
+      <div><span class="nl-top">CRETE CREATIONS LLC</span><span class="nl-bot">Arturo Escalante · Concrete Studio · Joplin, MO</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li>
+        <button class="nav-btn">Services <span class="drop-arrow">▾</span></button>
+        <div class="dropdown">
+          <div class="drop-section">Floor Coatings</div>
+          <a href="epoxy-floors.html">Epoxy Garage Floors</a>
+          <a href="polyaspartic.html">Polyaspartic Coatings</a>
+          <a href="metallic-epoxy.html">Metallic Epoxy Floors</a>
+          <a href="commercial.html">Commercial Floor Coatings</a>
+          <a href="basement-floors.html">Basement Floors</a>
+          <div class="drop-divider"></div>
+          <div class="drop-section">Driveways &amp; Outdoor</div>
+          <a href="driveways.html">Driveway Overlay Systems</a>
+          <a href="overlays.html">Decorative Overlays</a>
+          <a href="pool-deck-coatings.html">Pool Deck Coatings</a>
+          <div class="drop-divider"></div>
+          <div class="drop-section">Specialty</div>
+          <a href="shop-barn-floors.html">Shop &amp; Barn Floors</a>
+          <a href="concrete-countertops.html">Concrete Countertops</a>
+          <a href="water-features.html">Water Features</a>
+          <a href="concrete-repair.html">Concrete Repair</a>
+          <div class="drop-divider"></div>
+          <a href="services.html">All Services →</a>
+        </div>
+      </li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="colors.html">Colors</a></li>
+      <li><a href="about.html">About</a></li>
+      <li>
+        <button class="nav-btn">Service Areas <span class="drop-arrow">▾</span></button>
+        <div class="dropdown">
+          <div class="drop-section">Missouri</div>
+          <a href="joplin.html">Joplin</a>
+          <a href="carthage.html">Carthage</a>
+          <a href="neosho.html">Neosho</a>
+          <a href="webb-city.html">Webb City</a>
+          <a href="carl-junction.html">Carl Junction</a>
+          <a href="lamar.html">Lamar</a>
+          <a href="granby.html">Granby</a>
+          <a href="anderson.html">Anderson</a>
+          <div class="drop-divider"></div>
+          <div class="drop-section">Oklahoma</div>
+          <a href="grove.html">Grove / Grand Lake</a>
+          <a href="miami-ok.html">Miami</a>
+          <a href="vinita.html">Vinita</a>
+          <a href="pryor.html">Pryor</a>
+          <div class="drop-divider"></div>
+          <div class="drop-section">Kansas</div>
+          <a href="pittsburg.html">Pittsburg</a>
+          <a href="galena.html">Galena</a>
+          <a href="columbus-ks.html">Columbus</a>
+          <div class="drop-divider"></div>
+          <div class="drop-section">Arkansas</div>
+          <a href="fayetteville.html">Fayetteville</a>
+          <a href="bentonville.html">Bentonville</a>
+          <a href="rogers-ar.html">Rogers</a>
+          <div class="drop-divider"></div>
+          <a href="locations.html">All Service Areas →</a>
+        </div>
+      </li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="calculator.html">Calculator</a></li>
+      <li><a href="contact.html" class="nav-cta">Free Quote</a></li>
+    </ul>
+    <button class="hamburger" id="hbg" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+  <div class="mob-menu" id="mob">
+    <a href="index.html">Home</a>
+    <div class="mob-section">Floor Coatings</div>
+    <a href="epoxy-floors.html">Epoxy Garage Floors</a>
+    <a href="polyaspartic.html">Polyaspartic Coatings</a>
+    <a href="metallic-epoxy.html">Metallic Epoxy</a>
+    <a href="commercial.html">Commercial Floors</a>
+    <a href="basement-floors.html">Basement Floors</a>
+    <div class="mob-section">Driveways &amp; Outdoor</div>
+    <a href="driveways.html">Driveway Overlays</a>
+    <a href="overlays.html">Decorative Overlays</a>
+    <a href="pool-deck-coatings.html">Pool Deck Coatings</a>
+    <div class="mob-section">Specialty</div>
+    <a href="shop-barn-floors.html">Shop &amp; Barn Floors</a>
+    <a href="concrete-countertops.html">Concrete Countertops</a>
+    <a href="water-features.html">Water Features</a>
+    <div class="mob-section">Service Areas</div>
+    <a href="joplin.html">Joplin, MO</a>
+    <a href="carthage.html">Carthage, MO</a>
+    <a href="grove.html">Grove / Grand Lake, OK</a>
+    <a href="pittsburg.html">Pittsburg, KS</a>
+    <a href="fayetteville.html">Fayetteville, AR</a>
+    <a href="bentonville.html">Bentonville, AR</a>
+    <a href="locations.html">All Locations →</a>
+    <div class="mob-section">More</div>
+    <a href="gallery.html">Gallery</a>
+    <a href="blog.html">Blog</a>
+    <a href="faq.html">FAQ</a>
+    <a href="calculator.html">💲 Price Calculator</a>
+    <a href="contact.html" style="color:#E03030;font-weight:700">→ Get Free Quote</a>
+  </div>
+</nav>
+<script>
+function toggleMenu(){
+  var m=document.getElementById('mob');
+  var h=document.getElementById('hbg');
+  m.classList.toggle('open');
+  h.classList.toggle('open');
+}
+</script>
 
 <!-- HERO WITH CALCULATOR -->
 <section class="hero">
@@ -1110,236 +1146,85 @@
 </section>
 
 <!-- FOOTER -->
-<footer><div class="wrap">
-  <div class="footer-grid">
-    <div class="footer-brand">
-      <img src="https://cretecreationsllc.netlify.app/logo.png" alt="Crete Creations LLC" />
-      <strong>CRETE CREATIONS LLC</strong>
-      <p>Arturo Escalante · Concrete Studio<br>Joplin, Missouri's most experienced epoxy floor and decorative concrete contractor. 24+ years. MO · KS · OK · AR.</p>
-      <div class="footer-contact">
-        <a href="#">📍 Joplin, Missouri</a>
+<footer>
+<div class="foot-inner">
+  <div class="foot-grid">
+    <div>
+      <div class="foot-logo-row">
+        <img src="logo.png" alt="Crete Creations LLC" />
+        <div>
+          <div class="foot-brand">CRETE <span>CREATIONS</span> LLC</div>
+          <div style="font-family:var(--fc);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--silver);margin-top:2px">Arturo Escalante · Concrete Studio</div>
+        </div>
+      </div>
+      <p class="foot-desc">Joplin, Missouri's most experienced epoxy floor and decorative concrete contractor. 24+ years of artisan craftsmanship — garage floors, driveway overlays, metallic pours, commercial systems. Serving Missouri, Kansas, Oklahoma &amp; Arkansas.</p>
+      <div class="foot-contact">
+        <a href="#">📍 Joplin, Missouri — 75-Mile Service Radius</a>
         <a href="tel:4174837082">📞 (417) 483-7082</a>
         <a href="mailto:artvette68@yahoo.com">📧 artvette68@yahoo.com</a>
         <a href="https://cretecreationsllc.com">🌐 cretecreationsllc.com</a>
       </div>
     </div>
-    <div class="footer-col">
+    <div class="foot-col">
       <h4>Services</h4>
-      <a href="https://cretecreationsllc.netlify.app/epoxy-floors">Epoxy Garage Floors</a>
-      <a href="https://cretecreationsllc.netlify.app/polyaspartic">Polyaspartic Coatings</a>
-      <a href="https://cretecreationsllc.netlify.app/metallic-epoxy">Metallic Epoxy</a>
-      <a href="https://cretecreationsllc.netlify.app/driveways">Driveway Overlays</a>
-      <a href="https://cretecreationsllc.netlify.app/overlays">Decorative Overlays</a>
-      <a href="https://cretecreationsllc.netlify.app/commercial">Commercial Floors</a>
+      <a href="epoxy-floors.html">Epoxy Garage Floors</a>
+      <a href="polyaspartic.html">Polyaspartic Coatings</a>
+      <a href="metallic-epoxy.html">Metallic Epoxy</a>
+      <a href="driveways.html">Driveway Overlays</a>
+      <a href="overlays.html">Decorative Overlays</a>
+      <a href="commercial.html">Commercial Floors</a>
+      <a href="basement-floors.html">Basement Floors</a>
+      <a href="pool-deck-coatings.html">Pool Deck Coatings</a>
+      <a href="shop-barn-floors.html">Shop &amp; Barn Floors</a>
+      <a href="concrete-countertops.html">Concrete Countertops</a>
+      <a href="water-features.html">Water Features</a>
+      <a href="concrete-repair.html">Concrete Repair</a>
     </div>
-    <div class="footer-col footer-locations">
+    <div class="foot-col">
       <h4>Missouri</h4>
-      <a href="https://cretecreationsllc.netlify.app/joplin">Joplin</a>
-      <a href="https://cretecreationsllc.netlify.app/carthage">Carthage</a>
-      <a href="https://cretecreationsllc.netlify.app/neosho">Neosho</a>
-      <a href="https://cretecreationsllc.netlify.app/webb-city">Webb City</a>
-      <a href="https://cretecreationsllc.netlify.app/carl-junction">Carl Junction</a>
-      <a href="https://cretecreationsllc.netlify.app/lamar">Lamar</a>
-      <a href="https://cretecreationsllc.netlify.app/granby">Granby</a>
-      <a href="https://cretecreationsllc.netlify.app/anderson">Anderson</a>
-      <h4 style="margin-top:14px">Oklahoma</h4>
-      <a href="https://cretecreationsllc.netlify.app/grove">Grove</a>
-      <a href="https://cretecreationsllc.netlify.app/miami-ok">Miami</a>
-      <a href="https://cretecreationsllc.netlify.app/vinita">Vinita</a>
-      <a href="https://cretecreationsllc.netlify.app/pryor">Pryor</a>
+      <a href="joplin.html">Joplin</a>
+      <a href="carthage.html">Carthage</a>
+      <a href="neosho.html">Neosho</a>
+      <a href="webb-city.html">Webb City</a>
+      <a href="carl-junction.html">Carl Junction</a>
+      <a href="lamar.html">Lamar</a>
+      <a href="granby.html">Granby</a>
+      <a href="anderson.html">Anderson</a>
+      <h4 style="margin-top:16px">Oklahoma</h4>
+      <a href="grove.html">Grove / Grand Lake</a>
+      <a href="miami-ok.html">Miami</a>
+      <a href="vinita.html">Vinita</a>
+      <a href="pryor.html">Pryor</a>
     </div>
-    <div class="footer-col footer-locations">
+    <div class="foot-col">
       <h4>Kansas</h4>
-      <a href="https://cretecreationsllc.netlify.app/pittsburg">Pittsburg</a>
-      <a href="https://cretecreationsllc.netlify.app/galena">Galena</a>
-      <a href="https://cretecreationsllc.netlify.app/columbus-ks">Columbus</a>
-      <h4 style="margin-top:14px">Arkansas</h4>
-      <a href="https://cretecreationsllc.netlify.app/fayetteville">Fayetteville</a>
-      <a href="https://cretecreationsllc.netlify.app/bentonville">Bentonville</a>
-      <a href="https://cretecreationsllc.netlify.app/rogers-ar">Rogers</a>
-      <h4 style="margin-top:14px">Company</h4>
-      <a href="https://cretecreationsllc.netlify.app/about">About Arturo</a>
-      <a href="https://cretecreationsllc.netlify.app/gallery">Gallery</a>
-      <a href="https://cretecreationsllc.netlify.app/blog">Blog</a>
-      <a href="https://cretecreationsllc.netlify.app/faq">FAQ</a>
-      <a href="https://cretecreationsllc.netlify.app/calculator">Price Calculator</a>
-      <a href="https://cretecreationsllc.netlify.app/contact">Free Quote</a>
+      <a href="pittsburg.html">Pittsburg</a>
+      <a href="galena.html">Galena</a>
+      <a href="columbus-ks.html">Columbus</a>
+      <h4 style="margin-top:16px">Arkansas</h4>
+      <a href="fayetteville.html">Fayetteville</a>
+      <a href="bentonville.html">Bentonville</a>
+      <a href="rogers-ar.html">Rogers</a>
+      <h4 style="margin-top:16px">Company</h4>
+      <a href="about.html">About Arturo</a>
+      <a href="gallery.html">Photo Gallery</a>
+      <a href="blog.html">Blog &amp; Guides</a>
+      <a href="faq.html">FAQ</a>
+      <a href="colors.html">Color Palette</a>
+      <a href="calculator.html">Price Calculator</a>
+      <a href="contact.html">Free Quote</a>
     </div>
   </div>
-  <div class="footer-bottom">
-    <span>© 2025 Crete Creations LLC — Joplin, MO. All rights reserved.</span>
-    <a href="https://cretecreationsllc.netlify.app/contact" style="color:#d9241d;font-weight:900;">🚀 Free Quote</a>
+  <div class="foot-bottom">
+    <span class="foot-copy">© 2025 Crete Creations LLC — Joplin, MO. All rights reserved. Epoxy · Polyaspartic · Driveway Overlays · Four State Area · MO · KS · OK · AR</span>
+    <div class="foot-links">
+      <a href="calculator.html">Calculator</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html" style="color:var(--red-lt)">🚀 Free Quote</a>
+    </div>
   </div>
-</div></footer>
-<a href="https://cretecreationsllc.netlify.app/contact" class="float-cta">🚀 Free Quote</a>
-
-<script>
-  const WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/lox6fivr9xQwDSwatx9d/webhook-trigger/1069527f-0ff3-4af4-8cd6-9cc422bbfd1b';
-
-  function fmt(v) { return '$' + Number(v).toLocaleString(); }
-  function sanitizePhone(p) { return p.replace(/[^\d+]/g,'').trim(); }
-
-  // Pricing logic — covers all services
-  function getRates(system, projectType) {
-    // Custom projects get a custom-quote flag
-    const customTypes = ['Concrete Countertops','Water Feature / Fountain','Concrete Repair / Resurfacing','Commercial / Industrial'];
-    if (customTypes.includes(projectType)) return null;
-
-    if (system === 'Metallic Epoxy') return { lo: 12.00, hi: 16.00 };
-    if (system === 'Polyaspartic')   return { lo: 6.50,  hi: 9.00  };
-    if (system === 'Overlay / Decorative') {
-      // Differentiate driveway overlay tiers by project type
-      if (projectType.includes('Brick Inlay') || projectType.includes('Medallion')) return { lo: 9.00, hi: 14.00 };
-      if (projectType.includes('Stain + Scoring')) return { lo: 7.00, hi: 11.00 };
-      if (projectType.includes('Stamped'))  return { lo: 8.00, hi: 13.00 };
-      return { lo: 6.00, hi: 9.50 };
-    }
-    // Full Broadcast Flake (default)
-    return { lo: 5.75, hi: 7.50 };
-  }
-
-  function getProjectData() {
-    const projectType = document.getElementById('projectType').value.trim();
-    const sqft = parseFloat(document.getElementById('sqft').value.trim());
-    const system    = document.getElementById('system').value.trim();
-    const condition = document.getElementById('condition').value.trim();
-    const difficulty = document.getElementById('difficulty').value.trim();
-
-    if (!sqft || sqft <= 0) return null;
-
-    const rates = getRates(system, projectType);
-
-    // Custom projects — no rate calc
-    if (!rates) {
-      return {
-        projectType, sqft: String(sqft), system, condition, difficulty,
-        lowRate: 'Custom', highRate: 'Custom',
-        estimatedRange: 'Custom Quote',
-        isCustom: true
-      };
-    }
-
-    let { lo, hi } = rates;
-
-    if (condition === 'Average / Minor Repairs')      { lo += 0.50; hi += 0.50; }
-    if (condition === 'Cracks / Pitting / More Prep') { lo += 1.00; hi += 1.00; }
-    if (difficulty === 'Some Edges / Obstacles')       { lo += 0.25; hi += 0.25; }
-    if (difficulty.startsWith('Tight'))                { lo += 1.00; hi += 1.00; }
-
-    const lowEst  = Math.round(sqft * lo);
-    const highEst = Math.round(sqft * hi);
-
-    return {
-      projectType, sqft: String(sqft), system, condition, difficulty,
-      lowRate: lo.toFixed(2), highRate: hi.toFixed(2),
-      estimatedRange: `${fmt(lowEst)} – ${fmt(highEst)}`,
-      isCustom: false
-    };
-  }
-
-  function updateLivePreview() {
-    const data = getProjectData();
-    const overlay = document.getElementById('previewOverlay');
-    const status  = document.getElementById('liveStatus');
-    const range   = document.getElementById('previewRange');
-
-    if (!data) {
-      range.textContent = '$8,250 – $11,000';
-      overlay.textContent = '🔒 Complete Step 2 to reveal';
-      status.textContent = 'Enter your square footage to start calculating…';
-      return;
-    }
-
-    if (data.isCustom) {
-      range.textContent = 'Custom Quote';
-      overlay.textContent = '🔒 Submit your info to receive a custom quote';
-      status.textContent = `Custom project · ${Number(data.sqft).toLocaleString()} sq ft · Arturo will reach out personally`;
-      return;
-    }
-
-    // Update range (stays blurred — user can't read it)
-    range.textContent = data.estimatedRange;
-    overlay.textContent = '🔒 Complete Step 2 to reveal your price';
-    status.textContent = `Calculating… ${Number(data.sqft).toLocaleString()} sq ft · ${data.system} · ${data.condition}`;
-  }
-
-  ['projectType','sqft','system','condition','difficulty'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) { el.addEventListener('input', updateLivePreview); el.addEventListener('change', updateLivePreview); }
-  });
-
-  document.getElementById('showUnlockBtn').addEventListener('click', function() {
-    const data = getProjectData();
-    if (!data) { alert('Please enter your approximate square footage first.'); return; }
-    document.getElementById('unlockCard').classList.remove('hidden');
-    document.getElementById('progressStep2').classList.add('active');
-    document.getElementById('unlockCard').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-  });
-
-  async function submitLead() {
-    const data = getProjectData();
-    if (!data) { alert('Please complete your project details first.'); return; }
-
-    const name  = document.getElementById('name').value.trim();
-    const phone = sanitizePhone(document.getElementById('phone').value.trim());
-    const email = document.getElementById('email').value.trim();
-    const zip   = document.getElementById('zip').value.trim();
-
-    if (!name || !phone || !email || !zip) { alert('Please fill in all contact fields.'); return; }
-
-    const btn = document.getElementById('unlockBtn');
-    btn.disabled = true;
-    btn.textContent = 'Revealing Your Price…';
-
-    const fd = new FormData();
-    fd.append('name', name);
-    fd.append('phone', phone);
-    fd.append('email', email);
-    fd.append('zip', zip);
-    fd.append('source', 'Crete Creations Instant Calculator');
-    fd.append('company', 'Crete Creations LLC');
-    fd.append('project_type', data.projectType);
-    fd.append('sq_ft', data.sqft);
-    fd.append('coating_system', data.system);
-    fd.append('concrete_condition', data.condition);
-    fd.append('project_layout', data.difficulty);
-    fd.append('estimated_range', data.estimatedRange);
-    fd.append('price_per_sqft_range', data.isCustom ? 'Custom' : `$${data.lowRate} – $${data.highRate}`);
-    fd.append('meeting_notes', `${data.projectType} | ${data.system} | ${data.sqft} sq ft | ${data.condition} | ${data.difficulty} | Est: ${data.estimatedRange}`);
-
-    try { await fetch(WEBHOOK_URL, { method: 'POST', body: fd }); }
-    catch (e) { console.error('Webhook error:', e); }
-
-    document.getElementById('priceRange').textContent = data.estimatedRange;
-    document.getElementById('resultText').innerHTML = data.isCustom
-      ? `Your <strong>${data.projectType}</strong> project at <strong>${Number(data.sqft).toLocaleString()} sq ft</strong> is one Arturo prices personally after an on-site visit. He'll reach out within one business day to schedule a free consultation and give you a precise written quote.`
-      : `Based on <strong>${Number(data.sqft).toLocaleString()} sq ft</strong>, your <strong>${data.system}</strong> system, concrete condition, and preparation needed, your project falls within the range above.<br><br>The next step is a free on-site visit so Arturo can confirm measurements, evaluate the slab, and finalize your system.`;
-
-    document.getElementById('resultBox').classList.remove('hidden');
-    document.getElementById('progressStep2').classList.add('done');
-    document.getElementById('progressStep2').textContent = 'Step 2: Price Revealed ✅';
-    document.getElementById('resultBox').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-
-    btn.disabled = false;
-    btn.textContent = 'Reveal My Ballpark Price';
-  }
-
-  function resetCalc() {
-    document.getElementById('projectType').selectedIndex = 0;
-    document.getElementById('system').selectedIndex = 0;
-    document.getElementById('condition').selectedIndex = 0;
-    document.getElementById('difficulty').selectedIndex = 0;
-    document.getElementById('sqft').value = '';
-    ['name','phone','email','zip'].forEach(id => document.getElementById(id).value = '');
-    document.getElementById('unlockCard').classList.add('hidden');
-    document.getElementById('resultBox').classList.add('hidden');
-    const s2 = document.getElementById('progressStep2');
-    s2.classList.remove('active','done');
-    s2.textContent = 'Step 2: Unlock Price 🔒';
-    updateLivePreview();
-  }
-
-  updateLivePreview();
-</script>
+</div>
+</footer>
+<a href="contact.html" class="float-cta">🚀 Free Quote</a>
 </body>
 </html>
