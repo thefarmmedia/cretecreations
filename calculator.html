@@ -1,13 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Crete Creations LLC | Epoxy Floors & Driveway Overlays | Joplin, MO | (417) 483-7082</title>
-  <meta name="description" content="Get an instant epoxy floor or driveway overlay estimate in under 60 seconds. Select your service, square footage, and system. Crete Creations LLC, Joplin MO." />
+  <title>Project Price Calculator | Instant Epoxy Floor Estimate | Crete Creations LLC</title>
+  <meta name="description" content="Get an instant epoxy floor or driveway overlay estimate in under 60 seconds. Select your service, square footage, and system. Crete Creations LLC, Joplin MO. (417) 483-7082." />
   <link rel="canonical" href="https://cretecreationsllc.com/calculator" />
-  <meta property="og:title" content="Crete Creations LLC | Epoxy Floors & Driveway Overlays | Joplin, MO | (417) 483-7082" />
-  <meta property="og:description" content="Joplin MO epoxy garage floor contractor — 100% solids epoxy, full flake, high-solids polyaspartic. Arturo Escalante. 24+ years. Garage floors, driveway overlays, metallic pours. (417) 483-7082." />
-  <meta property="og:type" content="website" />
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
 :root{
   --red:#C41E1E;--red-dk:#8B1010;--red-lt:#E03030;
@@ -94,6 +94,58 @@ nav{background:var(--black);position:sticky;top:0;z-index:1000;border-bottom:2px
 
 /* HERO */
 
+    .page-hero{position:relative;overflow:hidden;padding:72px 24px 56px;border-bottom:2px solid var(--red-dk)}
+    .page-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.28) saturate(.7)}
+    .page-hero-dial{position:absolute;top:50%;right:-6%;transform:translateY(-50%);width:min(520px,60vw);height:min(520px,60vw);animation:spin 75s linear infinite;opacity:.08;pointer-events:none;object-fit:contain}
+    @keyframes spin{to{transform:translateY(-50%) rotate(360deg)}}
+    .page-hero-inner{position:relative;z-index:2;max-width:1300px;margin:0 auto}
+    .eyebrow{font-family:var(--fc);font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--red-lt);margin-bottom:12px;display:block}
+    .page-hero h1{font-family:var(--fh);font-size:clamp(36px,6vw,70px);color:var(--white);line-height:.92;font-weight:900;margin-bottom:14px}
+    .page-hero h1 em{color:var(--red-lt);font-style:normal}
+    .page-hero .lead{font-size:17px;font-weight:300;color:var(--silver-lt);max-width:640px;line-height:1.65;margin-bottom:24px}
+    .btn{font-family:var(--fc);font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:14px 28px;border-radius:2px;display:inline-block;transition:all .18s;cursor:pointer;border:none}
+    .btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--red-lt)}
+    .btn-out{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.3)}.btn-out:hover{border-color:var(--red-lt);color:var(--red-lt)}
+    .btn-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:20px}
+    .sl{font-family:var(--fc);font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--red-lt);margin-bottom:10px;display:block}
+    .sh{font-family:var(--fh);font-size:clamp(28px,4vw,46px);line-height:.95;color:var(--white);margin-bottom:18px;font-weight:700}
+    .sh em{color:var(--red-lt);font-style:normal}
+    .rule{width:56px;height:3px;background:var(--red);margin:14px 0 20px;border-radius:2px}
+    .sec{padding:60px 24px}
+    .sec-alt{background:var(--charcoal);padding:60px 24px}
+    .si{max-width:1300px;margin:0 auto}
+    .wrap{width:100%;max-width:1300px;margin:0 auto;padding:0 24px}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+    .ben{display:flex;gap:14px;align-items:flex-start;padding:14px 16px;background:var(--dark);border-left:3px solid var(--red);margin-bottom:10px}
+    .ben span{font-size:22px;flex-shrink:0;margin-top:2px}
+    .ben strong{display:block;font-family:var(--fc);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--white);margin-bottom:3px}
+    .ben em{font-size:14px;color:var(--silver);line-height:1.6;font-style:normal}
+    input,select,textarea{font-family:var(--fb)}
+    @media(max-width:800px){.two-col{grid-template-columns:1fr}}
+
+    .calc-wrap{max-width:820px;margin:0 auto}
+    .calc-step{background:var(--charcoal);border:1px solid var(--rim);border-top:3px solid var(--red);padding:28px;margin-bottom:16px}
+    .calc-step-num{font-family:var(--fc);font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red-lt);margin-bottom:6px}
+    .calc-step h3{font-family:var(--fh);font-size:20px;color:var(--white);font-weight:700;margin-bottom:16px}
+    .opt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+    .opt{background:var(--dark);border:2px solid var(--rim);padding:14px;cursor:pointer;transition:all .18s;text-align:center;border-radius:2px}
+    .opt:hover{border-color:var(--red-lt)}
+    .opt.selected{border-color:var(--red);background:rgba(196,30,30,.12)}
+    .opt-icon{font-size:24px;margin-bottom:6px}
+    .opt-name{font-family:var(--fc);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--white)}
+    .opt-desc{font-size:12px;color:var(--silver);margin-top:3px;line-height:1.4}
+    .sqft-input{width:100%;padding:14px;background:var(--dark);border:2px solid var(--rim);color:var(--white);font-family:var(--fh);font-size:28px;font-weight:700;text-align:center;outline:none;transition:border-color .18s;border-radius:2px}
+    .sqft-input:focus{border-color:var(--red-lt)}
+    .sqft-presets{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .sqft-preset{font-family:var(--fc);font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:7px 14px;background:var(--dark);border:1px solid var(--rim);color:var(--silver-lt);cursor:pointer;transition:all .18s;border-radius:2px}
+    .sqft-preset:hover{border-color:var(--red-lt);color:var(--red-lt)}
+    .result-box{background:linear-gradient(135deg,rgba(139,16,16,.3),rgba(0,0,0,.8));border:1px solid var(--red-dk);border-top:3px solid var(--red);padding:32px;text-align:center;display:none}
+    .result-box.show{display:block}
+    .result-label{font-family:var(--fc);font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--silver);margin-bottom:8px}
+    .result-range{font-family:var(--fh);font-size:clamp(32px,6vw,56px);color:var(--red-lt);font-weight:900;line-height:1;margin-bottom:8px}
+    .result-sub{font-size:13px;font-weight:300;color:var(--silver);margin-bottom:24px;line-height:1.6}
+    .result-disclaimer{font-size:12px;color:var(--silver);opacity:.7;margin-top:16px;line-height:1.6}
+    @media(max-width:640px){.opt-grid{grid-template-columns:1fr 1fr}}
   </style>
 </head>
 <body>
@@ -214,315 +266,97 @@ function toggleMenu(){
   h.classList.toggle('open');
 }
 </script>
-<!-- HERO WITH CALCULATOR -->
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-overlay"></div>
-  <img class="hero-spin-logo" src="https://cretecreationsllc.netlify.app/logo.png" alt="" aria-hidden="true" />
 
-  <div class="hero-content">
-    <div class="wrap">
-      <div class="hero-grid">
+<div class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('residential.jpg')"></div>
+  <img class="page-hero-dial" src="logo.png" alt="" aria-hidden="true" />
+  <div class="page-hero-inner">
+    <span class="eyebrow">Crete Creations LLC · Instant Project Estimate</span>
+    <h1>Project Price <em>Calculator</em></h1>
+    <p class="lead">Get a realistic price range in under 60 seconds — before you call. Select your service, enter your square footage, and choose your system.</p>
+  </div>
+</div>
 
-        <!-- Left: headline -->
-        <div class="hero-left">
-          <div class="hero-eyebrow">
-            <span>★</span> Instant Project Calculator
-          </div>
-          <h1 class="hero-h1">
-            Know your<br>budget <em>before</em><br>you call.
-          </h1>
-          <p class="hero-sub">
-            Pick your service, enter your square footage, and unlock a real ballpark range in under a minute. No pressure. No guessing.
-          </p>
-          <div class="hero-pills">
-            <div class="pill">24+ Years Experience</div>
-            <div class="pill">All Services Covered</div>
-            <div class="pill">MO · KS · OK · AR</div>
-            <div class="pill">Prep Always Included</div>
-          </div>
-          <div class="hero-stats">
-            <div class="hero-stat">
-              <strong>24+</strong>
-              <span>Years Exp.</span>
-            </div>
-            <div class="hero-stat">
-              <strong>500+</strong>
-              <span>Projects</span>
-            </div>
-            <div class="hero-stat">
-              <strong>4</strong>
-              <span>States</span>
-            </div>
-            <div class="hero-stat">
-              <strong>5★</strong>
-              <span>Rated</span>
-            </div>
-          </div>
+<div class="sec"><div class="si">
+  <div class="two-col">
+    <div class="calc-wrap" style="max-width:100%">
+
+      <!-- STEP 1: SERVICE -->
+      <div class="calc-step">
+        <div class="calc-step-num">Step 1 of 3</div>
+        <h3>What service do you need?</h3>
+        <div class="opt-grid">
+          <div class="opt" onclick="selectOpt(this,'svc','epoxy')" data-group="svc" data-val="epoxy"><div class="opt-icon">🏠</div><div class="opt-name">Garage Floor</div><div class="opt-desc">Epoxy or polyaspartic system</div></div>
+          <div class="opt" onclick="selectOpt(this,'svc','metallic')" data-group="svc" data-val="metallic"><div class="opt-icon">✨</div><div class="opt-name">Metallic Epoxy</div><div class="opt-desc">Artisan pour — unique every time</div></div>
+          <div class="opt" onclick="selectOpt(this,'svc','driveway')" data-group="svc" data-val="driveway"><div class="opt-icon">🚘</div><div class="opt-name">Driveway Overlay</div><div class="opt-desc">11 styles — no demolition</div></div>
+          <div class="opt" onclick="selectOpt(this,'svc','commercial')" data-group="svc" data-val="commercial"><div class="opt-icon">🏭</div><div class="opt-name">Commercial Floor</div><div class="opt-desc">Warehouses, shops, restaurants</div></div>
+          <div class="opt" onclick="selectOpt(this,'svc','basement')" data-group="svc" data-val="basement"><div class="opt-icon">🏗️</div><div class="opt-name">Basement Floor</div><div class="opt-desc">Moisture-resistant systems</div></div>
+          <div class="opt" onclick="selectOpt(this,'svc','other')" data-group="svc" data-val="other"><div class="opt-icon">🔧</div><div class="opt-name">Other / Specialty</div><div class="opt-desc">Pool deck, shop, countertops</div></div>
         </div>
+      </div>
 
-        <!-- Right: calculator -->
-        <div>
-          <div class="calc-card">
-
-            <div class="progress-wrap">
-              <div class="progress-step active" id="progressStep1">Step 1: Your Project</div>
-              <div class="progress-arrow">→</div>
-              <div class="progress-step" id="progressStep2">Step 2: Unlock Price 🔒</div>
-            </div>
-
-            <h2>Step 1: Project Details</h2>
-            <p class="sub">Tell us about your project — takes under a minute.</p>
-
-            <div class="grid-2">
-              <div class="field">
-                <label for="projectType">Service Type</label>
-                <select id="projectType">
-                  <optgroup label="Floor Coatings">
-                    <option value="Garage Floor">Garage Floor</option>
-                    <option value="Basement Floor">Basement Floor</option>
-                    <option value="Shop / Outbuilding Floor">Shop / Outbuilding Floor</option>
-                    <option value="Commercial Floor">Commercial Floor</option>
-                    <option value="Pool Deck Coating">Pool Deck Coating</option>
-                    <option value="Patio / Porch Floor">Patio / Porch Floor</option>
-                  </optgroup>
-                  <optgroup label="Coating Systems">
-                    <option value="Full Broadcast Flake System">Full Broadcast Flake System</option>
-                    <option value="Metallic Epoxy System">Metallic Epoxy System</option>
-                    <option value="Polyaspartic Coating">Polyaspartic Coating</option>
-                  </optgroup>
-                  <optgroup label="Driveway &amp; Overlays">
-                    <option value="Driveway Overlay – Solid Stain / Knockdown">Driveway Overlay – Solid Stain / Knockdown</option>
-                    <option value="Driveway Overlay – Stain + Scoring">Driveway Overlay – Stain + Scoring</option>
-                    <option value="Driveway Overlay – Brick Inlay / Medallion">Driveway Overlay – Brick Inlay / Medallion</option>
-                    <option value="Decorative Interior Overlay">Decorative Interior Overlay</option>
-                    <option value="Stamped & Stained Concrete">Stamped &amp; Stained Concrete</option>
-                  </optgroup>
-                  <optgroup label="Custom Projects">
-                    <option value="Concrete Countertops">Concrete Countertops</option>
-                    <option value="Water Feature / Fountain">Water Feature / Fountain</option>
-                    <option value="Concrete Repair / Resurfacing">Concrete Repair / Resurfacing</option>
-                    <option value="Commercial / Industrial">Commercial / Industrial</option>
-                  </optgroup>
-                </select>
-              </div>
-              <div class="field">
-                <label for="sqft">Square Footage</label>
-                <input id="sqft" type="number" min="1" placeholder="e.g. 550" />
-              </div>
-            </div>
-
-            <div class="grid-2">
-              <div class="field">
-                <label for="system">Coating System</label>
-                <select id="system">
-                  <option value="Full Broadcast Flake">Full Broadcast Flake</option>
-                  <option value="Metallic Epoxy">Metallic Epoxy</option>
-                  <option value="Polyaspartic">Polyaspartic</option>
-                  <option value="Overlay / Decorative">Overlay / Decorative</option>
-                  <option value="Custom Quote Needed">Custom Quote Needed</option>
-                </select>
-              </div>
-              <div class="field">
-                <label for="condition">Concrete Condition</label>
-                <select id="condition">
-                  <option value="Good Condition">Good — No major issues</option>
-                  <option value="Average / Minor Repairs">Fair — Some cracks / staining</option>
-                  <option value="Cracks / Pitting / More Prep">Poor — Significant repairs needed</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="field">
-              <label for="difficulty">Project Layout</label>
-              <select id="difficulty">
-                <option value="Standard Open Area">Standard Open Area</option>
-                <option value="Some Edges / Obstacles">Some Edges / Obstacles</option>
-                <option value="Tight / Detailed Layout (More Labor Required)">Tight / Detailed Layout (More Labor)</option>
-              </select>
-            </div>
-
-            <!-- Locked preview — NO pricing shown -->
-            <div class="locked-preview">
-              <div class="locked-badge">🔒 Live Estimate Preview</div>
-              <div style="font-size:11px;color:var(--muted);margin-bottom:4px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;">Your Estimated Price Range</div>
-              <div class="preview-range-wrap">
-                <div class="preview-range" id="previewRange">$8,250 – $11,000</div>
-                <div class="preview-overlay" id="previewOverlay">🔒 Complete Step 2 to reveal</div>
-              </div>
-              <div class="live-status" id="liveStatus">Enter your square footage to start calculating…</div>
-              <div class="lock-note">Complete the form below to unlock your exact ballpark range + available install dates.</div>
-            </div>
-
-            <button class="btn btn-primary" id="showUnlockBtn">
-              Unlock My Exact Price Range →
-            </button>
-            <button class="btn btn-ghost" onclick="resetCalc()">Reset Calculator</button>
-
-            <!-- Step 2: contact -->
-            <div class="unlock-wrap hidden" id="unlockCard">
-              <h3>Step 2: Unlock Your Price</h3>
-              <p class="sub">One step away — enter your info to instantly reveal your ballpark quote.</p>
-              <div class="grid-2">
-                <div class="field">
-                  <label for="name">Full Name</label>
-                  <input id="name" type="text" placeholder="John Smith" />
-                </div>
-                <div class="field">
-                  <label for="phone">Phone Number</label>
-                  <input id="phone" type="tel" placeholder="(417) 555-1234" />
-                </div>
-              </div>
-              <div class="grid-2">
-                <div class="field">
-                  <label for="email">Email Address</label>
-                  <input id="email" type="email" placeholder="you@email.com" />
-                </div>
-                <div class="field">
-                  <label for="zip">ZIP Code</label>
-                  <input id="zip" type="text" placeholder="64801" />
-                </div>
-              </div>
-              <button class="btn btn-primary" id="unlockBtn" onclick="submitLead()">
-                Reveal My Ballpark Price
-              </button>
-            </div>
-
-            <!-- Result -->
-            <div class="result-box hidden" id="resultBox">
-              <div class="result-label">Estimated Ballpark Investment</div>
-              <div class="result-range" id="priceRange">$0 – $0</div>
-              <div class="result-body" id="resultText"></div>
-              <div class="includes">
-                <span>✔ Diamond grinding &amp; prep</span>
-                <span>✔ Crack &amp; surface repairs</span>
-                <span>✔ Full coating system</span>
-                <span>✔ Long-term finish</span>
-              </div>
-              <div class="result-fine">Ballpark estimate only. Final pricing confirmed after Arturo measures your project, evaluates the slab, and reviews your finish options on-site.</div>
-            </div>
-
-          </div>
+      <!-- STEP 2: SQFT -->
+      <div class="calc-step">
+        <div class="calc-step-num">Step 2 of 3</div>
+        <h3>Approximate square footage?</h3>
+        <input class="sqft-input" type="number" id="sqft" placeholder="e.g. 500" oninput="calcEstimate()" min="100" max="50000" />
+        <div class="sqft-presets">
+          <span class="font-label" style="font-family:var(--fc);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--silver);align-self:center">Quick select:</span>
+          <button class="sqft-preset" onclick="setSqft(280)">1-Car (280)</button>
+          <button class="sqft-preset" onclick="setSqft(500)">2-Car (500)</button>
+          <button class="sqft-preset" onclick="setSqft(700)">3-Car (700)</button>
+          <button class="sqft-preset" onclick="setSqft(1000)">Large Shop (1000)</button>
+          <button class="sqft-preset" onclick="setSqft(2000)">Commercial (2000)</button>
         </div>
+      </div>
 
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- WHY THIS CALCULATOR -->
-<section class="why-section">
-  <div class="wrap">
-    <div class="section-eyebrow">Why Use This Tool</div>
-    <h2>Know your number <em>before</em> you schedule anything.</h2>
-    <div class="why-grid">
-      <div class="why-card">
-        <div class="why-icon">⏱</div>
-        <h3>Done in under a minute</h3>
-        <p>Select your service, enter square footage, pick your system and condition. That's it — a real range in seconds.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">💧</div>
-        <h3>Prep is always included</h3>
-        <p>Every Crete Creations project includes mechanical diamond grinding and full concrete prep. No shortcuts, no exceptions.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">🎨</div>
-        <h3>Every service covered</h3>
-        <p>From full flake garage floors to metallic pours, driveway overlays, and commercial coatings — all in one tool.</p>
-      </div>
-      <div class="why-card">
-        <div class="why-icon">📋</div>
-        <h3>A ballpark, not a guess</h3>
-        <p>Final pricing is confirmed after Arturo visits your site in person. This gives you a real starting point before that call.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES WE CALCULATE -->
-<section class="services-section">
-  <div class="wrap">
-    <div class="section-eyebrow">All Services · All Covered</div>
-    <h2>Every project Arturo does is in this calculator.</h2>
-    <p class="lead">Select any service above to get an instant estimate. Here's what Crete Creations LLC installs across the Four State area.</p>
-
-    <div class="services-grid">
-      <div class="svc-card">
-        <div class="svc-badge">Most Popular</div>
-        <h3>Epoxy Garage Floors</h3>
-        <p>100% solids epoxy base, full flake broadcast, high-solids polyaspartic topcoat. The complete system — done right.</p>
-        <a href="https://cretecreationsllc.netlify.app/epoxy-floors" class="svc-link">Learn More →</a>
-      </div>
-      <div class="svc-card">
-        <div class="svc-badge">Fast Cure</div>
-        <h3>Polyaspartic Coatings</h3>
-        <p>UV stable, hot-tire resistant, chemical-proof topcoat. Same-day or next-day return to service available.</p>
-        <a href="https://cretecreationsllc.netlify.app/polyaspartic" class="svc-link">Learn More →</a>
-      </div>
-      <div class="svc-card">
-        <div class="svc-badge">Artisan</div>
-        <h3>Metallic Epoxy Floors</h3>
-        <p>One-of-a-kind pours. No two metallic floors look alike. Arturo's most distinctive work — completely custom.</p>
-        <a href="https://cretecreationsllc.netlify.app/metallic-epoxy" class="svc-link">Learn More →</a>
-      </div>
-      <div class="svc-card">
-        <div class="svc-badge">11 Styles</div>
-        <h3>Driveway Overlays</h3>
-        <p>Transform a cracked, faded driveway without tearing it out. Brick inlay, acid stain, knockdown, custom medallion and more.</p>
-        <a href="https://cretecreationsllc.netlify.app/driveways" class="svc-link">Learn More →</a>
-      </div>
-      <div class="svc-card">
-        <div class="svc-badge">Commercial</div>
-        <h3>Commercial Floor Coatings</h3>
-        <p>Industrial-grade systems for warehouses, shops, retail, and medical spaces. Built for heavy daily use.</p>
-        <a href="https://cretecreationsllc.netlify.app/commercial" class="svc-link">Learn More →</a>
-      </div>
-      <div class="svc-card">
-        <div class="svc-badge">Decorative</div>
-        <h3>Decorative Overlays</h3>
-        <p>Wood, stone, and tile-look concrete overlays for interior and exterior surfaces. Completely custom designs.</p>
-        <a href="https://cretecreationsllc.netlify.app/overlays" class="svc-link">Learn More →</a>
-      </div>
-      <div class="svc-card">
-        <div class="svc-badge">Outdoor</div>
-        <h3>Stamped &amp; Stained Concrete</h3>
-        <p>Patios, pool decks, and driveways with texture and color. Custom patterns and stain combinations.</p>
+      <!-- STEP 3: CONDITION -->
+      <div class="calc-step">
+        <div class="calc-step-num">Step 3 of 3</div>
+        <h3>Current concrete condition?</h3>
+        <div class="opt-grid" style="grid-template-columns:1fr 1fr 1fr">
+          <div class="opt" onclick="selectOpt(this,'cond','good')" data-group="cond" data-val="good"><div class="opt-icon">✅</div><div class="opt-name">Good</div><div class="opt-desc">Minimal cracks, no oil</div></div>
+          <div class="opt" onclick="selectOpt(this,'cond','fair')" data-group="cond" data-val="fair"><div class="opt-icon">⚠️</div><div class="opt-name">Fair</div><div class="opt-desc">Some cracks or staining</div></div>
+          <div class="opt" onclick="selectOpt(this,'cond','poor')" data-group="cond" data-val="poor"><div class="opt-icon">🔴</div><div class="opt-name">Needs Work</div><div class="opt-desc">Heavy damage or oil</div></div>
         </div>
-      <div class="svc-card">
-        <div class="svc-badge">Custom</div>
-        <h3>Concrete Countertops</h3>
-        <p>Custom-formed concrete counters for kitchens, bars, and outdoor spaces. Every one is unique.</p>
-        <a href="https://cretecreationsllc.netlify.app/services" class="svc-link">Learn More →</a>
       </div>
-      <div class="svc-card">
-        <div class="svc-badge">Custom</div>
-        <h3>Water Features &amp; Fountains</h3>
-        <p>Custom outdoor waterfalls and water features designed and installed for any landscape or property.</p>
-        <a href="https://cretecreationsllc.netlify.app/services" class="svc-link">Learn More →</a>
+
+      <!-- RESULT -->
+      <div class="result-box" id="resultBox">
+        <div class="result-label">Your Estimated Project Range</div>
+        <div class="result-range" id="resultRange">—</div>
+        <div class="result-sub" id="resultSub"></div>
+        <a href="contact.html" class="btn btn-red" style="display:inline-block;margin-bottom:10px">Request Free On-Site Quote →</a><br>
+        <a href="tel:4174837082" class="btn btn-out" style="display:inline-block">📞 (417) 483-7082</a>
+        <p class="result-disclaimer">This is a ballpark estimate only — not a quote. Actual price depends on concrete condition, exact measurements, and system specified. Arturo visits every project in person before providing a written quote.</p>
       </div>
+
     </div>
 
-    <div class="mid-cta">
-      <a href="#" onclick="document.querySelector('.calc-card').scrollIntoView({behavior:'smooth'}); return false;" class="cta-main">Use the Calculator →</a>
-      <a href="https://cretecreationsllc.netlify.app/gallery" class="cta-sec">View Project Gallery</a>
+    <!-- SIDEBAR INFO -->
+    <div>
+      <div style="background:var(--charcoal);border:1px solid var(--rim);border-top:3px solid var(--red);padding:28px;margin-bottom:16px">
+        <div style="font-family:var(--fh);font-size:20px;color:var(--white);margin-bottom:14px;font-weight:700">After You Get Your Estimate</div>
+        <div class="ben"><span>📞</span><div><strong>Call Arturo</strong><em><a href="tel:4174837082" style="color:var(--red-lt)">(417) 483-7082</a> — he answers personally and talks through your project.</em></div></div>
+        <div class="ben"><span>🏠</span><div><strong>Free On-Site Visit</strong><em>Arturo comes to your property, assesses the slab, and gives a precise written quote — no obligation.</em></div></div>
+        <div class="ben"><span>🎨</span><div><strong>Brings Color Samples</strong><em>Physical sample chips to every consultation. See <a href="colors.html" style="color:var(--red-lt)">all 27 color blends →</a></em></div></div>
+        <div class="ben"><span>✅</span><div><strong>Written Quote</strong><em>Fixed price, system spec, timeline. No surprises.</em></div></div>
+      </div>
+      <div style="background:var(--charcoal);border:1px solid var(--rim);padding:28px">
+        <div style="font-family:var(--fh);font-size:18px;color:var(--white);margin-bottom:12px;font-weight:700">2025 Reference Pricing</div>
+        <div style="border:1px solid var(--rim);overflow:hidden">
+          <div style="display:grid;grid-template-columns:1fr 1fr;padding:11px 14px;border-bottom:1px solid var(--rim);background:var(--dark)"><span style="font-family:var(--fc);font-size:13px;font-weight:600;color:var(--white)">1-Car Garage</span><span style="font-family:var(--fh);font-size:14px;color:var(--red-lt);text-align:right;font-weight:600">$1,200–$1,800</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;padding:11px 14px;border-bottom:1px solid var(--rim)"><span style="font-family:var(--fc);font-size:13px;font-weight:600;color:var(--white)">2-Car Garage</span><span style="font-family:var(--fh);font-size:14px;color:var(--red-lt);text-align:right;font-weight:600">$2,000–$3,200</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;padding:11px 14px;border-bottom:1px solid var(--rim);background:var(--dark)"><span style="font-family:var(--fc);font-size:13px;font-weight:600;color:var(--white)">3-Car / Shop</span><span style="font-family:var(--fh);font-size:14px;color:var(--red-lt);text-align:right;font-weight:600">$3,200–$5,500</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;padding:11px 14px;border-bottom:1px solid var(--rim)"><span style="font-family:var(--fc);font-size:13px;font-weight:600;color:var(--white)">Metallic Epoxy</span><span style="font-family:var(--fh);font-size:14px;color:var(--red-lt);text-align:right;font-weight:600">$12–$16/sq ft</span></div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;padding:11px 14px"><span style="font-family:var(--fc);font-size:13px;font-weight:600;color:var(--white)">Driveway Overlay</span><span style="font-family:var(--fh);font-size:14px;color:var(--red-lt);text-align:right;font-weight:600">$6–$14/sq ft</span></div>
+        </div>
+        <p style="font-size:12px;color:var(--silver);margin-top:10px;line-height:1.6">Ranges include complete system: moisture vapor barrier, 100% solids epoxy, full flake, polyaspartic topcoat.</p>
+      </div>
     </div>
   </div>
-</section>
+</div></div>
 
-<!-- FINAL CTA -->
-<section class="cta-strip">
-  <div class="wrap">
-    <h2>Ready to see the real number?</h2>
-    <p>Use the calculator above for a ballpark range — then call Arturo directly. He answers, walks your project, and gives you a precise written quote. Free, no obligation.</p>
-    <div class="cta-btns">
-      <a href="tel:4174837082" class="btn-a">📞 Call (417) 483-7082</a>
-      <a href="https://cretecreationsllc.netlify.app/contact" class="btn-b">Request Written Quote →</a>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
 <footer>
 <div class="foot-inner">
   <div class="foot-grid">
@@ -603,4 +437,48 @@ function toggleMenu(){
 </div>
 </footer>
 <a href="contact.html" class="float-cta">🚀 Free Quote</a>
+
+<script>
+var state = {svc: null, cond: null};
+
+function selectOpt(el, group, val) {
+  document.querySelectorAll('[data-group="'+group+'"]').forEach(function(o){o.classList.remove('selected')});
+  el.classList.add('selected');
+  state[group] = val;
+  calcEstimate();
+}
+
+function setSqft(n) {
+  document.getElementById('sqft').value = n;
+  calcEstimate();
+}
+
+function calcEstimate() {
+  var sqft = parseInt(document.getElementById('sqft').value) || 0;
+  if (!state.svc || !sqft || sqft < 100) { document.getElementById('resultBox').classList.remove('show'); return; }
+
+  var rates = {
+    epoxy:      [5.75, 7.50],
+    metallic:   [12.00, 16.00],
+    driveway:   [6.00, 14.00],
+    commercial: [4.50, 8.00],
+    basement:   [5.00, 7.00],
+    other:      [5.00, 10.00]
+  };
+
+  var condMult = {good: 1.0, fair: 1.12, poor: 1.25};
+  var cond = state.cond || 'good';
+  var r = rates[state.svc];
+  var mult = condMult[cond];
+  var lo = Math.round(r[0] * sqft * mult / 50) * 50;
+  var hi = Math.round(r[1] * sqft * mult / 50) * 50;
+
+  var fmt = function(n){ return '$' + n.toLocaleString(); };
+  document.getElementById('resultRange').textContent = fmt(lo) + ' – ' + fmt(hi);
+
+  var svcNames = {epoxy:'Garage Floor Coating',metallic:'Metallic Epoxy Floor',driveway:'Driveway Overlay',commercial:'Commercial Floor',basement:'Basement Floor',other:'Specialty Project'};
+  document.getElementById('resultSub').textContent = svcNames[state.svc] + ' · ' + sqft.toLocaleString() + ' sq ft · ' + (cond.charAt(0).toUpperCase()+cond.slice(1)) + ' concrete condition';
+  document.getElementById('resultBox').classList.add('show');
+}
+</script>
 </body></html>
