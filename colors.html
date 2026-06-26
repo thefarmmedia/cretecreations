@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Epoxy Floor Color Options | 27 Full Flake Blends | Crete Creations LLC Joplin MO</title>
-  <meta name="description" content="27 full broadcast flake color blends for epoxy garage floors. View all options and choose your color. Crete Creations LLC, Joplin MO. (417) 483-7082." />
+  <meta name="description" content="27 full broadcast flake color blends for epoxy garage floors — view every option before your consultation. Crete Creations LLC, Joplin MO. (417) 483-7082." />
   <link rel="canonical" href="https://cretecreationsllc.com/colors" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -94,114 +94,69 @@ nav{background:var(--black);position:sticky;top:0;z-index:1000;border-bottom:2px
 
 /* HERO */
 
-/* ── COLORS PAGE SPECIFIC ── */
-/* HERO */
-    .page-hero{background:linear-gradient(135deg,rgba(217,36,29,.16),rgba(0,0,0,.95) 55%),var(--bg);padding:60px 0 48px;border-bottom:2px solid #8f100d}
-    .page-eyebrow{display:inline-block;padding:7px 14px;border-radius:999px;background:rgba(217,36,29,.14);border:1px solid var(--accent);color:#fff;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.08em;margin-bottom:14px}
-    .page-hero h1{font-size:clamp(32px,5vw,58px);font-weight:900;letter-spacing:-.04em;line-height:1.04;margin-bottom:14px}
-    .page-hero h1 em{color:var(--accent);font-style:normal}
-    .page-hero p{color:var(--muted);font-size:17px;max-width:620px;margin-bottom:24px;line-height:1.6}
-    .hero-note{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:10px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);font-size:13px;color:var(--muted)}
-    .hero-note strong{color:#fff}
-
-    /* CUSTOM FLAKE BANNER */
-    .custom-flake-banner{background:linear-gradient(105deg,rgba(217,36,29,.13) 0%,rgba(255,255,255,.03) 50%,rgba(217,36,29,.08) 100%);border-top:1px solid rgba(217,36,29,.25);border-bottom:1px solid rgba(217,36,29,.25);padding:22px 0}
-    .custom-flake-inner{display:flex;align-items:center;gap:28px;flex-wrap:wrap}
-    .custom-flake-icon{flex-shrink:0;width:52px;height:52px;border-radius:12px;background:rgba(217,36,29,.15);border:1px solid rgba(217,36,29,.35);display:flex;align-items:center;justify-content:center;font-size:24px}
-    .custom-flake-text{}
-    .custom-flake-headline{font-size:17px;font-weight:900;color:#fff;margin-bottom:4px;letter-spacing:-.01em}
-    .custom-flake-headline span{color:var(--accent)}
-    .custom-flake-sub{font-size:13px;color:var(--muted);line-height:1.55}
-    .custom-flake-pills{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
-    .custom-pill{padding:6px 12px;border-radius:50px;font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;border:1px solid rgba(217,36,29,.4);background:rgba(217,36,29,.1);color:rgba(255,200,195,.85)}
-    .custom-flake-cta{margin-left:auto;flex-shrink:0}
-    .custom-flake-cta a{display:inline-block;padding:11px 20px;border-radius:9px;border:1px solid rgba(217,36,29,.5);background:rgba(217,36,29,.12);color:#fff;font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:.05em;white-space:nowrap;transition:.2s}
-    .custom-flake-cta a:hover{background:rgba(217,36,29,.25);border-color:rgba(217,36,29,.7)}
-    @media(max-width:700px){.custom-flake-cta{margin-left:0;width:100%}.custom-flake-cta a{display:block;text-align:center}}
+    /* ── COLORS PAGE ── */
+    .page-hero{position:relative;overflow:hidden;padding:72px 24px 56px;border-bottom:2px solid var(--red-dk)}
+    .page-hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;filter:brightness(.28) saturate(.7)}
+    .page-hero-dial{position:absolute;top:50%;right:-6%;transform:translateY(-50%);width:min(520px,60vw);height:min(520px,60vw);animation:spin 75s linear infinite;opacity:.08;pointer-events:none;object-fit:contain}
+    @keyframes spin{to{transform:translateY(-50%) rotate(360deg)}}
+    .page-hero-inner{position:relative;z-index:2;max-width:1300px;margin:0 auto}
+    .page-hero .eyebrow{font-family:var(--fc);font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--red-lt);margin-bottom:12px;display:block}
+    .page-hero h1{font-family:var(--fh);font-size:clamp(36px,6vw,70px);color:var(--white);line-height:.92;font-weight:900;margin-bottom:14px}
+    .page-hero h1 em{color:var(--red-lt);font-style:normal}
+    .page-hero .lead{font-size:17px;font-weight:300;color:var(--silver-lt);max-width:640px;line-height:1.65;margin-bottom:24px}
+    .btn{font-family:var(--fc);font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:14px 28px;border-radius:2px;display:inline-block;transition:all .18s;cursor:pointer;border:none}
+    .btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--red-lt)}
+    .btn-out{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.3)}.btn-out:hover{border-color:var(--red-lt);color:var(--red-lt)}
+    .btn-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:20px}
+    .sl{font-family:var(--fc);font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--red-lt);margin-bottom:10px;display:block}
+    .sh{font-family:var(--fh);font-size:clamp(28px,4vw,46px);line-height:.95;color:var(--white);margin-bottom:18px;font-weight:700}
+    .sh em{color:var(--red-lt);font-style:normal}
+    .rule{width:56px;height:3px;background:var(--red);margin:14px 0 20px;border-radius:2px}
+    .sec{padding:60px 24px}
+    .sec-alt{background:var(--charcoal);padding:60px 24px}
+    .si{max-width:1300px;margin:0 auto}
+    .info-box{background:var(--dark);border:1px solid var(--rim);border-left:3px solid var(--red);padding:22px 24px;margin:28px 0}
+    .info-box p{font-size:14px;color:var(--silver-lt);line-height:1.7}
 
     /* FILTER BAR */
-    .filter-section{padding:32px 0 0}
-    .filter-bar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:32px}
-    .filter-label{font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.07em;color:rgba(255,255,255,.4);margin-right:4px}
-    .filter-btn{padding:8px 16px;border-radius:50px;border:1px solid rgba(255,255,255,.15);background:transparent;color:var(--muted);font-size:13px;font-weight:700;cursor:pointer;transition:.15s;font-family:inherit}
-    .filter-btn:hover{color:#fff;border-color:rgba(255,255,255,.3)}
-    .filter-btn.active{background:rgba(217,36,29,.18);border-color:rgba(217,36,29,.6);color:#fff}
+    .filter-wrap{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+    .filter-label{font-family:var(--fc);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--silver);flex-shrink:0}
+    .filter-btn{font-family:var(--fc);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:8px 16px;background:var(--dark);border:1px solid var(--rim);color:var(--silver-lt);cursor:pointer;transition:all .18s;border-radius:2px}
+    .filter-btn:hover,.filter-btn.active{background:var(--red);border-color:var(--red);color:#fff}
+    .filter-count{font-family:var(--fc);font-size:12px;color:var(--silver);margin-bottom:20px}
+    .filter-count span{color:var(--white);font-weight:700}
 
-    /* COLOR COUNT */
-    .color-count{font-size:13px;color:rgba(255,255,255,.35);margin-bottom:24px}
-    .color-count span{color:#fff;font-weight:700}
+    /* SWATCH GRID */
+    .swatch-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px}
+    .swatch-card{background:var(--charcoal);border:1px solid var(--rim);overflow:hidden;transition:border-color .2s,transform .2s;cursor:pointer}
+    .swatch-card:hover{border-color:var(--red);transform:translateY(-2px)}
+    .swatch-img-wrap{position:relative;overflow:hidden}
+    .swatch-img-wrap img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform .35s}
+    .swatch-card:hover .swatch-img-wrap img{transform:scale(1.05)}
+    .swatch-badge{position:absolute;top:12px;left:12px;background:var(--red);color:#fff;font-family:var(--fc);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;border-radius:2px;z-index:2}
+    .swatch-body{padding:14px 16px}
+    .swatch-name{font-family:var(--fh);font-size:16px;font-weight:700;color:var(--white);margin-bottom:3px}
+    .swatch-cat{font-family:var(--fc);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--red-lt)}
 
-    /* GRID */
-    .colors-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;padding-bottom:80px}
-
-    /* COLOR CARD */
-    .color-card{border-radius:16px;overflow:hidden;background:var(--card);border:1px solid var(--border);cursor:pointer;transition:transform .2s,box-shadow .2s,border-color .2s;position:relative}
-    .color-card:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(0,0,0,.5);border-color:rgba(217,36,29,.4)}
-    .color-card.popular::after{content:'Most Popular';position:absolute;top:10px;right:10px;background:rgba(217,36,29,.9);color:#fff;font-size:10px;font-weight:900;text-transform:uppercase;letter-spacing:.06em;padding:4px 8px;border-radius:4px;z-index:2}
-    .color-swatch{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;transition:transform .3s}
-    .color-card:hover .color-swatch{transform:scale(1.04)}
-    .color-info{padding:14px 16px}
-    .color-name{font-size:16px;font-weight:900;color:#fff;margin-bottom:4px;letter-spacing:-.01em}
-    .color-desc{font-size:12px;color:var(--muted);line-height:1.5}
-    .color-tags{display:flex;gap:5px;margin-top:8px;flex-wrap:wrap}
-    .tag{font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.05em;padding:3px 7px;border-radius:4px}
-    .tag-grey{background:rgba(150,150,150,.15);color:rgba(200,200,200,.7)}
-    .tag-warm{background:rgba(180,120,60,.15);color:rgba(210,160,90,.8)}
-    .tag-dark{background:rgba(30,30,30,.6);border:1px solid rgba(255,255,255,.1);color:rgba(200,200,200,.6)}
-    .tag-blue{background:rgba(60,100,180,.15);color:rgba(120,160,220,.8)}
-    .tag-bold{background:rgba(217,36,29,.12);color:rgba(220,100,90,.8)}
-    .tag-neutral{background:rgba(255,255,255,.06);color:rgba(180,170,160,.7)}
+    /* CUSTOM BANNER */
+    .custom-banner{background:linear-gradient(135deg,rgba(139,16,16,.3),rgba(0,0,0,.8));border-top:1px solid var(--red-dk);border-bottom:1px solid var(--red-dk);padding:32px 24px}
+    .custom-banner-inner{max-width:1300px;margin:0 auto;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+    .custom-banner-text strong{font-family:var(--fh);font-size:22px;color:var(--white);font-weight:700;display:block;margin-bottom:6px}
+    .custom-banner-text p{font-size:14px;font-weight:300;color:var(--silver-lt);max-width:680px;line-height:1.65}
+    .custom-tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+    .custom-tag{font-family:var(--fc);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;background:rgba(196,30,30,.12);border:1px solid rgba(196,30,30,.3);color:var(--red-lt);border-radius:2px}
 
     /* LIGHTBOX */
-    .lightbox{position:fixed;inset:0;z-index:500;background:rgba(0,0,0,.92);display:flex;align-items:center;justify-content:center;padding:24px;opacity:0;pointer-events:none;transition:opacity .2s}
-    .lightbox.open{opacity:1;pointer-events:all}
-    .lightbox-inner{position:relative;max-width:700px;width:100%;background:var(--card);border:1px solid var(--border);border-radius:20px;overflow:hidden;box-shadow:0 24px 80px rgba(0,0,0,.7)}
-    .lightbox img{width:100%;display:block;max-height:60vh;object-fit:cover}
-    .lightbox-body{padding:24px 28px}
-    .lightbox-name{font-size:28px;font-weight:900;color:#fff;margin-bottom:8px;letter-spacing:-.02em}
-    .lightbox-desc{font-size:15px;color:var(--muted);margin-bottom:20px;line-height:1.6}
-    .lightbox-actions{display:flex;gap:12px;flex-wrap:wrap}
-    .lightbox-actions a{display:inline-block;padding:12px 22px;border-radius:9px;font-weight:900;font-size:14px;text-transform:uppercase;letter-spacing:.04em;transition:.2s}
-    .lb-cta{background:linear-gradient(135deg,#e62b24,#9d1410);color:#fff}
-    .lb-cta:hover{filter:brightness(1.07)}
-    .lb-calc{border:1px solid rgba(255,255,255,.2);color:#fff}
-    .lb-calc:hover{background:rgba(255,255,255,.07)}
-    .lightbox-close{position:absolute;top:14px;right:14px;width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,.5);border:1px solid rgba(255,255,255,.15);color:#fff;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:.15s;z-index:10}
-    .lightbox-close:hover{background:rgba(217,36,29,.5)}
+    .lightbox{position:fixed;inset:0;z-index:999;background:rgba(0,0,0,.93);display:none;align-items:center;justify-content:center;padding:24px}
+    .lightbox.open{display:flex}
+    .lb-inner{max-width:900px;width:100%;position:relative}
+    .lb-inner img{width:100%;max-height:80vh;object-fit:contain;display:block;border:1px solid var(--rim)}
+    .lb-name{font-family:var(--fh);font-size:22px;color:var(--white);font-weight:700;margin-top:14px;text-align:center}
+    .lb-close{position:absolute;top:-14px;right:-14px;width:36px;height:36px;background:var(--red);border:none;color:#fff;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;border-radius:2px}
 
-    /* CTA STRIP */
-    .cta-strip{padding:60px 0;border-top:1px solid rgba(255,255,255,.07);text-align:center}
-    .cta-strip h2{font-size:clamp(26px,4vw,42px);font-weight:900;letter-spacing:-.03em;margin-bottom:12px}
-    .cta-strip p{color:var(--muted);font-size:16px;max-width:520px;margin:0 auto 28px}
-    .cta-btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}
-    .cta-btns a{display:inline-block;padding:14px 28px;border-radius:10px;font-weight:900;font-size:15px;text-transform:uppercase;letter-spacing:.04em;transition:.2s}
-    .btn-a{background:linear-gradient(135deg,#e62b24,#9d1410);color:#fff;box-shadow:0 4px 18px rgba(217,36,29,.35)}
-    .btn-a:hover{transform:translateY(-1px);filter:brightness(1.07)}
-    .btn-b{border:1px solid rgba(255,255,255,.18);color:#fff}
-    .btn-b:hover{background:rgba(255,255,255,.06)}
+    @media(max-width:900px){.swatch-grid{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:600px){.swatch-grid{grid-template-columns:repeat(2,1fr)}.custom-banner-inner{flex-direction:column}}
 
-    /* FOOTER */
-    footer{background:#000;border-top:1px solid rgba(255,255,255,.07);padding:50px 0 28px}
-    .footer-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px;margin-bottom:36px}
-    .footer-brand img{height:40px;margin-bottom:12px;display:block}
-    .footer-brand strong{display:block;font-size:14px;font-weight:900;margin-bottom:4px}
-    .footer-brand p{font-size:13px;color:#c8bbaf;margin-bottom:14px;line-height:1.6}
-    .footer-contact a{display:block;font-size:13px;color:#c8bbaf;margin-bottom:5px;transition:color .15s}
-    .footer-contact a:hover{color:#fff}
-    .footer-col h4{font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.09em;color:rgba(255,255,255,.4);margin-bottom:10px}
-    .footer-col a{display:block;font-size:13px;color:rgba(255,255,255,.5);margin-bottom:6px;transition:color .15s}
-    .footer-col a:hover{color:#fff}
-    .footer-bottom{border-top:1px solid rgba(255,255,255,.06);padding-top:20px;font-size:12px;color:rgba(255,255,255,.3);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
-    .float-cta{position:fixed;bottom:22px;right:22px;background:linear-gradient(135deg,#e62b24,#9d1410);color:#fff;padding:13px 20px;border-radius:50px;font-weight:900;font-size:14px;text-transform:uppercase;box-shadow:0 6px 24px rgba(217,36,29,.5);z-index:300;transition:.2s;text-decoration:none}
-    .float-cta:hover{transform:translateY(-2px)}
-    @media(max-width:960px){.footer-grid{grid-template-columns:1fr 1fr 1fr}}
-    @media(max-width:640px){.footer-grid{grid-template-columns:1fr 1fr}}
-
-    .hidden{display:none!important}
-
-    @media(max-width:1000px){.colors-grid{grid-template-columns:repeat(3,1fr)}}
-    @media(max-width:700px){.colors-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr 1fr}.nav-links{display:none}}
-    @media(max-width:480px){.colors-grid{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -322,351 +277,381 @@ function toggleMenu(){
   h.classList.toggle('open');
 }
 </script>
-<div class="page-hero"><div class="wrap">
-  <div class="page-eyebrow">Full Broadcast Flake · 27 Colors</div>
-  <h1>Choose Your <em>Color.</em></h1>
-  <p>Every color below is a real full broadcast flake blend available from Crete Creations LLC. Arturo brings physical samples to every consultation — so you see each blend under your actual lighting before committing to anything.</p>
-  <div class="hero-note">
-    <span>💡</span>
-    <span><strong>Pro tip:</strong> Colors look different under garage lighting vs. natural light. Always view samples on-site before deciding.</span>
-  </div>
-</div></div>
 
-<div class="custom-flake-banner">
-  <div class="wrap">
-    <div class="custom-flake-inner">
-      <div class="custom-flake-icon">🎨</div>
-      <div class="custom-flake-text">
-        <div class="custom-flake-headline">Custom Flake &amp; <span>Hybrid Blends</span> Available</div>
-        <div class="custom-flake-sub">Don't see exactly what you're looking for? Arturo can create custom flake blends and hybrid combinations not shown here — available at an upcharge. Ask at your free consultation.</div>
-        <div class="custom-flake-pills">
-          <span class="custom-pill">Custom Color Blends</span>
-          <span class="custom-pill">Hybrid Flake Systems</span>
-          <span class="custom-pill">Upcharge Applies</span>
+<div class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('closeup_gray_flake.jpg')"></div>
+  <img class="page-hero-dial" src="logo.png" alt="" aria-hidden="true" />
+  <div class="page-hero-inner">
+    <span class="eyebrow">Crete Creations LLC · Full Broadcast Flake · 27 Color Blends</span>
+    <h1>Choose Your <em>Color.</em></h1>
+    <p class="lead">Every blend below is a real full broadcast flake available from Crete Creations LLC. Arturo brings physical sample chips to every consultation — so you see each color under your actual garage lighting before committing to anything.</p>
+    <div class="btn-row">
+      <a href="calculator.html" class="btn btn-red">Get Instant Estimate →</a>
+      <a href="contact.html" class="btn btn-out">📞 (417) 483-7082</a>
+    </div>
+  </div>
+</div>
+
+<div class="custom-banner">
+  <div class="custom-banner-inner">
+    <div style="font-size:36px;flex-shrink:0">🎨</div>
+    <div class="custom-banner-text">
+      <strong>Custom Flake &amp; Hybrid Blends Available</strong>
+      <p>Don't see exactly what you're looking for? Arturo can create custom flake blends and hybrid combinations not shown here — available at an upcharge. Ask at your free consultation.</p>
+      <div class="custom-tags">
+        <span class="custom-tag">Custom Color Blends</span>
+        <span class="custom-tag">Hybrid Flake Systems</span>
+        <span class="custom-tag">Upcharge Applies</span>
+      </div>
+    </div>
+    <a href="contact.html" class="btn btn-out" style="flex-shrink:0">Ask About Custom →</a>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="si">
+    <span class="sl">Full Flake Broadcast · 27 Available Blends</span>
+    <h2 class="sh">All <em>Color Options</em></h2>
+    <div class="rule"></div>
+    <p style="font-size:15px;font-weight:300;color:var(--silver-lt);max-width:680px;line-height:1.75;margin-bottom:32px">These are the standard full broadcast flake blends available from Crete Creations. Gray and charcoal tones are the most popular choices — clean, modern, and they conceal tire marks and daily wear beautifully. Arturo brings physical chips to every consultation so you see the real color under your lighting before any product is opened.</p>
+
+    <div class="filter-wrap">
+      <span class="filter-label">Filter:</span>
+      <button class="filter-btn active" onclick="filterSwatches('all',this)">All 27</button>
+      <button class="filter-btn" onclick="filterSwatches('grey',this)">Grey Tones</button>
+      <button class="filter-btn" onclick="filterSwatches('warm',this)">Warm Tones</button>
+      <button class="filter-btn" onclick="filterSwatches('dark',this)">Dark &amp; Bold</button>
+      <button class="filter-btn" onclick="filterSwatches('cool',this)">Blue &amp; Cool</button>
+    </div>
+    <div class="filter-count">Showing <span id="count">27</span> colors</div>
+
+    <div class="swatch-grid" id="swatchGrid">
+<div class="swatch-card" data-cat="grey">
+  <div class="swatch-img-wrap">
+    <div class="swatch-badge">MOST POPULAR</div>
+    <img src="epoxy-flake-color-arrowhead-garage-floor-joplin.jpg" alt="Arrowhead epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
+  </div>
+  <div class="swatch-body">
+    <div class="swatch-name">Arrowhead</div>
+    <div class="swatch-cat">Grey Tones</div>
+  </div>
+</div>
+<div class="swatch-card" data-cat="dark">
+  <div class="swatch-img-wrap">
+    <div class="swatch-badge">MOST POPULAR</div>
+    <img src="epoxy-flake-color-domino-black-white-garage-floor.jpg" alt="Domino epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
+  </div>
+  <div class="swatch-body">
+    <div class="swatch-name">Domino</div>
+    <div class="swatch-cat">Dark &amp; Bold</div>
+  </div>
+</div>
+<div class="swatch-card" data-cat="grey">
+  <div class="swatch-img-wrap">
+    <div class="swatch-badge">MOST POPULAR</div>
+    <img src="epoxy-flake-color-denali-grey-garage-floor-joplin.jpg" alt="Denali epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
+  </div>
+  <div class="swatch-body">
+    <div class="swatch-name">Denali</div>
+    <div class="swatch-cat">Grey Tones</div>
+  </div>
+</div>
+<div class="swatch-card" data-cat="grey">
+  <div class="swatch-img-wrap">
+    
+    <img src="epoxy-flake-color-shoreline-slate-grey-garage-floor.jpg" alt="Shoreline epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
+  </div>
+  <div class="swatch-body">
+    <div class="swatch-name">Shoreline</div>
+    <div class="swatch-cat">Grey Tones</div>
+  </div>
+</div>
+<div class="swatch-card" data-cat="grey">
+  <div class="swatch-img-wrap">
+    
+    <img src="epoxy-flake-color-husky-blue-grey-garage-floor.jpg" alt="Husky epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
+  </div>
+  <div class="swatch-body">
+    <div class="swatch-name">Husky</div>
+    <div class="swatch-cat">Grey Tones</div>
+  </div>
+</div>
+<div class="swatch-card" data-cat="cool">
+  <div class="swatch-img-wrap">
+    
+    <img src="epoxy-flake-color-comet-blue-grey-garage-floor.jpg" alt="Comet epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
+  </div>
+  <div class="swatch-body">
+    <div class="swatch-name">Comet</div>
+    <div class="swatch-cat">Blue &amp; Cool</div>
+  </div>
+</div>
+<div class="swatch-card" data-cat="cool">
+  <div class="swatch-img-wrap">
+    
+    <img src="epoxy-flake-color-slate-blue-grey-garage-floor.jpg" alt="Slate epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
+  </div>
+  <div class="swatch-body">
+    <div class="swatch-name">Slate</div>
+    <div class="swatch-cat">Blue &amp; Cool</div>
+  </div>
+</div>
+<div class="swatch-card" data-cat="cool">
+  <div class="swatch-img-wrap">
+    
+    <img src="epoxy-flake-color-glacier-blue-grey-garage-floor.webp" alt="Glacier epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
+  </div>
+  <div class="swatch-body">
+    <div class="swatch-name">Glacier</div>
+    <div class="swatch-cat">Blue &amp; Cool</div>
+  </div>
+</div>
+<div class="swatch-card" data-cat="dark">
+  <div class="swatch-img-wrap">
+    
+    <img src="epoxy-flake-color-houndstooth-dark-grey-garage-floor.jpg" alt="Houndstooth epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
+  </div>
+  <div class="swatch-body">
+    <div class="swatch-name">Houndstooth</div>
+    <div class="swatch-cat">Dark &amp; Bold</div>
+  </div>
+</div>
+<div class="swatch-card" data-cat="dark">
+  <div class="swatch-img-wrap">
+    
+    <img src="epoxy-flake-color-nightfall-dark-charcoal-garage-floor.jpg" alt="Nightfall epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
+  </div>
+  <div class="swatch-body">
+    <div class="swatch-name">Nightfall</div>
+    <div class="swatch-cat">Dark &amp; Bold</div>
+  </div>
+</div>
+<div class="swatch-card" data-cat="dark">
+  <div class="swatch-img-wrap">
+    
+    <img src="epoxy-flake-color-carbon-black-garage-floor.jpg" alt="Carbon epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
+  </div>
+  <div class="swatch-body">
+    <div class="swatch-name">Carbon</div>
+    <div class="swatch-cat">Dark &amp; Bold</div>
+  </div>
+</div>
+<div class="swatch-card" data-cat="dark">
+  <div class="swatch-img-wrap">
+    
+    <img src="epoxy-flake-color-raven-black-garage-floor.jpg" alt="Raven epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
+  </div>
+  <div class="swatch-body">
+    <div class="swatch-name">Raven</div>
+    <div class="swatch-cat">Dark &amp; Bold</div>
+  </div>
+</div>
+<div class="swatch-card" data-cat="grey">
+  <div class="swatch-img-wrap">
+    
+    <img src="epoxy-flake-color-gravel-cool-grey-garage-floor.jpg" alt="Gravel epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
+  </div>
+  <div class="swatch-body">
+    <div class="swatch-name">Gravel</div>
+    <div class="swatch-cat">Grey Tones</div>
+  </div>
+</div>
+<div class="swatch-card" data-cat="grey">
+  <div class="swatch-img-wrap">
+    
+    <img src="epoxy-flake-color-feather-grey-light-garage-floor.jpg" alt="Feather Grey epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
+  </div>
+  <div class="swatch-body">
+    <div class="swatch-name">Feather Grey</div>
+    <div class="swatch-cat">Grey Tones</div>
+  </div>
+</div>
+<div class="swatch-card" data-cat="warm">
+  <div class="swatch-img-wrap">
+    
+    <img src="epoxy-flake-color-mushroom-warm-grey-garage-floor.jpg" alt="Mushroom epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
+  </div>
+  <div class="swatch-body">
+    <div class="swatch-name">Mushroom</div>
+    <div class="swatch-cat">Warm Tones</div>
+  </div>
+</div>
+<div class="swatch-card" data-cat="warm">
+  <div class="swatch-img-wrap">
+    
+    <img src="epoxy-flake-color-wombat-warm-grey-garage-floor.jpg" alt="Wombat epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
+  </div>
+  <div class="swatch-body">
+    <div class="swatch-name">Wombat</div>
+    <div class="swatch-cat">Warm Tones</div>
+  </div>
+</div>
+<div class="swatch-card" data-cat="warm">
+  <div class="swatch-img-wrap">
+    <div class="swatch-badge">MOST POPULAR</div>
+    <img src="epoxy-flake-color-agate-joplin-mo.jpg" alt="Agate epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
+  </div>
+  <div class="swatch-body">
+    <div class="swatch-name">Agate</div>
+    <div class="swatch-cat">Warm Tones</div>
+  </div>
+</div>
+<div class="swatch-card" data-cat="warm">
+  <div class="swatch-img-wrap">
+    
+    <img src="epoxy-flake-color-cascade-warm-ivory-garage-floor.jpg" alt="Cascade epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
+  </div>
+  <div class="swatch-body">
+    <div class="swatch-name">Cascade</div>
+    <div class="swatch-cat">Warm Tones</div>
+  </div>
+</div>
+<div class="swatch-card" data-cat="warm">
+  <div class="swatch-img-wrap">
+    
+    <img src="epoxy-flake-color-safari-warm-beige-garage-floor.jpg" alt="Safari epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
+  </div>
+  <div class="swatch-body">
+    <div class="swatch-name">Safari</div>
+    <div class="swatch-cat">Warm Tones</div>
+  </div>
+</div>
+<div class="swatch-card" data-cat="warm">
+  <div class="swatch-img-wrap">
+    
+    <img src="epoxy-flake-color-outback-tan-brown-garage-floor.jpg" alt="Outback epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
+  </div>
+  <div class="swatch-body">
+    <div class="swatch-name">Outback</div>
+    <div class="swatch-cat">Warm Tones</div>
+  </div>
+</div>
+<div class="swatch-card" data-cat="warm">
+  <div class="swatch-img-wrap">
+    
+    <img src="epoxy-flake-color-coyote-earth-tone-garage-floor.jpg" alt="Coyote epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
+  </div>
+  <div class="swatch-body">
+    <div class="swatch-name">Coyote</div>
+    <div class="swatch-cat">Warm Tones</div>
+  </div>
+</div>
+<div class="swatch-card" data-cat="warm">
+  <div class="swatch-img-wrap">
+    
+    <img src="epoxy-flake-color-creekbed-tan-brown-garage-floor.jpg" alt="Creekbed epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
+  </div>
+  <div class="swatch-body">
+    <div class="swatch-name">Creekbed</div>
+    <div class="swatch-cat">Warm Tones</div>
+  </div>
+</div>
+<div class="swatch-card" data-cat="warm">
+  <div class="swatch-img-wrap">
+    
+    <img src="epoxy-flake-color-ozark-sage-earth-tone-garage-floor.jpg" alt="Ozark epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
+  </div>
+  <div class="swatch-body">
+    <div class="swatch-name">Ozark</div>
+    <div class="swatch-cat">Warm Tones</div>
+  </div>
+</div>
+<div class="swatch-card" data-cat="warm">
+  <div class="swatch-img-wrap">
+    
+    <img src="epoxy-flake-color-yosemite-grey-amber-garage-floor.jpg" alt="Yosemite epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
+  </div>
+  <div class="swatch-body">
+    <div class="swatch-name">Yosemite</div>
+    <div class="swatch-cat">Warm Tones</div>
+  </div>
+</div>
+<div class="swatch-card" data-cat="dark">
+  <div class="swatch-img-wrap">
+    
+    <img src="epoxy-flake-color-yukon-dark-grey-warm-garage-floor.jpg" alt="Yukon epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
+  </div>
+  <div class="swatch-body">
+    <div class="swatch-name">Yukon</div>
+    <div class="swatch-cat">Dark &amp; Bold</div>
+  </div>
+</div>
+<div class="swatch-card" data-cat="dark">
+  <div class="swatch-img-wrap">
+    
+    <img src="epoxy-flake-color-europa-grey-burgundy-garage-floor.jpg" alt="Europa epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
+  </div>
+  <div class="swatch-body">
+    <div class="swatch-name">Europa</div>
+    <div class="swatch-cat">Dark &amp; Bold</div>
+  </div>
+</div>
+<div class="swatch-card" data-cat="grey">
+  <div class="swatch-img-wrap">
+    
+    <img src="epoxy-flake-color-tidal-wave-grey-white-garage-floor.jpg" alt="Tidal Wave epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
+  </div>
+  <div class="swatch-body">
+    <div class="swatch-name">Tidal Wave</div>
+    <div class="swatch-cat">Grey Tones</div>
+  </div>
+</div>
+    </div>
+
+    <div class="info-box" style="margin-top:40px">
+      <p>💡 <strong>Pro tip:</strong> Colors look very different under garage lighting vs. natural daylight. Arturo brings physical sample chips to every free consultation — you see the exact blend in your actual space before any work begins. <a href="contact.html" style="color:var(--red-lt)">Schedule your free consultation →</a></p>
+    </div>
+  </div>
+</div>
+
+<div class="sec-alt">
+  <div class="si">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
+      <div>
+        <span class="sl">Choosing Your Color</span>
+        <h2 class="sh">What to Know <em>Before You Decide</em></h2>
+        <div class="rule"></div>
+        <div style="display:grid;gap:10px">
+          <div style="display:flex;gap:14px;align-items:flex-start;padding:14px 16px;background:var(--dark);border-left:3px solid var(--red)">
+            <span style="font-size:20px;flex-shrink:0">🔆</span>
+            <div><strong style="display:block;font-family:var(--fc);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--white);margin-bottom:3px">Lighting Changes Everything</strong><span style="font-size:14px;color:var(--silver)">The same flake looks noticeably different under LED garage lighting vs. an open garage door in daylight. Always evaluate samples in your actual space.</span></div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:flex-start;padding:14px 16px;background:var(--dark);border-left:3px solid var(--red)">
+            <span style="font-size:20px;flex-shrink:0">🚗</span>
+            <div><strong style="display:block;font-family:var(--fc);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--white);margin-bottom:3px">Grey Hides Tire Marks</strong><span style="font-size:14px;color:var(--silver)">Gray and charcoal blends are most popular for a reason — they conceal rubber marks, dust, and daily wear better than warm or light tones.</span></div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:flex-start;padding:14px 16px;background:var(--dark);border-left:3px solid var(--red)">
+            <span style="font-size:20px;flex-shrink:0">🎨</span>
+            <div><strong style="display:block;font-family:var(--fc);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--white);margin-bottom:3px">Custom Blends Available</strong><span style="font-size:14px;color:var(--silver)">If none of the 27 standard blends are exactly right, Arturo can create a custom or hybrid blend at an upcharge. Ask at the free consultation.</span></div>
+          </div>
+          <div style="display:flex;gap:14px;align-items:flex-start;padding:14px 16px;background:var(--dark);border-left:3px solid var(--red)">
+            <span style="font-size:20px;flex-shrink:0">📐</span>
+            <div><strong style="display:block;font-family:var(--fc);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--white);margin-bottom:3px">Full Coverage — Wall to Wall</strong><span style="font-size:14px;color:var(--silver)">Every Crete Creations installation is 100% full broadcast flake — wall to wall, no bare spots. The color you see in the sample is the color you get everywhere.</span></div>
+          </div>
         </div>
       </div>
-      <div class="custom-flake-cta">
-        <a href="https://cretecreationsllc.netlify.app/contact">Ask About Custom →</a>
+      <div>
+        <span class="sl">Ready to Get Started?</span>
+        <h2 class="sh">Pick a Color.<br><em>We'll Do the Rest.</em></h2>
+        <div class="rule"></div>
+        <p style="font-size:15px;font-weight:300;color:var(--silver-lt);line-height:1.75;margin-bottom:20px">Use the <a href="calculator.html" style="color:var(--red-lt)">instant project calculator</a> for a fast price estimate, then call Arturo at <a href="tel:4174837082" style="color:var(--red-lt)">(417) 483-7082</a> to schedule a free on-site consultation. He brings physical sample chips — you'll make your final decision in your actual garage, not on a screen.</p>
+        <a href="calculator.html" class="btn btn-red" style="display:block;text-align:center;margin-bottom:10px">Get Instant Estimate →</a>
+        <a href="contact.html" class="btn btn-out" style="display:block;text-align:center;margin-bottom:10px">Request Free Consultation</a>
+        <a href="tel:4174837082" class="btn btn-out" style="display:block;text-align:center">📞 (417) 483-7082</a>
       </div>
     </div>
   </div>
 </div>
-
-<section class="filter-section"><div class="wrap">
-  <div class="filter-bar">
-    <span class="filter-label">Filter:</span>
-    <button class="filter-btn active" onclick="filter('all',this)">All 27</button>
-    <button class="filter-btn" onclick="filter('popular',this)">⭐ Most Popular</button>
-    <button class="filter-btn" onclick="filter('grey',this)">Grey Tones</button>
-    <button class="filter-btn" onclick="filter('warm',this)">Warm Tones</button>
-    <button class="filter-btn" onclick="filter('dark',this)">Dark &amp; Bold</button>
-    <button class="filter-btn" onclick="filter('blue',this)">Blue &amp; Cool</button>
-  </div>
-
-  <div class="color-count">Showing <span id="countNum">27</span> colors</div>
-
-  <div class="colors-grid" id="colorGrid">
-
-    <!-- AGATE -->
-    <div class="color-card" data-tags="grey neutral popular" onclick="openLight('Agate','epoxy-flake-color-agate-joplin-mo.jpg','Silver-grey fine flake with white, black and cool grey tones. The most versatile grey blend in the lineup — works with virtually any garage or home exterior.')">
-      <img class="color-swatch" src="epoxy-flake-color-agate-joplin-mo.jpg" alt="Agate epoxy flake color" loading="lazy" />
-      <div class="color-info">
-        <div class="color-name">Agate</div>
-        <div class="color-desc">Silver-grey fine flake with white, black and cool grey tones</div>
-        <div class="color-tags"><span class="tag tag-grey">Grey</span><span class="tag tag-neutral">Neutral</span></div>
-      </div>
-    </div>
-
-    <!-- ARROWHEAD -->
-    <div class="color-card popular" data-tags="dark bold popular" onclick="openLight('Arrowhead','epoxy-flake-color-arrowhead-garage-floor-joplin.jpg','Bold charcoal, crimson red, white and grey — high contrast and dramatic. One of our most requested colors, especially for showroom-style garages and commercial spaces.')">
-      <img class="color-swatch" src="epoxy-flake-color-arrowhead-garage-floor-joplin.jpg" alt="Arrowhead epoxy flake color" loading="lazy" />
-      <div class="color-info">
-        <div class="color-name">Arrowhead</div>
-        <div class="color-desc">Charcoal, red, white and grey — bold and high contrast</div>
-        <div class="color-tags"><span class="tag tag-dark">Dark</span><span class="tag tag-bold">Bold</span></div>
-      </div>
-    </div>
-
-    <!-- CARBON -->
-    <div class="color-card" data-tags="dark bold" onclick="openLight('Carbon','epoxy-flake-color-carbon-black-garage-floor.jpg','Deep near-black with subtle dark grey texture throughout. A pure statement color for garages that want maximum drama with zero distraction.')">
-      <img class="color-swatch" src="epoxy-flake-color-carbon-black-garage-floor.jpg" alt="Carbon epoxy flake color" loading="lazy" />
-      <div class="color-info">
-        <div class="color-name">Carbon</div>
-        <div class="color-desc">Deep near-black with subtle dark grey texture</div>
-        <div class="color-tags"><span class="tag tag-dark">Dark</span><span class="tag tag-bold">Bold</span></div>
-      </div>
-    </div>
-
-    <!-- CASCADE -->
-    <div class="color-card" data-tags="warm neutral" onclick="openLight('Cascade','epoxy-flake-color-cascade-warm-ivory-garage-floor.jpg','Warm ivory and cream base with brown, grey and rust accents. A softer, warmer alternative to grey blends — works beautifully with tan, brick and stone home exteriors.')">
-      <img class="color-swatch" src="epoxy-flake-color-cascade-warm-ivory-garage-floor.jpg" alt="Cascade epoxy flake color" loading="lazy" />
-      <div class="color-info">
-        <div class="color-name">Cascade</div>
-        <div class="color-desc">Warm ivory and cream base with brown, grey and rust accents</div>
-        <div class="color-tags"><span class="tag tag-warm">Warm</span><span class="tag tag-neutral">Neutral</span></div>
-      </div>
-    </div>
-
-    <!-- COMET -->
-    <div class="color-card popular" data-tags="blue bold popular" onclick="openLight('Comet','epoxy-flake-color-comet-blue-grey-garage-floor.jpg','Blue, black, grey and white in a bold large-chip blend. Striking and contemporary — a top choice for homeowners who want color without going all the way to metallic epoxy.')">
-      <img class="color-swatch" src="epoxy-flake-color-comet-blue-grey-garage-floor.jpg" alt="Comet epoxy flake color" loading="lazy" />
-      <div class="color-info">
-        <div class="color-name">Comet</div>
-        <div class="color-desc">Blue, black, grey and white — bold, cool and contemporary</div>
-        <div class="color-tags"><span class="tag tag-blue">Blue</span><span class="tag tag-bold">Bold</span></div>
-      </div>
-    </div>
-
-    <!-- COYOTE -->
-    <div class="color-card" data-tags="warm neutral" onclick="openLight('Coyote','epoxy-flake-color-coyote-earth-tone-garage-floor.jpg','Warm white, tan, grey and rust earth tones in a large-chip blend. A natural, organic feel that pairs well with wood-toned interiors and warmer home aesthetics.')">
-      <img class="color-swatch" src="epoxy-flake-color-coyote-earth-tone-garage-floor.jpg" alt="Coyote epoxy flake color" loading="lazy" />
-      <div class="color-info">
-        <div class="color-name">Coyote</div>
-        <div class="color-desc">Warm white, tan, grey and rust earth tones</div>
-        <div class="color-tags"><span class="tag tag-warm">Warm</span><span class="tag tag-neutral">Neutral</span></div>
-      </div>
-    </div>
-
-    <!-- CREEKBED -->
-    <div class="color-card" data-tags="warm neutral" onclick="openLight('Creekbed','epoxy-flake-color-creekbed-tan-brown-garage-floor.jpg','Natural tan, white, grey and warm brown blend. Earthy and organic — evokes natural stone without going dark. A great choice for spaces that spend time with the garage door open.')">
-      <img class="color-swatch" src="epoxy-flake-color-creekbed-tan-brown-garage-floor.jpg" alt="Creekbed epoxy flake color" loading="lazy" />
-      <div class="color-info">
-        <div class="color-name">Creekbed</div>
-        <div class="color-desc">Natural tan, white, grey and warm brown blend</div>
-        <div class="color-tags"><span class="tag tag-warm">Warm</span><span class="tag tag-neutral">Neutral</span></div>
-      </div>
-    </div>
-
-    <!-- DENALI -->
-    <div class="color-card popular" data-tags="grey neutral popular" onclick="openLight('Denali','epoxy-flake-color-denali-grey-garage-floor-joplin.jpg','Medium grey with black pops and fine light flake mix. A clean, modern grey blend that works in virtually any setting — one of the most-installed colors in the Crete Creations portfolio.')">
-      <img class="color-swatch" src="epoxy-flake-color-denali-grey-garage-floor-joplin.jpg" alt="Denali epoxy flake color" loading="lazy" />
-      <div class="color-info">
-        <div class="color-name">Denali</div>
-        <div class="color-desc">Medium grey with black pops and fine light flake mix</div>
-        <div class="color-tags"><span class="tag tag-grey">Grey</span><span class="tag tag-neutral">Neutral</span></div>
-      </div>
-    </div>
-
-    <!-- DOMINO -->
-    <div class="color-card popular" data-tags="dark bold popular" onclick="openLight('Domino','epoxy-flake-color-domino-black-white-garage-floor.jpg','Classic black, white and grey — clean, graphic, high-contrast. The most timeless color in the lineup. Photographs exceptionally well and looks sharp under any lighting.')">
-      <img class="color-swatch" src="epoxy-flake-color-domino-black-white-garage-floor.jpg" alt="Domino epoxy flake color" loading="lazy" />
-      <div class="color-info">
-        <div class="color-name">Domino</div>
-        <div class="color-desc">Classic black, white and grey — clean and high-contrast</div>
-        <div class="color-tags"><span class="tag tag-dark">Dark</span><span class="tag tag-bold">Bold</span></div>
-      </div>
-    </div>
-
-    <!-- EUROPA -->
-    <div class="color-card" data-tags="grey warm" onclick="openLight('Europa','epoxy-flake-color-europa-grey-burgundy-garage-floor.jpg','Grey base with deep burgundy/wine and beige accent flakes. Sophisticated and distinctive — one of the more unique options in the lineup for homeowners who want something truly different.')">
-      <img class="color-swatch" src="epoxy-flake-color-europa-grey-burgundy-garage-floor.jpg" alt="Europa epoxy flake color" loading="lazy" />
-      <div class="color-info">
-        <div class="color-name">Europa</div>
-        <div class="color-desc">Grey base with deep burgundy and beige accents</div>
-        <div class="color-tags"><span class="tag tag-grey">Grey</span><span class="tag tag-warm">Warm</span></div>
-      </div>
-    </div>
-
-    <!-- FEATHER GREY -->
-    <div class="color-card popular" data-tags="grey neutral popular" onclick="openLight('Feather Grey','epoxy-flake-color-feather-grey-light-garage-floor.jpg','Soft grey, black and white — lighter and airier than Denali. Ideal for garages with limited natural light where a brighter floor makes a meaningful visual difference.')">
-      <img class="color-swatch" src="epoxy-flake-color-feather-grey-light-garage-floor.jpg" alt="Feather Grey epoxy flake color" loading="lazy" />
-      <div class="color-info">
-        <div class="color-name">Feather Grey</div>
-        <div class="color-desc">Soft grey, black and white — lighter and airier than Denali</div>
-        <div class="color-tags"><span class="tag tag-grey">Grey</span><span class="tag tag-neutral">Neutral</span></div>
-      </div>
-    </div>
-
-    <!-- GLACIER -->
-    <div class="color-card popular" data-tags="blue neutral popular" onclick="openLight('Glacier','epoxy-flake-color-glacier-blue-grey-garage-floor.webp','Pale blue, soft grey and white — cool, clean and crisp. One of the most popular color choices for Grand Lake and lake property garages where a fresh, coastal feel is the goal.')">
-      <img class="color-swatch" src="epoxy-flake-color-glacier-blue-grey-garage-floor.webp" alt="Glacier epoxy flake color" loading="lazy" />
-      <div class="color-info">
-        <div class="color-name">Glacier</div>
-        <div class="color-desc">Pale blue, soft grey and white — cool, clean and crisp</div>
-        <div class="color-tags"><span class="tag tag-blue">Blue</span><span class="tag tag-neutral">Neutral</span></div>
-      </div>
-    </div>
-
-    <!-- GRAVEL -->
-    <div class="color-card" data-tags="grey neutral" onclick="openLight('Gravel','epoxy-flake-color-gravel-cool-grey-garage-floor.jpg','Cool grey and white large-chip blend — open and bright. A fresh, contemporary grey that skews lighter than most. Great for spaces that want a clean, uncluttered look.')">
-      <img class="color-swatch" src="epoxy-flake-color-gravel-cool-grey-garage-floor.jpg" alt="Gravel epoxy flake color" loading="lazy" />
-      <div class="color-info">
-        <div class="color-name">Gravel</div>
-        <div class="color-desc">Cool grey and white large-chip blend — open and bright</div>
-        <div class="color-tags"><span class="tag tag-grey">Grey</span><span class="tag tag-neutral">Neutral</span></div>
-      </div>
-    </div>
-
-    <!-- HOUNDSTOOTH -->
-    <div class="color-card" data-tags="dark bold" onclick="openLight('Houndstooth','epoxy-flake-color-houndstooth-dark-grey-garage-floor.jpg','Dark grey and near-black large flake — bold and moody. A sophisticated dark option that avoids full black while still making a strong visual statement.')">
-      <img class="color-swatch" src="epoxy-flake-color-houndstooth-dark-grey-garage-floor.jpg" alt="Houndstooth epoxy flake color" loading="lazy" />
-      <div class="color-info">
-        <div class="color-name">Houndstooth</div>
-        <div class="color-desc">Dark grey and near-black large flake — bold and moody</div>
-        <div class="color-tags"><span class="tag tag-dark">Dark</span><span class="tag tag-bold">Bold</span></div>
-      </div>
-    </div>
-
-    <!-- HUSKY -->
-    <div class="color-card" data-tags="grey blue neutral" onclick="openLight('Husky','epoxy-flake-color-husky-blue-grey-garage-floor.jpg','Blue-grey fine flake with darker accents — cool and refined. Sits between a true grey and a blue-grey, making it a subtle way to bring color into the floor without committing fully to blue.')">
-      <img class="color-swatch" src="epoxy-flake-color-husky-blue-grey-garage-floor.jpg" alt="Husky epoxy flake color" loading="lazy" />
-      <div class="color-info">
-        <div class="color-name">Husky</div>
-        <div class="color-desc">Blue-grey fine flake with dark accents — cool and refined</div>
-        <div class="color-tags"><span class="tag tag-blue">Blue</span><span class="tag tag-grey">Grey</span></div>
-      </div>
-    </div>
-
-    <!-- MUSHROOM -->
-    <div class="color-card popular" data-tags="warm neutral popular" onclick="openLight('Mushroom','epoxy-flake-color-mushroom-warm-grey-garage-floor.jpg','White, warm grey, taupe and dark grey blend. A warm-neutral that bridges the gap between cool grey and earth tone — the go-to for homes with tan, beige or brown exteriors.')">
-      <img class="color-swatch" src="epoxy-flake-color-mushroom-warm-grey-garage-floor.jpg" alt="Mushroom epoxy flake color" loading="lazy" />
-      <div class="color-info">
-        <div class="color-name">Mushroom</div>
-        <div class="color-desc">White, warm grey and taupe blend — warm and versatile</div>
-        <div class="color-tags"><span class="tag tag-warm">Warm</span><span class="tag tag-neutral">Neutral</span></div>
-      </div>
-    </div>
-
-    <!-- NIGHTFALL -->
-    <div class="color-card" data-tags="dark bold" onclick="openLight('Nightfall','epoxy-flake-color-nightfall-dark-charcoal-garage-floor.jpg','Dark charcoal and black with light grey pops — deep and dramatic. Similar to Carbon but with more visible texture and slight variation that keeps it from reading as flat black.')">
-      <img class="color-swatch" src="epoxy-flake-color-nightfall-dark-charcoal-garage-floor.jpg" alt="Nightfall epoxy flake color" loading="lazy" />
-      <div class="color-info">
-        <div class="color-name">Nightfall</div>
-        <div class="color-desc">Dark charcoal and black with light grey pops</div>
-        <div class="color-tags"><span class="tag tag-dark">Dark</span><span class="tag tag-bold">Bold</span></div>
-      </div>
-    </div>
-
-    <!-- OUTBACK -->
-    <div class="color-card" data-tags="warm bold" onclick="openLight('Outback','epoxy-flake-color-outback-tan-brown-garage-floor.jpg','Rich tan, brown, cream and black in a bold earth-tone blend. A warm, rugged color palette that works particularly well in shop floors, barns and working garages throughout the Four State region.')">
-      <img class="color-swatch" src="epoxy-flake-color-outback-tan-brown-garage-floor.jpg" alt="Outback epoxy flake color" loading="lazy" />
-      <div class="color-info">
-        <div class="color-name">Outback</div>
-        <div class="color-desc">Rich tan, brown, cream and black earth-tone blend</div>
-        <div class="color-tags"><span class="tag tag-warm">Warm</span><span class="tag tag-bold">Bold</span></div>
-      </div>
-    </div>
-
-    <!-- OZARK -->
-    <div class="color-card" data-tags="warm neutral" onclick="openLight('Ozark','epoxy-flake-color-ozark-sage-earth-tone-garage-floor.jpg','Natural sage, brown, tan and white — earthy and regional. Named for a reason: this palette feels native to the Ozarks, a natural fit for Missouri, Arkansas and Oklahoma properties.')">
-      <img class="color-swatch" src="epoxy-flake-color-ozark-sage-earth-tone-garage-floor.jpg" alt="Ozark epoxy flake color" loading="lazy" />
-      <div class="color-info">
-        <div class="color-name">Ozark</div>
-        <div class="color-desc">Sage, brown, tan and white — earthy and regional</div>
-        <div class="color-tags"><span class="tag tag-warm">Warm</span><span class="tag tag-neutral">Neutral</span></div>
-      </div>
-    </div>
-
-    <!-- RAVEN -->
-    <div class="color-card" data-tags="dark bold" onclick="openLight('Raven','epoxy-flake-color-raven-black-garage-floor.jpg','Deep black dominant with dark grey and white accent flakes — a bold, graphic statement. For homeowners who want maximum contrast and a floor that commands attention.')">
-      <img class="color-swatch" src="epoxy-flake-color-raven-black-garage-floor.jpg" alt="Raven epoxy flake color" loading="lazy" />
-      <div class="color-info">
-        <div class="color-name">Raven</div>
-        <div class="color-desc">Deep black dominant with dark grey and white accent flakes</div>
-        <div class="color-tags"><span class="tag tag-dark">Dark</span><span class="tag tag-bold">Bold</span></div>
-      </div>
-    </div>
-
-    <!-- SAFARI -->
-    <div class="color-card" data-tags="warm neutral" onclick="openLight('Safari','epoxy-flake-color-safari-warm-beige-garage-floor.jpg','Warm tan, beige and cream with black accents. A light, airy warm tone that brightens a space significantly. Popular for finished garage spaces used as workshops or recreational rooms.')">
-      <img class="color-swatch" src="epoxy-flake-color-safari-warm-beige-garage-floor.jpg" alt="Safari epoxy flake color" loading="lazy" />
-      <div class="color-info">
-        <div class="color-name">Safari</div>
-        <div class="color-desc">Warm tan, beige and cream with black accents</div>
-        <div class="color-tags"><span class="tag tag-warm">Warm</span><span class="tag tag-neutral">Neutral</span></div>
-      </div>
-    </div>
-
-    <!-- SHORELINE -->
-    <div class="color-card" data-tags="grey neutral" onclick="openLight('Shoreline','epoxy-flake-color-shoreline-slate-grey-garage-floor.jpg','Soft slate medium-grey with subtle warm undertones. Sits between a cool grey and a warm grey — one of the most flattering neutrals in the lineup for mixed-light environments.')">
-      <img class="color-swatch" src="epoxy-flake-color-shoreline-slate-grey-garage-floor.jpg" alt="Shoreline epoxy flake color" loading="lazy" />
-      <div class="color-info">
-        <div class="color-name">Shoreline</div>
-        <div class="color-desc">Soft slate medium-grey with warm undertones</div>
-        <div class="color-tags"><span class="tag tag-grey">Grey</span><span class="tag tag-neutral">Neutral</span></div>
-      </div>
-    </div>
-
-    <!-- SLATE -->
-    <div class="color-card" data-tags="blue grey neutral" onclick="openLight('Slate','epoxy-flake-color-slate-blue-grey-garage-floor.jpg','Cool blue-grey fine flake with white — calm and coastal. A refined, understated blue that reads as grey from a distance but reveals its color character up close.')">
-      <img class="color-swatch" src="epoxy-flake-color-slate-blue-grey-garage-floor.jpg" alt="Slate epoxy flake color" loading="lazy" />
-      <div class="color-info">
-        <div class="color-name">Slate</div>
-        <div class="color-desc">Cool blue-grey fine flake with white — calm and coastal</div>
-        <div class="color-tags"><span class="tag tag-blue">Blue</span><span class="tag tag-grey">Grey</span></div>
-      </div>
-    </div>
-
-    <!-- TIDAL WAVE -->
-    <div class="color-card popular" data-tags="grey bold popular" onclick="openLight('Tidal Wave','epoxy-flake-color-tidal-wave-grey-white-garage-floor.jpg','Grey, white and black large chip — bold, clean and modern. A high-contrast grey blend with large flake scale that creates a strong textural presence on the floor.')">
-      <img class="color-swatch" src="epoxy-flake-color-tidal-wave-grey-white-garage-floor.jpg" alt="Tidal Wave epoxy flake color" loading="lazy" />
-      <div class="color-info">
-        <div class="color-name">Tidal Wave</div>
-        <div class="color-desc">Grey, white and black large chip — bold and modern</div>
-        <div class="color-tags"><span class="tag tag-grey">Grey</span><span class="tag tag-bold">Bold</span></div>
-      </div>
-    </div>
-
-    <!-- WOMBAT -->
-    <div class="color-card" data-tags="warm grey neutral" onclick="openLight('Wombat','epoxy-flake-color-wombat-warm-grey-garage-floor.jpg','Warm grey, beige and black in a soft, balanced blend. One of the most approachable neutrals in the lineup — neither cool nor warm enough to conflict with most home aesthetics.')">
-      <img class="color-swatch" src="epoxy-flake-color-wombat-warm-grey-garage-floor.jpg" alt="Wombat epoxy flake color" loading="lazy" />
-      <div class="color-info">
-        <div class="color-name">Wombat</div>
-        <div class="color-desc">Warm grey, beige and black — soft and balanced</div>
-        <div class="color-tags"><span class="tag tag-warm">Warm</span><span class="tag tag-grey">Grey</span></div>
-      </div>
-    </div>
-
-    <!-- YOSEMITE -->
-    <div class="color-card" data-tags="warm grey neutral" onclick="openLight('Yosemite','epoxy-flake-color-yosemite-grey-amber-garage-floor.jpg','Grey base with golden amber, warm tan and black speckles. A mineral-inspired palette that brings warmth to a grey foundation — unique in the lineup and particularly striking in large spaces.')">
-      <img class="color-swatch" src="epoxy-flake-color-yosemite-grey-amber-garage-floor.jpg" alt="Yosemite epoxy flake color" loading="lazy" />
-      <div class="color-info">
-        <div class="color-name">Yosemite</div>
-        <div class="color-desc">Grey base with golden amber, warm tan and black speckles</div>
-        <div class="color-tags"><span class="tag tag-grey">Grey</span><span class="tag tag-warm">Warm</span></div>
-      </div>
-    </div>
-
-    <!-- YUKON -->
-    <div class="color-card" data-tags="grey warm neutral" onclick="openLight('Yukon','epoxy-flake-color-yukon-dark-grey-warm-garage-floor.jpg','Dark grey with warm beige, white and black flake — a refined combination of cool and warm tones. One of the most nuanced options in the lineup; looks different depending on lighting conditions.')">
-      <img class="color-swatch" src="epoxy-flake-color-yukon-dark-grey-warm-garage-floor.jpg" alt="Yukon epoxy flake color" loading="lazy" />
-      <div class="color-info">
-        <div class="color-name">Yukon</div>
-        <div class="color-desc">Dark grey with warm beige, white and black flake</div>
-        <div class="color-tags"><span class="tag tag-grey">Grey</span><span class="tag tag-warm">Warm</span></div>
-      </div>
-    </div>
-
-  </div><!-- /colors-grid -->
-</div></section>
 
 <!-- LIGHTBOX -->
-<div class="lightbox" id="lightbox" onclick="closeLightboxOutside(event)">
-  <div class="lightbox-inner">
-    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-    <img id="lbImg" src="" alt="" />
-    <div class="lightbox-body">
-      <div class="lightbox-name" id="lbName"></div>
-      <div class="lightbox-desc" id="lbDesc"></div>
-      <div class="lightbox-actions">
-        <a href="https://cretecreationsllc.netlify.app/contact" class="lb-cta">Request This Color →</a>
-        <a href="https://cretecreationsllc.netlify.app/calculator" class="lb-calc">Get an Estimate</a>
-      </div>
-    </div>
+<div class="lightbox" id="lb" onclick="closeLB(event)">
+  <div class="lb-inner">
+    <button class="lb-close" onclick="document.getElementById('lb').classList.remove('open')">✕</button>
+    <img id="lb-img" src="" alt="" />
+    <div class="lb-name" id="lb-name"></div>
   </div>
 </div>
 
-<!-- CTA STRIP -->
-<section class="cta-strip"><div class="wrap">
-  <h2>Ready to pick your floor?</h2>
-  <p>Arturo brings physical samples to every free consultation so you see each color under your actual garage lighting before deciding. No screen can replace that.</p>
-  <div class="cta-btns">
-    <a href="https://cretecreationsllc.netlify.app/calculator" class="btn-a">Get an Instant Estimate →</a>
-    <a href="https://cretecreationsllc.netlify.app/contact" class="btn-b">📞 Schedule Free Consultation</a>
-  </div>
-</div></section>
-
-<!-- FOOTER -->
 <footer>
 <div class="foot-inner">
   <div class="foot-grid">
@@ -747,4 +732,39 @@ function toggleMenu(){
 </div>
 </footer>
 <a href="contact.html" class="float-cta">🚀 Free Quote</a>
+
+<script>
+function filterSwatches(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  var cards = document.querySelectorAll('.swatch-card');
+  var visible = 0;
+  cards.forEach(function(c) {
+    if (cat === 'all' || c.dataset.cat === cat) {
+      c.style.display = '';
+      visible++;
+    } else {
+      c.style.display = 'none';
+    }
+  });
+  document.getElementById('count').textContent = visible;
+}
+function openLB(name, img) {
+  document.getElementById('lb-img').src = img;
+  document.getElementById('lb-name').textContent = name;
+  document.getElementById('lb').classList.add('open');
+}
+function closeLB(e) {
+  if (e.target === document.getElementById('lb')) {
+    document.getElementById('lb').classList.remove('open');
+  }
+}
+document.querySelectorAll('.swatch-card').forEach(function(card) {
+  card.addEventListener('click', function() {
+    var img = card.querySelector('img');
+    var name = card.querySelector('.swatch-name').textContent;
+    openLB(name, img.src);
+  });
+});
+</script>
 </body></html>
