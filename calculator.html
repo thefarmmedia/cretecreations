@@ -146,6 +146,27 @@ nav{background:var(--black);position:sticky;top:0;z-index:1000;border-bottom:2px
     .hidden { display: none; }
     .footer-cta { text-align: center; padding: 0 0 70px; }
     @media (max-width: 900px) { .hero-grid, .feature-grid, .grid-2, .stats, .includes, .progress-wrap { grid-template-columns: 1fr; } .hero { padding-top: 50px; } .progress-arrow { display: none; } }
+  
+    footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0 28px}
+    .foot-inner{max-width:1300px;margin:0 auto;padding:0 24px}
+    .foot-grid{display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:40px;margin-bottom:44px}
+    .foot-logo-row{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+    .foot-logo-row img{width:52px;height:52px;border-radius:50%;border:2px solid var(--red);object-fit:contain}
+    .foot-brand{font-family:var(--fh);font-size:17px;color:var(--white);font-weight:700;letter-spacing:.06em}
+    .foot-brand span{color:var(--red-lt)}
+    .foot-desc{font-size:13px;font-weight:300;color:var(--silver);line-height:1.7;margin-bottom:18px}
+    .foot-contact a{display:block;font-size:13px;color:var(--silver);margin-bottom:6px;font-family:var(--fc);letter-spacing:.04em;transition:color .15s}
+    .foot-contact a:hover{color:var(--white)}
+    .foot-col h4{font-family:var(--fc);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red-lt);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--rim)}
+    .foot-col a{display:block;font-size:13px;color:var(--silver);margin-bottom:7px;font-family:var(--fc);letter-spacing:.04em;transition:color .15s}
+    .foot-col a:hover{color:var(--white)}
+    .foot-bottom{border-top:1px solid var(--rim);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+    .foot-copy{font-family:var(--fc);font-size:11px;color:var(--silver);letter-spacing:.06em}
+    .foot-links{display:flex;gap:20px}
+    .foot-links a{font-family:var(--fc);font-size:11px;color:var(--silver);letter-spacing:.06em;text-transform:uppercase;transition:color .15s}
+    .foot-links a:hover{color:var(--red-lt)}
+    @media(max-width:960px){.foot-grid{grid-template-columns:1fr 1fr}}
+    @media(max-width:600px){.foot-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
