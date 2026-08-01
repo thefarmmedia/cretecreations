@@ -1,3 +1,6 @@
 User-agent: *
 Allow: /
 Sitemap: https://cretecreationsllc.com/sitemap.xml
+
+# AI crawler reference: https://llmstxt.org/
+# https://cretecreationsllc.com/llms.txt
