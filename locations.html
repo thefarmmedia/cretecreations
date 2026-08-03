@@ -13,7 +13,7 @@
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cretecreationsllc.com/"},{"@type":"ListItem","position":2,"name":"Service Areas","item":"https://cretecreationsllc.com/locations"}]}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;600;700&display=swap"><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -53,7 +53,7 @@
       {"@type":"City","name":"Bentonville","containedIn":"Arkansas"},
       {"@type":"City","name":"Rogers","containedIn":"Arkansas"}
     ],
-    "sameAs": ["https://cretecreationsllc.netlify.app"],
+    "sameAs": ["https://cretecreationsllc.com"],
     "openingHours": "Mo-Fr 07:00-18:00",
     "priceRange": "$$"
   }
@@ -97,7 +97,7 @@ nav{background:var(--black);position:sticky;top:0;z-index:1000;border-bottom:2px
 .dropdown a:hover{color:var(--red-lt);background:rgba(196,30,30,.08)}
 .drop-divider{height:1px;background:var(--rim);margin:5px 0}
 .drop-section{font-family:var(--fc);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--silver);padding:8px 18px 3px}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;padding:8px;min-width:44px;min-height:44px;background:none;border:none}
 .hamburger span{display:block;width:24px;height:2px;background:var(--white);transition:all .25s}
 .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .hamburger.open span:nth-child(2){opacity:0}
@@ -172,7 +172,7 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
 .foot-desc{font-size:13px;font-weight:300;color:var(--silver);line-height:1.7;margin-bottom:18px}
 .foot-contact a{display:block;font-size:13px;color:var(--silver);margin-bottom:6px;font-family:var(--fc);letter-spacing:.04em;transition:color .15s}
 .foot-contact a:hover{color:var(--white)}
-.foot-col h4{font-family:var(--fc);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red-lt);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--rim)}
+.foot-col h3{font-family:var(--fc);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red-lt);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--rim)}
 .foot-col a{display:block;font-size:13px;color:var(--silver);margin-bottom:7px;font-family:var(--fc);letter-spacing:.04em;transition:color .15s}
 .foot-col a:hover{color:var(--white)}
 .foot-bottom{border-top:1px solid var(--rim);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
@@ -269,9 +269,10 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
     <div class="mob-section">More</div>
     <a href="gallery.html">Gallery</a>
     <a href="contact.html">💲 Price Free Quote</a>
-    <a href="contact.html" style="color:var(--red-lt)">→ Get Free Quote</a>
+    <a href="contact.html" style="color:var(--red-lt);text-decoration:underline">→ Get Free Quote</a>
   </div>
 </nav>
+<main>
 <script>function toggleMenu(){var m=document.getElementById('mob');var h=document.getElementById('hbg');m.classList.toggle('open');h.classList.toggle('open');}</script>
 
 <!-- PAGE HERO -->
@@ -284,7 +285,7 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
     <p class="lead">Based in Joplin, Missouri. Arturo Escalante serves homeowners and businesses across Missouri, Kansas, Oklahoma, and Arkansas — the same complete professional system at every location, no compromise.</p>
     <div class="btn-row">
       <a href="contact.html" class="btn btn-red">📊 Get a Free Quote →</a>
-      <a href="contact.html" class="btn btn-out">📞 (417) 483-7082</a>
+      <a href="tel:4174837082" class="btn btn-out">📞 (417) 483-7082</a>
     </div>
   </div>
 </div>
@@ -727,7 +728,7 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
         <h2 class="sh">Arturo Travels for <em>the Right Project</em></h2>
         <div class="rule"></div>
         <p style="font-size:15px;font-weight:300;color:var(--silver-lt);line-height:1.8;margin-bottom:16px">The 18 cities above represent Arturo's regular service territory — but they're not a hard limit. He considers projects beyond the standard radius based on scope, project type, and scheduling. If you're in the Four State region and don't see your city listed, call and ask.</p>
-        <p style="font-size:15px;font-weight:300;color:var(--silver-lt);line-height:1.8;margin-bottom:24px">Use the <a href="contact.html" style="color:var(--red-lt)">free quote form</a> to get a ballpark on your project — then call <a href="tel:4174837082" style="color:var(--red-lt)">(417) 483-7082</a> and ask about your specific location. Arturo answers personally.</p>
+        <p style="font-size:15px;font-weight:300;color:var(--silver-lt);line-height:1.8;margin-bottom:24px">Use the <a href="contact.html" style="color:var(--red-lt);text-decoration:underline">free quote form</a> to get a ballpark on your project — then call <a href="tel:4174837082" style="color:var(--red-lt);text-decoration:underline">(417) 483-7082</a> and ask about your specific location. Arturo answers personally.</p>
         <div class="btn-row">
           <a href="tel:4174837082" class="btn btn-red">📞 (417) 483-7082</a>
           <a href="contact.html" class="btn btn-out">Get Instant Estimate</a>
@@ -739,7 +740,7 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
           <input type="text" placeholder="Name" style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none;margin-bottom:10px" />
           <input type="tel" placeholder="Phone *" required style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none;margin-bottom:10px" />
           <input type="text" placeholder="City / ZIP you're located in" style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none;margin-bottom:10px" />
-          <select style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--silver);font-family:var(--fc);font-size:13px;outline:none;margin-bottom:14px">
+          <select aria-label="Select a service" style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--silver);font-family:var(--fc);font-size:13px;outline:none;margin-bottom:14px">
             <option>Select a service...</option>
             <option>Epoxy Garage Floor</option><option>Polyaspartic Coating</option><option>Metallic Epoxy</option>
             <option>Driveway Overlay</option><option>Commercial Floor</option><option>Basement Floor</option>
@@ -754,6 +755,7 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
 </div>
 
 <!-- FOOTER -->
+</main>
 <footer>
 <div class="foot-inner">
   <div class="foot-grid">
@@ -774,7 +776,7 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
       </div>
     </div>
     <div class="foot-col">
-      <h4>Services</h4>
+      <h3>Services</h3>
       <a href="epoxy-floors.html">Epoxy Garage Floors</a>
       <a href="polyaspartic.html">Polyaspartic Coatings</a>
       <a href="metallic-epoxy.html">Metallic Epoxy</a>
@@ -789,20 +791,20 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
       <a href="concrete-repair.html">Concrete Repair</a>
     </div>
     <div class="foot-col">
-      <h4>Missouri</h4>
+      <h3>Missouri</h3>
       <a href="joplin.html">Joplin</a><a href="carthage.html">Carthage</a><a href="neosho.html">Neosho</a>
       <a href="webb-city.html">Webb City</a><a href="carl-junction.html">Carl Junction</a>
       <a href="lamar.html">Lamar</a><a href="granby.html">Granby</a><a href="anderson.html">Anderson</a>
-      <h4 style="margin-top:16px">Oklahoma</h4>
+      <h3 style="margin-top:16px">Oklahoma</h3>
       <a href="grove.html">Grove / Grand Lake</a><a href="miami-ok.html">Miami</a>
       <a href="vinita.html">Vinita</a><a href="pryor.html">Pryor</a>
     </div>
     <div class="foot-col">
-      <h4>Kansas</h4>
+      <h3>Kansas</h3>
       <a href="pittsburg.html">Pittsburg</a><a href="galena.html">Galena</a><a href="columbus-ks.html">Columbus</a>
-      <h4 style="margin-top:16px">Arkansas</h4>
+      <h3 style="margin-top:16px">Arkansas</h3>
       <a href="fayetteville.html">Fayetteville</a><a href="bentonville.html">Bentonville</a><a href="rogers-ar.html">Rogers</a>
-      <h4 style="margin-top:16px">Company</h4>
+      <h3 style="margin-top:16px">Company</h3>
       <a href="about.html">About Arturo</a><a href="gallery.html">Gallery</a>
       <a href="blog.html">Blog &amp; Guides</a><a href="faq.html">FAQ</a>
       <a href="colors.html">Color Palette</a><a href="contact.html">Price Free Quote</a>
@@ -811,7 +813,7 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
   </div>
   <div class="foot-bottom">
     <span class="foot-copy">© 2025 Crete Creations LLC — Joplin, MO. All rights reserved. Epoxy · Polyaspartic · Driveway Overlays · Four State Area · MO · KS · OK · AR</span>
-    <div class="foot-links"><a href="contact.html">Free Quote</a><a href="gallery.html">Gallery</a><a href="contact.html" style="color:var(--red-lt)">🚀 Free Quote</a></div>
+    <div class="foot-links"><a href="contact.html">Free Quote</a><a href="gallery.html">Gallery</a><a href="contact.html" style="color:var(--red-lt);text-decoration:underline">🚀 Free Quote</a></div>
   </div>
 </div>
 </footer>

@@ -10,7 +10,7 @@
   <meta property="og:type" content="website" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cretecreationsllc.com/"},{"@type":"ListItem","position":2,"name":"Gallery","item":"https://cretecreationsllc.com/gallery"}]}</script>
   
-  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;600;700&display=swap"><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
   <style>
 :root{
   --red:#C41E1E;--red-dk:#8B1010;--red-lt:#E03030;
@@ -53,7 +53,7 @@ nav{background:var(--black);position:sticky;top:0;z-index:1000;border-bottom:2px
 .drop-section{font-family:var(--fc);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--silver);padding:8px 18px 3px}
 
 /* HAMBURGER */
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.hamburger{display:none;flex-direction:column;justify-content:center;align-items:center;gap:5px;cursor:pointer;padding:8px;min-width:44px;min-height:44px;background:none;border:none}
 .hamburger span{display:block;width:24px;height:2px;background:var(--white);transition:all .25s}
 .hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
 .hamburger.open span:nth-child(2){opacity:0}
@@ -291,7 +291,7 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
 .foot-desc{font-size:13px;font-weight:300;color:var(--silver);line-height:1.7;margin-bottom:18px}
 .foot-contact a{display:block;font-size:13px;color:var(--silver);margin-bottom:6px;font-family:var(--fc);letter-spacing:.04em;transition:color .15s}
 .foot-contact a:hover{color:var(--white)}
-.foot-col h4{font-family:var(--fc);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red-lt);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--rim)}
+.foot-col h3{font-family:var(--fc);font-size:10px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red-lt);margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--rim)}
 .foot-col a{display:block;font-size:13px;color:var(--silver);margin-bottom:7px;font-family:var(--fc);letter-spacing:.04em;transition:color .15s}
 .foot-col a:hover{color:var(--white)}
 .foot-bottom{border-top:1px solid var(--rim);padding-top:20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
@@ -452,6 +452,7 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
     <a href="contact.html" style="color:#E03030;font-weight:700">→ Get Free Quote</a>
   </div>
 </nav>
+<main>
 <script>
 function toggleMenu(){
   var m=document.getElementById('mob');
@@ -467,8 +468,8 @@ function toggleMenu(){
   <div class="page-hero-inner">
     <span class="eyebrow">Crete Creations LLC · Real Projects · Real Results</span>
     <h1>Project <em>Gallery</em></h1>
-    <p class="lead">Every photo is a real Crete Creations LLC project — garage floors, driveway overlays, metallic pours, and decorative concrete throughout the Four State area. Use the <a href="contact.html" style="color:var(--red-lt)">free quote form</a> to estimate yours.</p>
-    <div class="btn-row"><a href="contact.html" class="btn btn-red">Get an Estimate →</a><a href="contact.html" class="btn btn-out">📞 (417) 483-7082</a></div>
+    <p class="lead">Every photo is a real Crete Creations LLC project — garage floors, driveway overlays, metallic pours, and decorative concrete throughout the Four State area. Use the <a href="contact.html" style="color:var(--red-lt);text-decoration:underline">free quote form</a> to estimate yours.</p>
+    <div class="btn-row"><a href="contact.html" class="btn btn-red">Get an Estimate →</a><a href="tel:4174837082" class="btn btn-out">📞 (417) 483-7082</a></div>
   </div>
 </div>
 <div class="sec"><div class="si">
@@ -516,17 +517,17 @@ function toggleMenu(){
   <h2 class="sh">Driveways <span class="a">&amp; Outdoor</span></h2>
   <div class="rule"></div>
   <div class="g-grid" style="grid-template-columns:repeat(4,1fr);margin-top:20px">
-    <div class="g-thumb"><a href="driveway_acid_stain.png" target="_blank"><img src="driveway_acid_stain.png" alt="Acid Stained Mottled Driveway" loading="lazy" /></a></div>
-    <div class="g-thumb"><a href="driveway_custom_stone.png" target="_blank"><img src="driveway_custom_stone.png" alt="Stone Scored Driveway" loading="lazy" /></a></div>
-    <div class="g-thumb"><a href="driveway_faux_stone.png" target="_blank"><img src="driveway_faux_stone.png" alt="Faux Stone Tile Driveway" loading="lazy" /></a></div>
-    <div class="g-thumb"><a href="driveway_brick_accent1.png" target="_blank"><img src="driveway_brick_accent1.png" alt="Light Mottled with Brick Accent" loading="lazy" /></a></div>
-    <div class="g-thumb"><a href="driveway_brick_accent2.png" target="_blank"><img src="driveway_brick_accent2.png" alt="Decorative Brick Border" loading="lazy" /></a></div>
-    <div class="g-thumb"><a href="driveway_brick_inlay.png" target="_blank"><img src="driveway_brick_inlay.png" alt="Full Brick Inlay Grid" loading="lazy" /></a></div>
-    <div class="g-thumb"><a href="driveway_border.png" target="_blank"><img src="driveway_border.png" alt="Solid Color with Border" loading="lazy" /></a></div>
-    <div class="g-thumb"><a href="driveway_knockdown.png" target="_blank"><img src="driveway_knockdown.png" alt="Spray Texture Knockdown" loading="lazy" /></a></div>
-    <div class="g-thumb"><a href="driveway_medallion.png" target="_blank"><img src="driveway_medallion.png" alt="Custom Medallion Inlay" loading="lazy" /></a></div>
-    <div class="g-thumb"><a href="driveway_stencil.png" target="_blank"><img src="driveway_stencil.png" alt="Stenciled Tile Pattern" loading="lazy" /></a></div>
-    <div class="g-thumb"><a href="driveway_stencil_ba.png" target="_blank"><img src="driveway_stencil_ba.png" alt="Before and After Transformation" loading="lazy" /></a></div>
+    <div class="g-thumb"><a href="driveway_acid_stain.jpg" target="_blank"><img src="driveway_acid_stain.jpg" alt="Acid Stained Mottled Driveway" loading="lazy" /></a></div>
+    <div class="g-thumb"><a href="driveway_custom_stone.jpg" target="_blank"><img src="driveway_custom_stone.jpg" alt="Stone Scored Driveway" loading="lazy" /></a></div>
+    <div class="g-thumb"><a href="driveway_faux_stone.jpg" target="_blank"><img src="driveway_faux_stone.jpg" alt="Faux Stone Tile Driveway" loading="lazy" /></a></div>
+    <div class="g-thumb"><a href="driveway_brick_accent1.jpg" target="_blank"><img src="driveway_brick_accent1.jpg" alt="Light Mottled with Brick Accent" loading="lazy" /></a></div>
+    <div class="g-thumb"><a href="driveway_brick_accent2.jpg" target="_blank"><img src="driveway_brick_accent2.jpg" alt="Decorative Brick Border" loading="lazy" /></a></div>
+    <div class="g-thumb"><a href="driveway_brick_inlay.jpg" target="_blank"><img src="driveway_brick_inlay.jpg" alt="Full Brick Inlay Grid" loading="lazy" /></a></div>
+    <div class="g-thumb"><a href="driveway_border.jpg" target="_blank"><img src="driveway_border.jpg" alt="Solid Color with Border" loading="lazy" /></a></div>
+    <div class="g-thumb"><a href="driveway_knockdown.jpg" target="_blank"><img src="driveway_knockdown.jpg" alt="Spray Texture Knockdown" loading="lazy" /></a></div>
+    <div class="g-thumb"><a href="driveway_medallion.jpg" target="_blank"><img src="driveway_medallion.jpg" alt="Custom Medallion Inlay" loading="lazy" /></a></div>
+    <div class="g-thumb"><a href="driveway_stencil.jpg" target="_blank"><img src="driveway_stencil.jpg" alt="Stenciled Tile Pattern" loading="lazy" /></a></div>
+    <div class="g-thumb"><a href="driveway_stencil_ba.jpg" target="_blank"><img src="driveway_stencil_ba.jpg" alt="Before and After Transformation" loading="lazy" /></a></div>
   </div>
 </div></div>
 <div class="sec"><div class="si">
@@ -541,13 +542,14 @@ function toggleMenu(){
   </div>
   <div style="text-align:center;margin-top:32px;padding:28px;background:var(--charcoal);border-top:2px solid var(--red-dk)">
     <div style="font-family:var(--fh);font-size:22px;color:var(--white);margin-bottom:10px;font-weight:700">See Something You Like?</div>
-    <p style="font-size:15px;font-weight:300;color:var(--silver);margin-bottom:18px">Use the <a href="contact.html" style="color:var(--red-lt)">free quote form</a> to estimate your project — then call Arturo to schedule a free consultation. He brings physical <a href="colors.html" style="color:var(--red-lt)">color samples</a> to every visit.</p>
+    <p style="font-size:15px;font-weight:300;color:var(--silver);margin-bottom:18px">Use the <a href="contact.html" style="color:var(--red-lt);text-decoration:underline">free quote form</a> to estimate your project — then call Arturo to schedule a free consultation. He brings physical <a href="colors.html" style="color:var(--red-lt);text-decoration:underline">color samples</a> to every visit.</p>
     <div class="btn-row" style="justify-content:center">
       <a href="contact.html" class="btn btn-red">Get an Estimate →</a>
       <a href="contact.html" class="btn btn-out">Request Free Quote</a>
     </div>
   </div>
 </div></div>
+</main>
 <footer>
 <div class="foot-inner">
   <div class="foot-grid">
@@ -568,7 +570,7 @@ function toggleMenu(){
       </div>
     </div>
     <div class="foot-col">
-      <h4>Services</h4>
+      <h3>Services</h3>
       <a href="epoxy-floors.html">Epoxy Garage Floors</a>
       <a href="polyaspartic.html">Polyaspartic Coatings</a>
       <a href="metallic-epoxy.html">Metallic Epoxy</a>
@@ -583,7 +585,7 @@ function toggleMenu(){
       <a href="concrete-repair.html">Concrete Repair</a>
     </div>
     <div class="foot-col">
-      <h4>Missouri</h4>
+      <h3>Missouri</h3>
       <a href="joplin.html">Joplin</a>
       <a href="carthage.html">Carthage</a>
       <a href="neosho.html">Neosho</a>
@@ -592,22 +594,22 @@ function toggleMenu(){
       <a href="lamar.html">Lamar</a>
       <a href="granby.html">Granby</a>
       <a href="anderson.html">Anderson</a>
-      <h4 style="margin-top:16px">Oklahoma</h4>
+      <h3 style="margin-top:16px">Oklahoma</h3>
       <a href="grove.html">Grove / Grand Lake</a>
       <a href="miami-ok.html">Miami</a>
       <a href="vinita.html">Vinita</a>
       <a href="pryor.html">Pryor</a>
     </div>
     <div class="foot-col">
-      <h4>Kansas</h4>
+      <h3>Kansas</h3>
       <a href="pittsburg.html">Pittsburg</a>
       <a href="galena.html">Galena</a>
       <a href="columbus-ks.html">Columbus</a>
-      <h4 style="margin-top:16px">Arkansas</h4>
+      <h3 style="margin-top:16px">Arkansas</h3>
       <a href="fayetteville.html">Fayetteville</a>
       <a href="bentonville.html">Bentonville</a>
       <a href="rogers-ar.html">Rogers</a>
-      <h4 style="margin-top:16px">Company</h4>
+      <h3 style="margin-top:16px">Company</h3>
       <a href="about.html">About Arturo</a>
       <a href="gallery.html">Photo Gallery</a>
       <a href="blog.html">Blog &amp; Guides</a>
@@ -622,7 +624,7 @@ function toggleMenu(){
     <div class="foot-links">
       <a href="contact.html">Free Quote</a>
       <a href="gallery.html">Gallery</a>
-      <a href="contact.html" style="color:var(--red-lt)">🚀 Free Quote</a>
+      <a href="contact.html" style="color:var(--red-lt);text-decoration:underline">🚀 Free Quote</a>
     </div>
   </div>
 </div>
