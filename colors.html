@@ -171,6 +171,7 @@ nav{background:var(--black);position:sticky;top:0;z-index:1000;border-bottom:2px
     @media(max-width:900px){.swatch-grid{grid-template-columns:repeat(3,1fr)}.pigment-grid{grid-template-columns:repeat(5,1fr)}}
     @media(max-width:600px){.swatch-grid{grid-template-columns:repeat(2,1fr);gap:10px}.custom-banner-inner{flex-direction:column}.pigment-grid{grid-template-columns:repeat(4,1fr)}}
     @media(max-width:400px){.pigment-grid{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:700px){.tips-grid{grid-template-columns:1fr!important}}
 
   
     footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0 28px}
@@ -384,7 +385,7 @@ function toggleMenu(){
     <h2 class="sh">Hybrid <em>Flake Colors</em></h2>
     <div class="rule"></div>
     <p style="font-size:15px;font-weight:300;color:var(--silver-lt);max-width:680px;line-height:1.75;margin-bottom:32px">Hybrid flake blends mix multiple chip sizes and types for added depth, dimension, and a richer visual texture — a step above standard for homeowners who want a floor that truly stands out. Arturo brings physical hybrid chips to every consultation.</p>
-    <div class="swatch-grid" style="grid-template-columns:repeat(4,1fr)">
+    <div class="swatch-grid">
 <div class="swatch-card" onclick="openColorModal('Denali','epoxy-flake-color-denali-grey-garage-floor-joplin.jpg','Gray, beige, white &amp; black — rich dimensional look')"><div class="swatch-img-wrap"><div class="swatch-badge">MOST POPULAR</div><img src="epoxy-flake-color-denali-grey-garage-floor-joplin.jpg" alt="Denali hybrid flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Denali</div><div class="swatch-desc">Gray, beige, white &amp; black — rich dimensional look</div><div class="swatch-tap">Tap for full view →</div></div></div>
 <div class="swatch-card" onclick="openColorModal('Husky','epoxy-flake-color-husky-blue-grey-garage-floor.jpg','Light gray, white &amp; black — clean, classic grey tone')"><div class="swatch-img-wrap"><div class="badge-hybrid">HYBRID</div><img src="epoxy-flake-color-husky-blue-grey-garage-floor.jpg" alt="Husky hybrid flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Husky</div><div class="swatch-desc">Light gray, white &amp; black — clean, classic grey tone</div><div class="swatch-tap">Tap for full view →</div></div></div>
 <div class="swatch-card" onclick="openColorModal('Slate','epoxy-flake-color-slate-blue-grey-garage-floor.jpg','Gray, white &amp; tan — smooth, sophisticated cool tone')"><div class="swatch-img-wrap"><div class="badge-hybrid">HYBRID</div><img src="epoxy-flake-color-slate-blue-grey-garage-floor.jpg" alt="Slate hybrid flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Slate</div><div class="swatch-desc">Gray, white &amp; tan — smooth, sophisticated cool tone</div><div class="swatch-tap">Tap for full view →</div></div></div>
@@ -499,7 +500,7 @@ function toggleMenu(){
 
 <div class="sec-alt">
   <div class="si">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start" class="tips-grid">
       <div>
         <span class="sl">Choosing Your Color</span>
         <h2 class="sh">What to Know <em>Before You Decide</em></h2>
