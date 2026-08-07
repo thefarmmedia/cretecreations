@@ -120,24 +120,25 @@ nav{background:var(--black);position:sticky;top:0;z-index:1000;border-bottom:2px
     .info-box p{font-size:14px;color:var(--silver-lt);line-height:1.7}
 
     /* FILTER BAR */
-    .filter-wrap{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:28px}
+    .filter-wrap{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:28px}
     .filter-label{font-family:var(--fc);font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--silver);flex-shrink:0}
-    .filter-btn{font-family:var(--fc);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:8px 16px;background:var(--dark);border:1px solid var(--rim);color:var(--silver-lt);cursor:pointer;transition:all .18s;border-radius:2px}
+    .filter-btn{font-family:var(--fc);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:8px 18px;background:var(--dark);border:1.5px solid var(--rim);color:var(--silver-lt);cursor:pointer;transition:all .18s;border-radius:20px}
     .filter-btn:hover,.filter-btn.active{background:var(--red);border-color:var(--red);color:#fff}
     .filter-count{font-family:var(--fc);font-size:12px;color:var(--silver);margin-bottom:20px}
     .filter-count span{color:var(--white);font-weight:700}
 
     /* SWATCH GRID */
-    .swatch-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:3px}
-    .swatch-card{background:var(--charcoal);border:1px solid var(--rim);overflow:hidden;transition:border-color .2s,transform .2s;cursor:pointer}
-    .swatch-card:hover{border-color:var(--red);transform:translateY(-2px)}
+    .swatch-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+    .swatch-card{background:var(--mid);border:2px solid rgba(255,255,255,.06);border-radius:8px;overflow:hidden;transition:border-color .2s,transform .2s;cursor:pointer}
+    .swatch-card:hover{border-color:var(--red-lt);transform:translateY(-4px)}
     .swatch-img-wrap{position:relative;overflow:hidden}
-    .swatch-img-wrap img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform .35s}
-    .swatch-card:hover .swatch-img-wrap img{transform:scale(1.05)}
-    .swatch-badge{position:absolute;top:12px;left:12px;background:var(--red);color:#fff;font-family:var(--fc);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;padding:4px 10px;border-radius:2px;z-index:2}
-    .swatch-body{padding:14px 16px}
-    .swatch-name{font-family:var(--fh);font-size:16px;font-weight:700;color:var(--white);margin-bottom:3px}
-    .swatch-cat{font-family:var(--fc);font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--red-lt)}
+    .swatch-img-wrap img{width:100%;height:180px;object-fit:cover;display:block;transition:transform .35s}
+    .swatch-card:hover .swatch-img-wrap img{transform:scale(1.04)}
+    .swatch-badge{position:absolute;top:10px;left:10px;background:var(--red);color:#fff;font-family:var(--fc);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 11px;border-radius:20px;z-index:2}
+    .swatch-body{padding:14px 16px;background:var(--mid)}
+    .swatch-name{font-family:var(--fh);font-size:15px;font-weight:700;color:var(--white);margin-bottom:4px}
+    .swatch-desc{font-size:12px;color:var(--silver);line-height:1.5;margin-bottom:10px}
+    .swatch-tap{font-size:11px;font-weight:700;color:var(--red-lt);font-family:var(--fc);letter-spacing:.06em;text-transform:uppercase}
 
     /* CUSTOM BANNER */
     .custom-banner{background:linear-gradient(135deg,rgba(139,16,16,.3),rgba(0,0,0,.8));border-top:1px solid var(--red-dk);border-bottom:1px solid var(--red-dk);padding:32px 24px}
@@ -153,10 +154,12 @@ nav{background:var(--black);position:sticky;top:0;z-index:1000;border-bottom:2px
     .lb-inner{max-width:900px;width:100%;position:relative}
     .lb-inner img{width:100%;max-height:80vh;object-fit:contain;display:block;border:1px solid var(--rim)}
     .lb-name{font-family:var(--fh);font-size:22px;color:var(--white);font-weight:700;margin-top:14px;text-align:center}
+    .lb-desc{font-size:13px;color:var(--silver);margin-top:6px;text-align:center;font-family:var(--fb)}
     .lb-close{position:absolute;top:-14px;right:-14px;width:36px;height:36px;background:var(--red);border:none;color:#fff;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;border-radius:2px}
 
+    @media(max-width:1100px){.swatch-grid{grid-template-columns:repeat(4,1fr)}}
     @media(max-width:900px){.swatch-grid{grid-template-columns:repeat(3,1fr)}}
-    @media(max-width:600px){.swatch-grid{grid-template-columns:repeat(2,1fr)}.custom-banner-inner{flex-direction:column}}
+    @media(max-width:600px){.swatch-grid{grid-template-columns:repeat(2,1fr);gap:10px}.custom-banner-inner{flex-direction:column}}
 
   
     footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0 28px}
@@ -320,12 +323,12 @@ function toggleMenu(){
   <div class="custom-banner-inner">
     <div style="font-size:36px;flex-shrink:0">🎨</div>
     <div class="custom-banner-text">
-      <strong>Custom Flake &amp; Hybrid Blends Available</strong>
-      <p>Don't see exactly what you're looking for? Arturo can create custom flake blends and hybrid combinations not shown here — available at an upcharge. Ask at your free consultation.</p>
+      <strong>Custom Flake Blends Available</strong>
+      <p>Don't see exactly what you're looking for? Arturo can create custom color blends not shown here — available at a small upcharge. Ask at your free consultation.</p>
       <div class="custom-tags">
         <span class="custom-tag">Custom Color Blends</span>
-        <span class="custom-tag">Hybrid Flake Systems</span>
-        <span class="custom-tag">Upcharge Applies</span>
+        <span class="custom-tag">Physical Samples to Every Job</span>
+        <span class="custom-tag">Upcharge May Apply</span>
       </div>
     </div>
     <a href="contact.html" class="btn btn-out" style="flex-shrink:0">Ask About Custom →</a>
@@ -350,276 +353,281 @@ function toggleMenu(){
     <div class="filter-count">Showing <span id="count">27</span> colors</div>
 
     <div class="swatch-grid" id="swatchGrid">
-<div class="swatch-card" data-cat="grey">
+<div class="swatch-card" data-cat="grey" onclick="openColorModal('Arrowhead','epoxy-flake-color-arrowhead-garage-floor-joplin.jpg','Charcoal, gray, white &amp; red — bold contrast, a customer favorite')">
   <div class="swatch-img-wrap">
-    <div class="swatch-badge">MOST POPULAR</div>
+  <div class="swatch-badge">MOST POPULAR</div>
     <img src="epoxy-flake-color-arrowhead-garage-floor-joplin.jpg" alt="Arrowhead epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
   </div>
   <div class="swatch-body">
     <div class="swatch-name">Arrowhead</div>
-    <div class="swatch-cat">Grey Tones</div>
+    <div class="swatch-desc">Charcoal, gray, white &amp; red — bold contrast, a customer favorite</div>
+    <div class="swatch-tap">Tap for full view →</div>
   </div>
 </div>
-<div class="swatch-card" data-cat="dark">
+<div class="swatch-card" data-cat="dark" onclick="openColorModal('Domino','epoxy-flake-color-domino-black-white-garage-floor.jpg','Black, white &amp; gray — bold, dramatic floor')">
   <div class="swatch-img-wrap">
-    <div class="swatch-badge">MOST POPULAR</div>
+  <div class="swatch-badge">MOST POPULAR</div>
     <img src="epoxy-flake-color-domino-black-white-garage-floor.jpg" alt="Domino epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
   </div>
   <div class="swatch-body">
     <div class="swatch-name">Domino</div>
-    <div class="swatch-cat">Dark &amp; Bold</div>
+    <div class="swatch-desc">Black, white &amp; gray — bold, dramatic floor</div>
+    <div class="swatch-tap">Tap for full view →</div>
   </div>
 </div>
-<div class="swatch-card" data-cat="grey">
+<div class="swatch-card" data-cat="grey" onclick="openColorModal('Denali','epoxy-flake-color-denali-grey-garage-floor-joplin.jpg','Gray, beige, white &amp; black — rich dimensional look')">
   <div class="swatch-img-wrap">
-    <div class="swatch-badge">MOST POPULAR</div>
+  <div class="swatch-badge">MOST POPULAR</div>
     <img src="epoxy-flake-color-denali-grey-garage-floor-joplin.jpg" alt="Denali epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
   </div>
   <div class="swatch-body">
     <div class="swatch-name">Denali</div>
-    <div class="swatch-cat">Grey Tones</div>
+    <div class="swatch-desc">Gray, beige, white &amp; black — rich dimensional look</div>
+    <div class="swatch-tap">Tap for full view →</div>
   </div>
 </div>
-<div class="swatch-card" data-cat="grey">
+<div class="swatch-card" data-cat="grey" onclick="openColorModal('Shoreline','epoxy-flake-color-shoreline-slate-grey-garage-floor.jpg','Tan, beige &amp; cream — warm, inviting, light feel')">
   <div class="swatch-img-wrap">
-    
     <img src="epoxy-flake-color-shoreline-slate-grey-garage-floor.jpg" alt="Shoreline epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
   </div>
   <div class="swatch-body">
     <div class="swatch-name">Shoreline</div>
-    <div class="swatch-cat">Grey Tones</div>
+    <div class="swatch-desc">Tan, beige &amp; cream — warm, inviting, light feel</div>
+    <div class="swatch-tap">Tap for full view →</div>
   </div>
 </div>
-<div class="swatch-card" data-cat="grey">
+<div class="swatch-card" data-cat="grey" onclick="openColorModal('Husky','epoxy-flake-color-husky-blue-grey-garage-floor.jpg','Light gray, white &amp; black — clean, classic grey tone')">
   <div class="swatch-img-wrap">
-    
     <img src="epoxy-flake-color-husky-blue-grey-garage-floor.jpg" alt="Husky epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
   </div>
   <div class="swatch-body">
     <div class="swatch-name">Husky</div>
-    <div class="swatch-cat">Grey Tones</div>
+    <div class="swatch-desc">Light gray, white &amp; black — clean, classic grey tone</div>
+    <div class="swatch-tap">Tap for full view →</div>
   </div>
 </div>
-<div class="swatch-card" data-cat="cool">
+<div class="swatch-card" data-cat="cool" onclick="openColorModal('Comet','epoxy-flake-color-comet-blue-grey-garage-floor.jpg','Blue, gray &amp; white — cool-toned, head-turning finish')">
   <div class="swatch-img-wrap">
-    
     <img src="epoxy-flake-color-comet-blue-grey-garage-floor.jpg" alt="Comet epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
   </div>
   <div class="swatch-body">
     <div class="swatch-name">Comet</div>
-    <div class="swatch-cat">Blue &amp; Cool</div>
+    <div class="swatch-desc">Blue, gray &amp; white — cool-toned, head-turning finish</div>
+    <div class="swatch-tap">Tap for full view →</div>
   </div>
 </div>
-<div class="swatch-card" data-cat="cool">
+<div class="swatch-card" data-cat="cool" onclick="openColorModal('Slate','epoxy-flake-color-slate-blue-grey-garage-floor.jpg','Gray, white &amp; tan — smooth, sophisticated cool tone')">
   <div class="swatch-img-wrap">
-    
     <img src="epoxy-flake-color-slate-blue-grey-garage-floor.jpg" alt="Slate epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
   </div>
   <div class="swatch-body">
     <div class="swatch-name">Slate</div>
-    <div class="swatch-cat">Blue &amp; Cool</div>
+    <div class="swatch-desc">Gray, white &amp; tan — smooth, sophisticated cool tone</div>
+    <div class="swatch-tap">Tap for full view →</div>
   </div>
 </div>
-<div class="swatch-card" data-cat="cool">
+<div class="swatch-card" data-cat="cool" onclick="openColorModal('Glacier','epoxy-flake-color-glacier-blue-grey-garage-floor.webp','Soft blue, gray &amp; white — crisp, cool-tone finish')">
   <div class="swatch-img-wrap">
-    
     <img src="epoxy-flake-color-glacier-blue-grey-garage-floor.webp" alt="Glacier epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
   </div>
   <div class="swatch-body">
     <div class="swatch-name">Glacier</div>
-    <div class="swatch-cat">Blue &amp; Cool</div>
+    <div class="swatch-desc">Soft blue, gray &amp; white — crisp, cool-tone finish</div>
+    <div class="swatch-tap">Tap for full view →</div>
   </div>
 </div>
-<div class="swatch-card" data-cat="dark">
+<div class="swatch-card" data-cat="dark" onclick="openColorModal('Houndstooth','epoxy-flake-color-houndstooth-dark-grey-garage-floor.jpg','Black, gray, white &amp; red — clean, classic, bold contrast')">
   <div class="swatch-img-wrap">
-    
     <img src="epoxy-flake-color-houndstooth-dark-grey-garage-floor.jpg" alt="Houndstooth epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
   </div>
   <div class="swatch-body">
     <div class="swatch-name">Houndstooth</div>
-    <div class="swatch-cat">Dark &amp; Bold</div>
+    <div class="swatch-desc">Black, gray, white &amp; red — clean, classic, bold contrast</div>
+    <div class="swatch-tap">Tap for full view →</div>
   </div>
 </div>
-<div class="swatch-card" data-cat="dark">
+<div class="swatch-card" data-cat="dark" onclick="openColorModal('Nightfall','epoxy-flake-color-nightfall-dark-charcoal-garage-floor.jpg','Dark charcoal, gray &amp; white — dramatic, sleek finish')">
   <div class="swatch-img-wrap">
-    
     <img src="epoxy-flake-color-nightfall-dark-charcoal-garage-floor.jpg" alt="Nightfall epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
   </div>
   <div class="swatch-body">
     <div class="swatch-name">Nightfall</div>
-    <div class="swatch-cat">Dark &amp; Bold</div>
+    <div class="swatch-desc">Dark charcoal, gray &amp; white — dramatic, sleek finish</div>
+    <div class="swatch-tap">Tap for full view →</div>
   </div>
 </div>
-<div class="swatch-card" data-cat="dark">
+<div class="swatch-card" data-cat="dark" onclick="openColorModal('Carbon','epoxy-flake-color-carbon-black-garage-floor.jpg','Pure black flake — deep, sleek, high-contrast look')">
   <div class="swatch-img-wrap">
-    
     <img src="epoxy-flake-color-carbon-black-garage-floor.jpg" alt="Carbon epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
   </div>
   <div class="swatch-body">
     <div class="swatch-name">Carbon</div>
-    <div class="swatch-cat">Dark &amp; Bold</div>
+    <div class="swatch-desc">Pure black flake — deep, sleek, high-contrast look</div>
+    <div class="swatch-tap">Tap for full view →</div>
   </div>
 </div>
-<div class="swatch-card" data-cat="dark">
+<div class="swatch-card" data-cat="dark" onclick="openColorModal('Raven','epoxy-flake-color-raven-black-garage-floor.jpg','Black &amp; dark gray — bold, industrial look')">
   <div class="swatch-img-wrap">
-    
     <img src="epoxy-flake-color-raven-black-garage-floor.jpg" alt="Raven epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
   </div>
   <div class="swatch-body">
     <div class="swatch-name">Raven</div>
-    <div class="swatch-cat">Dark &amp; Bold</div>
+    <div class="swatch-desc">Black &amp; dark gray — bold, industrial look</div>
+    <div class="swatch-tap">Tap for full view →</div>
   </div>
 </div>
-<div class="swatch-card" data-cat="grey">
+<div class="swatch-card" data-cat="grey" onclick="openColorModal('Gravel','epoxy-flake-color-gravel-cool-grey-garage-floor.jpg','Light gray, white &amp; black — cool, sophisticated finish')">
   <div class="swatch-img-wrap">
-    
     <img src="epoxy-flake-color-gravel-cool-grey-garage-floor.jpg" alt="Gravel epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
   </div>
   <div class="swatch-body">
     <div class="swatch-name">Gravel</div>
-    <div class="swatch-cat">Grey Tones</div>
+    <div class="swatch-desc">Light gray, white &amp; black — cool, sophisticated finish</div>
+    <div class="swatch-tap">Tap for full view →</div>
   </div>
 </div>
-<div class="swatch-card" data-cat="grey">
+<div class="swatch-card" data-cat="grey" onclick="openColorModal('Feather Grey','epoxy-flake-color-feather-grey-light-garage-floor.jpg','White, gray &amp; black — subtle, clean, premium look')">
   <div class="swatch-img-wrap">
-    
     <img src="epoxy-flake-color-feather-grey-light-garage-floor.jpg" alt="Feather Grey epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
   </div>
   <div class="swatch-body">
     <div class="swatch-name">Feather Grey</div>
-    <div class="swatch-cat">Grey Tones</div>
+    <div class="swatch-desc">White, gray &amp; black — subtle, clean, premium look</div>
+    <div class="swatch-tap">Tap for full view →</div>
   </div>
 </div>
-<div class="swatch-card" data-cat="warm">
+<div class="swatch-card" data-cat="warm" onclick="openColorModal('Mushroom','epoxy-flake-color-mushroom-warm-grey-garage-floor.jpg','Gray, brown &amp; white — warm, natural earth tones')">
   <div class="swatch-img-wrap">
-    
     <img src="epoxy-flake-color-mushroom-warm-grey-garage-floor.jpg" alt="Mushroom epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
   </div>
   <div class="swatch-body">
     <div class="swatch-name">Mushroom</div>
-    <div class="swatch-cat">Warm Tones</div>
+    <div class="swatch-desc">Gray, brown &amp; white — warm, natural earth tones</div>
+    <div class="swatch-tap">Tap for full view →</div>
   </div>
 </div>
-<div class="swatch-card" data-cat="warm">
+<div class="swatch-card" data-cat="warm" onclick="openColorModal('Wombat','epoxy-flake-color-wombat-warm-grey-garage-floor.jpg','Gray, black &amp; white — clean, neutral warm tone')">
   <div class="swatch-img-wrap">
-    
     <img src="epoxy-flake-color-wombat-warm-grey-garage-floor.jpg" alt="Wombat epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
   </div>
   <div class="swatch-body">
     <div class="swatch-name">Wombat</div>
-    <div class="swatch-cat">Warm Tones</div>
+    <div class="swatch-desc">Gray, black &amp; white — clean, neutral warm tone</div>
+    <div class="swatch-tap">Tap for full view →</div>
   </div>
 </div>
-<div class="swatch-card" data-cat="warm">
+<div class="swatch-card" data-cat="warm" onclick="openColorModal('Agate','epoxy-flake-color-agate-joplin-mo.jpg','Mixed silver, gray &amp; white — granite-like stone appearance')">
   <div class="swatch-img-wrap">
-    <div class="swatch-badge">MOST POPULAR</div>
+  <div class="swatch-badge">MOST POPULAR</div>
     <img src="epoxy-flake-color-agate-joplin-mo.jpg" alt="Agate epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
   </div>
   <div class="swatch-body">
     <div class="swatch-name">Agate</div>
-    <div class="swatch-cat">Warm Tones</div>
+    <div class="swatch-desc">Mixed silver, gray &amp; white — granite-like stone appearance</div>
+    <div class="swatch-tap">Tap for full view →</div>
   </div>
 </div>
-<div class="swatch-card" data-cat="warm">
+<div class="swatch-card" data-cat="warm" onclick="openColorModal('Cascade','epoxy-flake-color-cascade-warm-ivory-garage-floor.jpg','White, tan, gray &amp; brick red — light neutral with warm accents')">
   <div class="swatch-img-wrap">
-    
     <img src="epoxy-flake-color-cascade-warm-ivory-garage-floor.jpg" alt="Cascade epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
   </div>
   <div class="swatch-body">
     <div class="swatch-name">Cascade</div>
-    <div class="swatch-cat">Warm Tones</div>
+    <div class="swatch-desc">White, tan, gray &amp; brick red — light neutral with warm accents</div>
+    <div class="swatch-tap">Tap for full view →</div>
   </div>
 </div>
-<div class="swatch-card" data-cat="warm">
+<div class="swatch-card" data-cat="warm" onclick="openColorModal('Safari','epoxy-flake-color-safari-warm-beige-garage-floor.jpg','Tan, cream, gray &amp; black — warm neutral, very popular')">
   <div class="swatch-img-wrap">
-    
     <img src="epoxy-flake-color-safari-warm-beige-garage-floor.jpg" alt="Safari epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
   </div>
   <div class="swatch-body">
     <div class="swatch-name">Safari</div>
-    <div class="swatch-cat">Warm Tones</div>
+    <div class="swatch-desc">Tan, cream, gray &amp; black — warm neutral, very popular</div>
+    <div class="swatch-tap">Tap for full view →</div>
   </div>
 </div>
-<div class="swatch-card" data-cat="warm">
+<div class="swatch-card" data-cat="warm" onclick="openColorModal('Outback','epoxy-flake-color-outback-tan-brown-garage-floor.jpg','Tan &amp; warm brown — rustic, natural outdoor feel')">
   <div class="swatch-img-wrap">
-    
     <img src="epoxy-flake-color-outback-tan-brown-garage-floor.jpg" alt="Outback epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
   </div>
   <div class="swatch-body">
     <div class="swatch-name">Outback</div>
-    <div class="swatch-cat">Warm Tones</div>
+    <div class="swatch-desc">Tan &amp; warm brown — rustic, natural outdoor feel</div>
+    <div class="swatch-tap">Tap for full view →</div>
   </div>
 </div>
-<div class="swatch-card" data-cat="warm">
+<div class="swatch-card" data-cat="warm" onclick="openColorModal('Coyote','epoxy-flake-color-coyote-earth-tone-garage-floor.jpg','White, gray &amp; brown — warm neutral stone appearance')">
   <div class="swatch-img-wrap">
-    
     <img src="epoxy-flake-color-coyote-earth-tone-garage-floor.jpg" alt="Coyote epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
   </div>
   <div class="swatch-body">
     <div class="swatch-name">Coyote</div>
-    <div class="swatch-cat">Warm Tones</div>
+    <div class="swatch-desc">White, gray &amp; brown — warm neutral stone appearance</div>
+    <div class="swatch-tap">Tap for full view →</div>
   </div>
 </div>
-<div class="swatch-card" data-cat="warm">
+<div class="swatch-card" data-cat="warm" onclick="openColorModal('Creekbed','epoxy-flake-color-creekbed-tan-brown-garage-floor.jpg','Tan, brown, gold &amp; gray — warm, rustic, natural look')">
   <div class="swatch-img-wrap">
-    
     <img src="epoxy-flake-color-creekbed-tan-brown-garage-floor.jpg" alt="Creekbed epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
   </div>
   <div class="swatch-body">
     <div class="swatch-name">Creekbed</div>
-    <div class="swatch-cat">Warm Tones</div>
+    <div class="swatch-desc">Tan, brown, gold &amp; gray — warm, rustic, natural look</div>
+    <div class="swatch-tap">Tap for full view →</div>
   </div>
 </div>
-<div class="swatch-card" data-cat="warm">
+<div class="swatch-card" data-cat="warm" onclick="openColorModal('Ozark','epoxy-flake-color-ozark-sage-earth-tone-garage-floor.jpg','Brown, tan, gold, gray &amp; white — earthy Four-State feel')">
   <div class="swatch-img-wrap">
-    
     <img src="epoxy-flake-color-ozark-sage-earth-tone-garage-floor.jpg" alt="Ozark epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
   </div>
   <div class="swatch-body">
     <div class="swatch-name">Ozark</div>
-    <div class="swatch-cat">Warm Tones</div>
+    <div class="swatch-desc">Brown, tan, gold, gray &amp; white — earthy Four-State feel</div>
+    <div class="swatch-tap">Tap for full view →</div>
   </div>
 </div>
-<div class="swatch-card" data-cat="warm">
+<div class="swatch-card" data-cat="warm" onclick="openColorModal('Yosemite','epoxy-flake-color-yosemite-grey-amber-garage-floor.jpg','Gray, tan, cream &amp; black — organic stone appearance')">
   <div class="swatch-img-wrap">
-    
     <img src="epoxy-flake-color-yosemite-grey-amber-garage-floor.jpg" alt="Yosemite epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
   </div>
   <div class="swatch-body">
     <div class="swatch-name">Yosemite</div>
-    <div class="swatch-cat">Warm Tones</div>
+    <div class="swatch-desc">Gray, tan, cream &amp; black — organic stone appearance</div>
+    <div class="swatch-tap">Tap for full view →</div>
   </div>
 </div>
-<div class="swatch-card" data-cat="dark">
+<div class="swatch-card" data-cat="dark" onclick="openColorModal('Yukon','epoxy-flake-color-yukon-dark-grey-warm-garage-floor.jpg','Dark gray, black &amp; white — dramatic, layered depth')">
   <div class="swatch-img-wrap">
-    
     <img src="epoxy-flake-color-yukon-dark-grey-warm-garage-floor.jpg" alt="Yukon epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
   </div>
   <div class="swatch-body">
     <div class="swatch-name">Yukon</div>
-    <div class="swatch-cat">Dark &amp; Bold</div>
+    <div class="swatch-desc">Dark gray, black &amp; white — dramatic, layered depth</div>
+    <div class="swatch-tap">Tap for full view →</div>
   </div>
 </div>
-<div class="swatch-card" data-cat="dark">
+<div class="swatch-card" data-cat="dark" onclick="openColorModal('Europa','epoxy-flake-color-europa-grey-burgundy-garage-floor.jpg','Dark gray &amp; black — sleek, deep, premium finish')">
   <div class="swatch-img-wrap">
-    
     <img src="epoxy-flake-color-europa-grey-burgundy-garage-floor.jpg" alt="Europa epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
   </div>
   <div class="swatch-body">
     <div class="swatch-name">Europa</div>
-    <div class="swatch-cat">Dark &amp; Bold</div>
+    <div class="swatch-desc">Dark gray &amp; black — sleek, deep, premium finish</div>
+    <div class="swatch-tap">Tap for full view →</div>
   </div>
 </div>
-<div class="swatch-card" data-cat="grey">
+<div class="swatch-card" data-cat="grey" onclick="openColorModal('Tidal Wave','epoxy-flake-color-tidal-wave-grey-white-garage-floor.jpg','Light blue, gray &amp; white — cool, airy, show-stopping finish')">
   <div class="swatch-img-wrap">
-    
     <img src="epoxy-flake-color-tidal-wave-grey-white-garage-floor.jpg" alt="Tidal Wave epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
   </div>
   <div class="swatch-body">
     <div class="swatch-name">Tidal Wave</div>
-    <div class="swatch-cat">Grey Tones</div>
+    <div class="swatch-desc">Light blue, gray &amp; white — cool, airy, show-stopping finish</div>
+    <div class="swatch-tap">Tap for full view →</div>
   </div>
 </div>
+
     </div>
 
     <div class="info-box" style="margin-top:40px">
@@ -646,7 +654,7 @@ function toggleMenu(){
           </div>
           <div style="display:flex;gap:14px;align-items:flex-start;padding:14px 16px;background:var(--dark);border-left:3px solid var(--red)">
             <span style="font-size:20px;flex-shrink:0">🎨</span>
-            <div><strong style="display:block;font-family:var(--fc);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--white);margin-bottom:3px">Custom Blends Available</strong><span style="font-size:14px;color:var(--silver)">If none of the 27 standard blends are exactly right, Arturo can create a custom or hybrid blend at an upcharge. Ask at the free consultation.</span></div>
+            <div><strong style="display:block;font-family:var(--fc);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--white);margin-bottom:3px">Custom Blends Available</strong><span style="font-size:14px;color:var(--silver)">If none of the 27 standard blends are exactly right, Arturo can create a custom color blend at an upcharge. Ask at the free consultation.</span></div>
           </div>
           <div style="display:flex;gap:14px;align-items:flex-start;padding:14px 16px;background:var(--dark);border-left:3px solid var(--red)">
             <span style="font-size:20px;flex-shrink:0">📐</span>
@@ -673,6 +681,7 @@ function toggleMenu(){
     <button class="lb-close" onclick="document.getElementById('lb').classList.remove('open')">✕</button>
     <img id="lb-img" src="" alt="" />
     <div class="lb-name" id="lb-name"></div>
+    <div class="lb-desc" id="lb-desc"></div>
   </div>
 </div>
 
@@ -774,22 +783,18 @@ function filterSwatches(cat, btn) {
   });
   document.getElementById('count').textContent = visible;
 }
-function openLB(name, img) {
+function openColorModal(name, img, desc) {
   document.getElementById('lb-img').src = img;
   document.getElementById('lb-name').textContent = name;
+  document.getElementById('lb-desc').textContent = desc.replace(/&amp;/g,'&');
   document.getElementById('lb').classList.add('open');
+  document.body.style.overflow = 'hidden';
 }
 function closeLB(e) {
   if (e.target === document.getElementById('lb')) {
     document.getElementById('lb').classList.remove('open');
+    document.body.style.overflow = '';
   }
 }
-document.querySelectorAll('.swatch-card').forEach(function(card) {
-  card.addEventListener('click', function() {
-    var img = card.querySelector('img');
-    var name = card.querySelector('.swatch-name').textContent;
-    openLB(name, img.src);
-  });
-});
 </script>
 </body></html>
