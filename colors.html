@@ -140,6 +140,16 @@ nav{background:var(--black);position:sticky;top:0;z-index:1000;border-bottom:2px
     .swatch-desc{font-size:12px;color:var(--silver);line-height:1.5;margin-bottom:10px}
     .swatch-tap{font-size:11px;font-weight:700;color:var(--red-lt);font-family:var(--fc);letter-spacing:.06em;text-transform:uppercase}
 
+    /* HYBRID BADGE */
+    .badge-hybrid{position:absolute;top:10px;left:10px;background:#1a6a8a;color:#fff;font-family:var(--fc);font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:4px 11px;border-radius:20px;z-index:2}
+
+    /* METALLIC PIGMENT CHART */
+    .pigment-grid{display:grid;grid-template-columns:repeat(8,1fr);gap:10px;margin-bottom:36px}
+    .pigment-card{border-radius:10px;padding:12px 8px;text-align:center;border:1px solid rgba(255,255,255,.1)}
+    .pigment-circle{width:40px;height:40px;border-radius:50%;margin:0 auto 8px;box-shadow:0 2px 8px rgba(0,0,0,.35)}
+    .pigment-name{font-family:var(--fc);font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;line-height:1.3}
+    .family-hdr{font-family:var(--fc);font-size:11px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;color:var(--red-lt);margin:32px 0 14px;padding-bottom:8px;border-bottom:1px solid var(--rim)}
+
     /* CUSTOM BANNER */
     .custom-banner{background:linear-gradient(135deg,rgba(139,16,16,.3),rgba(0,0,0,.8));border-top:1px solid var(--red-dk);border-bottom:1px solid var(--red-dk);padding:32px 24px}
     .custom-banner-inner{max-width:1300px;margin:0 auto;display:flex;align-items:center;gap:28px;flex-wrap:wrap}
@@ -157,9 +167,10 @@ nav{background:var(--black);position:sticky;top:0;z-index:1000;border-bottom:2px
     .lb-desc{font-size:13px;color:var(--silver);margin-top:6px;text-align:center;font-family:var(--fb)}
     .lb-close{position:absolute;top:-14px;right:-14px;width:36px;height:36px;background:var(--red);border:none;color:#fff;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;border-radius:2px}
 
-    @media(max-width:1100px){.swatch-grid{grid-template-columns:repeat(4,1fr)}}
-    @media(max-width:900px){.swatch-grid{grid-template-columns:repeat(3,1fr)}}
-    @media(max-width:600px){.swatch-grid{grid-template-columns:repeat(2,1fr);gap:10px}.custom-banner-inner{flex-direction:column}}
+    @media(max-width:1100px){.swatch-grid{grid-template-columns:repeat(4,1fr)}.pigment-grid{grid-template-columns:repeat(6,1fr)}}
+    @media(max-width:900px){.swatch-grid{grid-template-columns:repeat(3,1fr)}.pigment-grid{grid-template-columns:repeat(5,1fr)}}
+    @media(max-width:600px){.swatch-grid{grid-template-columns:repeat(2,1fr);gap:10px}.custom-banner-inner{flex-direction:column}.pigment-grid{grid-template-columns:repeat(4,1fr)}}
+    @media(max-width:400px){.pigment-grid{grid-template-columns:repeat(3,1fr)}}
 
   
     footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0 28px}
@@ -309,7 +320,7 @@ function toggleMenu(){
   <div class="page-hero-bg" style="background-image:url('closeup_gray_flake.jpg')"></div>
   <img class="page-hero-dial" src="logo.png" alt="" aria-hidden="true" />
   <div class="page-hero-inner">
-    <span class="eyebrow">Crete Creations LLC · Full Broadcast Flake · 27 Color Blends</span>
+    <span class="eyebrow">Crete Creations LLC · 27 Flake Colors · 59 Metallic Pigments</span>
     <h1>Choose Your <em>Color.</em></h1>
     <p class="lead">Every blend below is a real full broadcast flake available from Crete Creations LLC. Arturo brings physical sample chips to every consultation — so you see each color under your actual garage lighting before committing to anything.</p>
     <div class="btn-row">
@@ -335,302 +346,152 @@ function toggleMenu(){
   </div>
 </div>
 
-<div class="sec">
+<!-- ── STANDARD COLLECTION ── -->
+<div style="background:var(--dark);padding:60px 24px">
   <div class="si">
-    <span class="sl">Full Flake Broadcast · 27 Available Blends</span>
-    <h2 class="sh">All <em>Color Options</em></h2>
+    <span class="sl">Standard Collection · 19 Full Broadcast Blends</span>
+    <h2 class="sh">Standard <em>Flake Colors</em></h2>
     <div class="rule"></div>
-    <p style="font-size:15px;font-weight:300;color:var(--silver-lt);max-width:680px;line-height:1.75;margin-bottom:32px">These are the standard full broadcast flake blends available from Crete Creations. Gray and charcoal tones are the most popular choices — clean, modern, and they conceal tire marks and daily wear beautifully. Arturo brings physical chips to every consultation so you see the real color under your lighting before any product is opened.</p>
-
-    <div class="filter-wrap">
-      <span class="filter-label">Filter:</span>
-      <button class="filter-btn active" onclick="filterSwatches('all',this)">All 27</button>
-      <button class="filter-btn" onclick="filterSwatches('grey',this)">Grey Tones</button>
-      <button class="filter-btn" onclick="filterSwatches('warm',this)">Warm Tones</button>
-      <button class="filter-btn" onclick="filterSwatches('dark',this)">Dark &amp; Bold</button>
-      <button class="filter-btn" onclick="filterSwatches('cool',this)">Blue &amp; Cool</button>
+    <p style="font-size:15px;font-weight:300;color:var(--silver-lt);max-width:680px;line-height:1.75;margin-bottom:32px">Our core full broadcast flake blends — the most popular choices for garage floors in the Four State Area. Gray and charcoal tones lead the pack for hiding tire marks and daily wear. Arturo brings physical chips to every free consultation so you see the real color under your actual lighting.</p>
+    <div class="swatch-grid">
+<div class="swatch-card" onclick="openColorModal('Arrowhead','epoxy-flake-color-arrowhead-garage-floor-joplin.jpg','Charcoal, gray, white &amp; red — bold contrast, a customer favorite')"><div class="swatch-img-wrap"><div class="swatch-badge">MOST POPULAR</div><img src="epoxy-flake-color-arrowhead-garage-floor-joplin.jpg" alt="Arrowhead epoxy flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Arrowhead</div><div class="swatch-desc">Charcoal, gray, white &amp; red — bold contrast, a customer favorite</div><div class="swatch-tap">Tap for full view →</div></div></div>
+<div class="swatch-card" onclick="openColorModal('Domino','epoxy-flake-color-domino-black-white-garage-floor.jpg','Black, white &amp; gray — bold, dramatic floor')"><div class="swatch-img-wrap"><div class="swatch-badge">MOST POPULAR</div><img src="epoxy-flake-color-domino-black-white-garage-floor.jpg" alt="Domino epoxy flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Domino</div><div class="swatch-desc">Black, white &amp; gray — bold, dramatic floor</div><div class="swatch-tap">Tap for full view →</div></div></div>
+<div class="swatch-card" onclick="openColorModal('Shoreline','epoxy-flake-color-shoreline-slate-grey-garage-floor.jpg','Tan, beige &amp; cream — warm, inviting, light feel')"><div class="swatch-img-wrap"><img src="epoxy-flake-color-shoreline-slate-grey-garage-floor.jpg" alt="Shoreline epoxy flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Shoreline</div><div class="swatch-desc">Tan, beige &amp; cream — warm, inviting, light feel</div><div class="swatch-tap">Tap for full view →</div></div></div>
+<div class="swatch-card" onclick="openColorModal('Glacier','epoxy-flake-color-glacier-blue-grey-garage-floor.webp','Soft blue, gray &amp; white — crisp, cool-tone finish')"><div class="swatch-img-wrap"><img src="epoxy-flake-color-glacier-blue-grey-garage-floor.webp" alt="Glacier epoxy flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Glacier</div><div class="swatch-desc">Soft blue, gray &amp; white — crisp, cool-tone finish</div><div class="swatch-tap">Tap for full view →</div></div></div>
+<div class="swatch-card" onclick="openColorModal('Houndstooth','epoxy-flake-color-houndstooth-dark-grey-garage-floor.jpg','Black, gray, white &amp; red — clean, classic, bold contrast')"><div class="swatch-img-wrap"><img src="epoxy-flake-color-houndstooth-dark-grey-garage-floor.jpg" alt="Houndstooth epoxy flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Houndstooth</div><div class="swatch-desc">Black, gray, white &amp; red — clean, classic, bold contrast</div><div class="swatch-tap">Tap for full view →</div></div></div>
+<div class="swatch-card" onclick="openColorModal('Nightfall','epoxy-flake-color-nightfall-dark-charcoal-garage-floor.jpg','Dark charcoal, gray &amp; white — dramatic, sleek finish')"><div class="swatch-img-wrap"><img src="epoxy-flake-color-nightfall-dark-charcoal-garage-floor.jpg" alt="Nightfall epoxy flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Nightfall</div><div class="swatch-desc">Dark charcoal, gray &amp; white — dramatic, sleek finish</div><div class="swatch-tap">Tap for full view →</div></div></div>
+<div class="swatch-card" onclick="openColorModal('Carbon','epoxy-flake-color-carbon-black-garage-floor.jpg','Pure black flake — deep, sleek, high-contrast look')"><div class="swatch-img-wrap"><img src="epoxy-flake-color-carbon-black-garage-floor.jpg" alt="Carbon epoxy flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Carbon</div><div class="swatch-desc">Pure black flake — deep, sleek, high-contrast look</div><div class="swatch-tap">Tap for full view →</div></div></div>
+<div class="swatch-card" onclick="openColorModal('Raven','epoxy-flake-color-raven-black-garage-floor.jpg','Black &amp; dark gray — bold, industrial look')"><div class="swatch-img-wrap"><img src="epoxy-flake-color-raven-black-garage-floor.jpg" alt="Raven epoxy flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Raven</div><div class="swatch-desc">Black &amp; dark gray — bold, industrial look</div><div class="swatch-tap">Tap for full view →</div></div></div>
+<div class="swatch-card" onclick="openColorModal('Gravel','epoxy-flake-color-gravel-cool-grey-garage-floor.jpg','Light gray, white &amp; black — cool, sophisticated finish')"><div class="swatch-img-wrap"><img src="epoxy-flake-color-gravel-cool-grey-garage-floor.jpg" alt="Gravel epoxy flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Gravel</div><div class="swatch-desc">Light gray, white &amp; black — cool, sophisticated finish</div><div class="swatch-tap">Tap for full view →</div></div></div>
+<div class="swatch-card" onclick="openColorModal('Feather Grey','epoxy-flake-color-feather-grey-light-garage-floor.jpg','White, gray &amp; black — subtle, clean, premium look')"><div class="swatch-img-wrap"><img src="epoxy-flake-color-feather-grey-light-garage-floor.jpg" alt="Feather Grey epoxy flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Feather Grey</div><div class="swatch-desc">White, gray &amp; black — subtle, clean, premium look</div><div class="swatch-tap">Tap for full view →</div></div></div>
+<div class="swatch-card" onclick="openColorModal('Mushroom','epoxy-flake-color-mushroom-warm-grey-garage-floor.jpg','Gray, brown &amp; white — warm, natural earth tones')"><div class="swatch-img-wrap"><img src="epoxy-flake-color-mushroom-warm-grey-garage-floor.jpg" alt="Mushroom epoxy flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Mushroom</div><div class="swatch-desc">Gray, brown &amp; white — warm, natural earth tones</div><div class="swatch-tap">Tap for full view →</div></div></div>
+<div class="swatch-card" onclick="openColorModal('Wombat','epoxy-flake-color-wombat-warm-grey-garage-floor.jpg','Gray, black &amp; white — clean, neutral warm tone')"><div class="swatch-img-wrap"><img src="epoxy-flake-color-wombat-warm-grey-garage-floor.jpg" alt="Wombat epoxy flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Wombat</div><div class="swatch-desc">Gray, black &amp; white — clean, neutral warm tone</div><div class="swatch-tap">Tap for full view →</div></div></div>
+<div class="swatch-card" onclick="openColorModal('Safari','epoxy-flake-color-safari-warm-beige-garage-floor.jpg','Tan, cream, gray &amp; black — warm neutral, very popular')"><div class="swatch-img-wrap"><img src="epoxy-flake-color-safari-warm-beige-garage-floor.jpg" alt="Safari epoxy flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Safari</div><div class="swatch-desc">Tan, cream, gray &amp; black — warm neutral, very popular</div><div class="swatch-tap">Tap for full view →</div></div></div>
+<div class="swatch-card" onclick="openColorModal('Outback','epoxy-flake-color-outback-tan-brown-garage-floor.jpg','Tan &amp; warm brown — rustic, natural outdoor feel')"><div class="swatch-img-wrap"><img src="epoxy-flake-color-outback-tan-brown-garage-floor.jpg" alt="Outback epoxy flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Outback</div><div class="swatch-desc">Tan &amp; warm brown — rustic, natural outdoor feel</div><div class="swatch-tap">Tap for full view →</div></div></div>
+<div class="swatch-card" onclick="openColorModal('Coyote','epoxy-flake-color-coyote-earth-tone-garage-floor.jpg','White, gray &amp; brown — warm neutral stone appearance')"><div class="swatch-img-wrap"><img src="epoxy-flake-color-coyote-earth-tone-garage-floor.jpg" alt="Coyote epoxy flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Coyote</div><div class="swatch-desc">White, gray &amp; brown — warm neutral stone appearance</div><div class="swatch-tap">Tap for full view →</div></div></div>
+<div class="swatch-card" onclick="openColorModal('Creekbed','epoxy-flake-color-creekbed-tan-brown-garage-floor.jpg','Tan, brown, gold &amp; gray — warm, rustic, natural look')"><div class="swatch-img-wrap"><img src="epoxy-flake-color-creekbed-tan-brown-garage-floor.jpg" alt="Creekbed epoxy flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Creekbed</div><div class="swatch-desc">Tan, brown, gold &amp; gray — warm, rustic, natural look</div><div class="swatch-tap">Tap for full view →</div></div></div>
+<div class="swatch-card" onclick="openColorModal('Ozark','epoxy-flake-color-ozark-sage-earth-tone-garage-floor.jpg','Brown, tan, gold, gray &amp; white — earthy Four-State feel')"><div class="swatch-img-wrap"><img src="epoxy-flake-color-ozark-sage-earth-tone-garage-floor.jpg" alt="Ozark epoxy flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Ozark</div><div class="swatch-desc">Brown, tan, gold, gray &amp; white — earthy Four-State feel</div><div class="swatch-tap">Tap for full view →</div></div></div>
+<div class="swatch-card" onclick="openColorModal('Tidal Wave','epoxy-flake-color-tidal-wave-grey-white-garage-floor.jpg','Light blue, gray &amp; white — cool, airy, show-stopping finish')"><div class="swatch-img-wrap"><img src="epoxy-flake-color-tidal-wave-grey-white-garage-floor.jpg" alt="Tidal Wave epoxy flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Tidal Wave</div><div class="swatch-desc">Light blue, gray &amp; white — cool, airy, show-stopping finish</div><div class="swatch-tap">Tap for full view →</div></div></div>
+<div class="swatch-card" onclick="openColorModal('Comet','epoxy-flake-color-comet-blue-grey-garage-floor.jpg','Blue, gray &amp; white — cool-toned, head-turning finish')"><div class="swatch-img-wrap"><img src="epoxy-flake-color-comet-blue-grey-garage-floor.jpg" alt="Comet epoxy flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Comet</div><div class="swatch-desc">Blue, gray &amp; white — cool-toned, head-turning finish</div><div class="swatch-tap">Tap for full view →</div></div></div>
     </div>
-    <div class="filter-count">Showing <span id="count">27</span> colors</div>
-
-    <div class="swatch-grid" id="swatchGrid">
-<div class="swatch-card" data-cat="grey" onclick="openColorModal('Arrowhead','epoxy-flake-color-arrowhead-garage-floor-joplin.jpg','Charcoal, gray, white &amp; red — bold contrast, a customer favorite')">
-  <div class="swatch-img-wrap">
-  <div class="swatch-badge">MOST POPULAR</div>
-    <img src="epoxy-flake-color-arrowhead-garage-floor-joplin.jpg" alt="Arrowhead epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
-  </div>
-  <div class="swatch-body">
-    <div class="swatch-name">Arrowhead</div>
-    <div class="swatch-desc">Charcoal, gray, white &amp; red — bold contrast, a customer favorite</div>
-    <div class="swatch-tap">Tap for full view →</div>
-  </div>
-</div>
-<div class="swatch-card" data-cat="dark" onclick="openColorModal('Domino','epoxy-flake-color-domino-black-white-garage-floor.jpg','Black, white &amp; gray — bold, dramatic floor')">
-  <div class="swatch-img-wrap">
-  <div class="swatch-badge">MOST POPULAR</div>
-    <img src="epoxy-flake-color-domino-black-white-garage-floor.jpg" alt="Domino epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
-  </div>
-  <div class="swatch-body">
-    <div class="swatch-name">Domino</div>
-    <div class="swatch-desc">Black, white &amp; gray — bold, dramatic floor</div>
-    <div class="swatch-tap">Tap for full view →</div>
-  </div>
-</div>
-<div class="swatch-card" data-cat="grey" onclick="openColorModal('Denali','epoxy-flake-color-denali-grey-garage-floor-joplin.jpg','Gray, beige, white &amp; black — rich dimensional look')">
-  <div class="swatch-img-wrap">
-  <div class="swatch-badge">MOST POPULAR</div>
-    <img src="epoxy-flake-color-denali-grey-garage-floor-joplin.jpg" alt="Denali epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
-  </div>
-  <div class="swatch-body">
-    <div class="swatch-name">Denali</div>
-    <div class="swatch-desc">Gray, beige, white &amp; black — rich dimensional look</div>
-    <div class="swatch-tap">Tap for full view →</div>
-  </div>
-</div>
-<div class="swatch-card" data-cat="grey" onclick="openColorModal('Shoreline','epoxy-flake-color-shoreline-slate-grey-garage-floor.jpg','Tan, beige &amp; cream — warm, inviting, light feel')">
-  <div class="swatch-img-wrap">
-    <img src="epoxy-flake-color-shoreline-slate-grey-garage-floor.jpg" alt="Shoreline epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
-  </div>
-  <div class="swatch-body">
-    <div class="swatch-name">Shoreline</div>
-    <div class="swatch-desc">Tan, beige &amp; cream — warm, inviting, light feel</div>
-    <div class="swatch-tap">Tap for full view →</div>
-  </div>
-</div>
-<div class="swatch-card" data-cat="grey" onclick="openColorModal('Husky','epoxy-flake-color-husky-blue-grey-garage-floor.jpg','Light gray, white &amp; black — clean, classic grey tone')">
-  <div class="swatch-img-wrap">
-    <img src="epoxy-flake-color-husky-blue-grey-garage-floor.jpg" alt="Husky epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
-  </div>
-  <div class="swatch-body">
-    <div class="swatch-name">Husky</div>
-    <div class="swatch-desc">Light gray, white &amp; black — clean, classic grey tone</div>
-    <div class="swatch-tap">Tap for full view →</div>
-  </div>
-</div>
-<div class="swatch-card" data-cat="cool" onclick="openColorModal('Comet','epoxy-flake-color-comet-blue-grey-garage-floor.jpg','Blue, gray &amp; white — cool-toned, head-turning finish')">
-  <div class="swatch-img-wrap">
-    <img src="epoxy-flake-color-comet-blue-grey-garage-floor.jpg" alt="Comet epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
-  </div>
-  <div class="swatch-body">
-    <div class="swatch-name">Comet</div>
-    <div class="swatch-desc">Blue, gray &amp; white — cool-toned, head-turning finish</div>
-    <div class="swatch-tap">Tap for full view →</div>
-  </div>
-</div>
-<div class="swatch-card" data-cat="cool" onclick="openColorModal('Slate','epoxy-flake-color-slate-blue-grey-garage-floor.jpg','Gray, white &amp; tan — smooth, sophisticated cool tone')">
-  <div class="swatch-img-wrap">
-    <img src="epoxy-flake-color-slate-blue-grey-garage-floor.jpg" alt="Slate epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
-  </div>
-  <div class="swatch-body">
-    <div class="swatch-name">Slate</div>
-    <div class="swatch-desc">Gray, white &amp; tan — smooth, sophisticated cool tone</div>
-    <div class="swatch-tap">Tap for full view →</div>
-  </div>
-</div>
-<div class="swatch-card" data-cat="cool" onclick="openColorModal('Glacier','epoxy-flake-color-glacier-blue-grey-garage-floor.webp','Soft blue, gray &amp; white — crisp, cool-tone finish')">
-  <div class="swatch-img-wrap">
-    <img src="epoxy-flake-color-glacier-blue-grey-garage-floor.webp" alt="Glacier epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
-  </div>
-  <div class="swatch-body">
-    <div class="swatch-name">Glacier</div>
-    <div class="swatch-desc">Soft blue, gray &amp; white — crisp, cool-tone finish</div>
-    <div class="swatch-tap">Tap for full view →</div>
-  </div>
-</div>
-<div class="swatch-card" data-cat="dark" onclick="openColorModal('Houndstooth','epoxy-flake-color-houndstooth-dark-grey-garage-floor.jpg','Black, gray, white &amp; red — clean, classic, bold contrast')">
-  <div class="swatch-img-wrap">
-    <img src="epoxy-flake-color-houndstooth-dark-grey-garage-floor.jpg" alt="Houndstooth epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
-  </div>
-  <div class="swatch-body">
-    <div class="swatch-name">Houndstooth</div>
-    <div class="swatch-desc">Black, gray, white &amp; red — clean, classic, bold contrast</div>
-    <div class="swatch-tap">Tap for full view →</div>
-  </div>
-</div>
-<div class="swatch-card" data-cat="dark" onclick="openColorModal('Nightfall','epoxy-flake-color-nightfall-dark-charcoal-garage-floor.jpg','Dark charcoal, gray &amp; white — dramatic, sleek finish')">
-  <div class="swatch-img-wrap">
-    <img src="epoxy-flake-color-nightfall-dark-charcoal-garage-floor.jpg" alt="Nightfall epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
-  </div>
-  <div class="swatch-body">
-    <div class="swatch-name">Nightfall</div>
-    <div class="swatch-desc">Dark charcoal, gray &amp; white — dramatic, sleek finish</div>
-    <div class="swatch-tap">Tap for full view →</div>
-  </div>
-</div>
-<div class="swatch-card" data-cat="dark" onclick="openColorModal('Carbon','epoxy-flake-color-carbon-black-garage-floor.jpg','Pure black flake — deep, sleek, high-contrast look')">
-  <div class="swatch-img-wrap">
-    <img src="epoxy-flake-color-carbon-black-garage-floor.jpg" alt="Carbon epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
-  </div>
-  <div class="swatch-body">
-    <div class="swatch-name">Carbon</div>
-    <div class="swatch-desc">Pure black flake — deep, sleek, high-contrast look</div>
-    <div class="swatch-tap">Tap for full view →</div>
-  </div>
-</div>
-<div class="swatch-card" data-cat="dark" onclick="openColorModal('Raven','epoxy-flake-color-raven-black-garage-floor.jpg','Black &amp; dark gray — bold, industrial look')">
-  <div class="swatch-img-wrap">
-    <img src="epoxy-flake-color-raven-black-garage-floor.jpg" alt="Raven epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
-  </div>
-  <div class="swatch-body">
-    <div class="swatch-name">Raven</div>
-    <div class="swatch-desc">Black &amp; dark gray — bold, industrial look</div>
-    <div class="swatch-tap">Tap for full view →</div>
-  </div>
-</div>
-<div class="swatch-card" data-cat="grey" onclick="openColorModal('Gravel','epoxy-flake-color-gravel-cool-grey-garage-floor.jpg','Light gray, white &amp; black — cool, sophisticated finish')">
-  <div class="swatch-img-wrap">
-    <img src="epoxy-flake-color-gravel-cool-grey-garage-floor.jpg" alt="Gravel epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
-  </div>
-  <div class="swatch-body">
-    <div class="swatch-name">Gravel</div>
-    <div class="swatch-desc">Light gray, white &amp; black — cool, sophisticated finish</div>
-    <div class="swatch-tap">Tap for full view →</div>
-  </div>
-</div>
-<div class="swatch-card" data-cat="grey" onclick="openColorModal('Feather Grey','epoxy-flake-color-feather-grey-light-garage-floor.jpg','White, gray &amp; black — subtle, clean, premium look')">
-  <div class="swatch-img-wrap">
-    <img src="epoxy-flake-color-feather-grey-light-garage-floor.jpg" alt="Feather Grey epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
-  </div>
-  <div class="swatch-body">
-    <div class="swatch-name">Feather Grey</div>
-    <div class="swatch-desc">White, gray &amp; black — subtle, clean, premium look</div>
-    <div class="swatch-tap">Tap for full view →</div>
-  </div>
-</div>
-<div class="swatch-card" data-cat="warm" onclick="openColorModal('Mushroom','epoxy-flake-color-mushroom-warm-grey-garage-floor.jpg','Gray, brown &amp; white — warm, natural earth tones')">
-  <div class="swatch-img-wrap">
-    <img src="epoxy-flake-color-mushroom-warm-grey-garage-floor.jpg" alt="Mushroom epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
-  </div>
-  <div class="swatch-body">
-    <div class="swatch-name">Mushroom</div>
-    <div class="swatch-desc">Gray, brown &amp; white — warm, natural earth tones</div>
-    <div class="swatch-tap">Tap for full view →</div>
-  </div>
-</div>
-<div class="swatch-card" data-cat="warm" onclick="openColorModal('Wombat','epoxy-flake-color-wombat-warm-grey-garage-floor.jpg','Gray, black &amp; white — clean, neutral warm tone')">
-  <div class="swatch-img-wrap">
-    <img src="epoxy-flake-color-wombat-warm-grey-garage-floor.jpg" alt="Wombat epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
-  </div>
-  <div class="swatch-body">
-    <div class="swatch-name">Wombat</div>
-    <div class="swatch-desc">Gray, black &amp; white — clean, neutral warm tone</div>
-    <div class="swatch-tap">Tap for full view →</div>
-  </div>
-</div>
-<div class="swatch-card" data-cat="warm" onclick="openColorModal('Agate','epoxy-flake-color-agate-joplin-mo.jpg','Mixed silver, gray &amp; white — granite-like stone appearance')">
-  <div class="swatch-img-wrap">
-  <div class="swatch-badge">MOST POPULAR</div>
-    <img src="epoxy-flake-color-agate-joplin-mo.jpg" alt="Agate epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
-  </div>
-  <div class="swatch-body">
-    <div class="swatch-name">Agate</div>
-    <div class="swatch-desc">Mixed silver, gray &amp; white — granite-like stone appearance</div>
-    <div class="swatch-tap">Tap for full view →</div>
-  </div>
-</div>
-<div class="swatch-card" data-cat="warm" onclick="openColorModal('Cascade','epoxy-flake-color-cascade-warm-ivory-garage-floor.jpg','White, tan, gray &amp; brick red — light neutral with warm accents')">
-  <div class="swatch-img-wrap">
-    <img src="epoxy-flake-color-cascade-warm-ivory-garage-floor.jpg" alt="Cascade epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
-  </div>
-  <div class="swatch-body">
-    <div class="swatch-name">Cascade</div>
-    <div class="swatch-desc">White, tan, gray &amp; brick red — light neutral with warm accents</div>
-    <div class="swatch-tap">Tap for full view →</div>
-  </div>
-</div>
-<div class="swatch-card" data-cat="warm" onclick="openColorModal('Safari','epoxy-flake-color-safari-warm-beige-garage-floor.jpg','Tan, cream, gray &amp; black — warm neutral, very popular')">
-  <div class="swatch-img-wrap">
-    <img src="epoxy-flake-color-safari-warm-beige-garage-floor.jpg" alt="Safari epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
-  </div>
-  <div class="swatch-body">
-    <div class="swatch-name">Safari</div>
-    <div class="swatch-desc">Tan, cream, gray &amp; black — warm neutral, very popular</div>
-    <div class="swatch-tap">Tap for full view →</div>
-  </div>
-</div>
-<div class="swatch-card" data-cat="warm" onclick="openColorModal('Outback','epoxy-flake-color-outback-tan-brown-garage-floor.jpg','Tan &amp; warm brown — rustic, natural outdoor feel')">
-  <div class="swatch-img-wrap">
-    <img src="epoxy-flake-color-outback-tan-brown-garage-floor.jpg" alt="Outback epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
-  </div>
-  <div class="swatch-body">
-    <div class="swatch-name">Outback</div>
-    <div class="swatch-desc">Tan &amp; warm brown — rustic, natural outdoor feel</div>
-    <div class="swatch-tap">Tap for full view →</div>
-  </div>
-</div>
-<div class="swatch-card" data-cat="warm" onclick="openColorModal('Coyote','epoxy-flake-color-coyote-earth-tone-garage-floor.jpg','White, gray &amp; brown — warm neutral stone appearance')">
-  <div class="swatch-img-wrap">
-    <img src="epoxy-flake-color-coyote-earth-tone-garage-floor.jpg" alt="Coyote epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
-  </div>
-  <div class="swatch-body">
-    <div class="swatch-name">Coyote</div>
-    <div class="swatch-desc">White, gray &amp; brown — warm neutral stone appearance</div>
-    <div class="swatch-tap">Tap for full view →</div>
-  </div>
-</div>
-<div class="swatch-card" data-cat="warm" onclick="openColorModal('Creekbed','epoxy-flake-color-creekbed-tan-brown-garage-floor.jpg','Tan, brown, gold &amp; gray — warm, rustic, natural look')">
-  <div class="swatch-img-wrap">
-    <img src="epoxy-flake-color-creekbed-tan-brown-garage-floor.jpg" alt="Creekbed epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
-  </div>
-  <div class="swatch-body">
-    <div class="swatch-name">Creekbed</div>
-    <div class="swatch-desc">Tan, brown, gold &amp; gray — warm, rustic, natural look</div>
-    <div class="swatch-tap">Tap for full view →</div>
-  </div>
-</div>
-<div class="swatch-card" data-cat="warm" onclick="openColorModal('Ozark','epoxy-flake-color-ozark-sage-earth-tone-garage-floor.jpg','Brown, tan, gold, gray &amp; white — earthy Four-State feel')">
-  <div class="swatch-img-wrap">
-    <img src="epoxy-flake-color-ozark-sage-earth-tone-garage-floor.jpg" alt="Ozark epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
-  </div>
-  <div class="swatch-body">
-    <div class="swatch-name">Ozark</div>
-    <div class="swatch-desc">Brown, tan, gold, gray &amp; white — earthy Four-State feel</div>
-    <div class="swatch-tap">Tap for full view →</div>
-  </div>
-</div>
-<div class="swatch-card" data-cat="warm" onclick="openColorModal('Yosemite','epoxy-flake-color-yosemite-grey-amber-garage-floor.jpg','Gray, tan, cream &amp; black — organic stone appearance')">
-  <div class="swatch-img-wrap">
-    <img src="epoxy-flake-color-yosemite-grey-amber-garage-floor.jpg" alt="Yosemite epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
-  </div>
-  <div class="swatch-body">
-    <div class="swatch-name">Yosemite</div>
-    <div class="swatch-desc">Gray, tan, cream &amp; black — organic stone appearance</div>
-    <div class="swatch-tap">Tap for full view →</div>
-  </div>
-</div>
-<div class="swatch-card" data-cat="dark" onclick="openColorModal('Yukon','epoxy-flake-color-yukon-dark-grey-warm-garage-floor.jpg','Dark gray, black &amp; white — dramatic, layered depth')">
-  <div class="swatch-img-wrap">
-    <img src="epoxy-flake-color-yukon-dark-grey-warm-garage-floor.jpg" alt="Yukon epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
-  </div>
-  <div class="swatch-body">
-    <div class="swatch-name">Yukon</div>
-    <div class="swatch-desc">Dark gray, black &amp; white — dramatic, layered depth</div>
-    <div class="swatch-tap">Tap for full view →</div>
-  </div>
-</div>
-<div class="swatch-card" data-cat="dark" onclick="openColorModal('Europa','epoxy-flake-color-europa-grey-burgundy-garage-floor.jpg','Dark gray &amp; black — sleek, deep, premium finish')">
-  <div class="swatch-img-wrap">
-    <img src="epoxy-flake-color-europa-grey-burgundy-garage-floor.jpg" alt="Europa epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
-  </div>
-  <div class="swatch-body">
-    <div class="swatch-name">Europa</div>
-    <div class="swatch-desc">Dark gray &amp; black — sleek, deep, premium finish</div>
-    <div class="swatch-tap">Tap for full view →</div>
-  </div>
-</div>
-<div class="swatch-card" data-cat="grey" onclick="openColorModal('Tidal Wave','epoxy-flake-color-tidal-wave-grey-white-garage-floor.jpg','Light blue, gray &amp; white — cool, airy, show-stopping finish')">
-  <div class="swatch-img-wrap">
-    <img src="epoxy-flake-color-tidal-wave-grey-white-garage-floor.jpg" alt="Tidal Wave epoxy flake color — Crete Creations LLC Joplin MO" loading="lazy" />
-  </div>
-  <div class="swatch-body">
-    <div class="swatch-name">Tidal Wave</div>
-    <div class="swatch-desc">Light blue, gray &amp; white — cool, airy, show-stopping finish</div>
-    <div class="swatch-tap">Tap for full view →</div>
   </div>
 </div>
 
+<!-- ── HYBRID FLAKE ── -->
+<div style="background:var(--charcoal);padding:60px 24px;border-top:1px solid var(--rim)">
+  <div class="si">
+    <span class="sl">Hybrid Flake Collection · 8 Premium Blends</span>
+    <h2 class="sh">Hybrid <em>Flake Colors</em></h2>
+    <div class="rule"></div>
+    <p style="font-size:15px;font-weight:300;color:var(--silver-lt);max-width:680px;line-height:1.75;margin-bottom:32px">Hybrid flake blends mix multiple chip sizes and types for added depth, dimension, and a richer visual texture — a step above standard for homeowners who want a floor that truly stands out. Arturo brings physical hybrid chips to every consultation.</p>
+    <div class="swatch-grid" style="grid-template-columns:repeat(4,1fr)">
+<div class="swatch-card" onclick="openColorModal('Denali','epoxy-flake-color-denali-grey-garage-floor-joplin.jpg','Gray, beige, white &amp; black — rich dimensional look')"><div class="swatch-img-wrap"><div class="swatch-badge">MOST POPULAR</div><img src="epoxy-flake-color-denali-grey-garage-floor-joplin.jpg" alt="Denali hybrid flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Denali</div><div class="swatch-desc">Gray, beige, white &amp; black — rich dimensional look</div><div class="swatch-tap">Tap for full view →</div></div></div>
+<div class="swatch-card" onclick="openColorModal('Husky','epoxy-flake-color-husky-blue-grey-garage-floor.jpg','Light gray, white &amp; black — clean, classic grey tone')"><div class="swatch-img-wrap"><div class="badge-hybrid">HYBRID</div><img src="epoxy-flake-color-husky-blue-grey-garage-floor.jpg" alt="Husky hybrid flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Husky</div><div class="swatch-desc">Light gray, white &amp; black — clean, classic grey tone</div><div class="swatch-tap">Tap for full view →</div></div></div>
+<div class="swatch-card" onclick="openColorModal('Slate','epoxy-flake-color-slate-blue-grey-garage-floor.jpg','Gray, white &amp; tan — smooth, sophisticated cool tone')"><div class="swatch-img-wrap"><div class="badge-hybrid">HYBRID</div><img src="epoxy-flake-color-slate-blue-grey-garage-floor.jpg" alt="Slate hybrid flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Slate</div><div class="swatch-desc">Gray, white &amp; tan — smooth, sophisticated cool tone</div><div class="swatch-tap">Tap for full view →</div></div></div>
+<div class="swatch-card" onclick="openColorModal('Agate','epoxy-flake-color-agate-joplin-mo.jpg','Mixed silver, gray &amp; white — granite-like stone appearance')"><div class="swatch-img-wrap"><div class="swatch-badge">MOST POPULAR</div><img src="epoxy-flake-color-agate-joplin-mo.jpg" alt="Agate hybrid flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Agate</div><div class="swatch-desc">Mixed silver, gray &amp; white — granite-like stone appearance</div><div class="swatch-tap">Tap for full view →</div></div></div>
+<div class="swatch-card" onclick="openColorModal('Cascade','epoxy-flake-color-cascade-warm-ivory-garage-floor.jpg','White, tan, gray &amp; brick red — light neutral with warm accents')"><div class="swatch-img-wrap"><div class="badge-hybrid">HYBRID</div><img src="epoxy-flake-color-cascade-warm-ivory-garage-floor.jpg" alt="Cascade hybrid flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Cascade</div><div class="swatch-desc">White, tan, gray &amp; brick red — light neutral with warm accents</div><div class="swatch-tap">Tap for full view →</div></div></div>
+<div class="swatch-card" onclick="openColorModal('Yosemite','epoxy-flake-color-yosemite-grey-amber-garage-floor.jpg','Gray, tan, cream &amp; black — organic stone appearance')"><div class="swatch-img-wrap"><div class="badge-hybrid">HYBRID</div><img src="epoxy-flake-color-yosemite-grey-amber-garage-floor.jpg" alt="Yosemite hybrid flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Yosemite</div><div class="swatch-desc">Gray, tan, cream &amp; black — organic stone appearance</div><div class="swatch-tap">Tap for full view →</div></div></div>
+<div class="swatch-card" onclick="openColorModal('Yukon','epoxy-flake-color-yukon-dark-grey-warm-garage-floor.jpg','Dark gray, black &amp; white — dramatic, layered depth')"><div class="swatch-img-wrap"><div class="badge-hybrid">HYBRID</div><img src="epoxy-flake-color-yukon-dark-grey-warm-garage-floor.jpg" alt="Yukon hybrid flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Yukon</div><div class="swatch-desc">Dark gray, black &amp; white — dramatic, layered depth</div><div class="swatch-tap">Tap for full view →</div></div></div>
+<div class="swatch-card" onclick="openColorModal('Europa','epoxy-flake-color-europa-grey-burgundy-garage-floor.jpg','Dark gray &amp; black — sleek, deep, premium finish')"><div class="swatch-img-wrap"><div class="badge-hybrid">HYBRID</div><img src="epoxy-flake-color-europa-grey-burgundy-garage-floor.jpg" alt="Europa hybrid flake" loading="lazy"></div><div class="swatch-body"><div class="swatch-name">Europa</div><div class="swatch-desc">Dark gray &amp; black — sleek, deep, premium finish</div><div class="swatch-tap">Tap for full view →</div></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ── METALLIC PIGMENT CHART ── -->
+<div style="background:var(--black);padding:60px 24px;border-top:2px solid var(--red-dk)">
+  <div class="si">
+    <span class="sl">Metallic System · 59 Signature Pigments</span>
+    <h2 class="sh">Metallic Epoxy <em>Pigment Colors</em></h2>
+    <div class="rule"></div>
+    <p style="font-size:15px;font-weight:300;color:var(--silver-lt);max-width:680px;line-height:1.75;margin-bottom:28px">Pure pigment powders suspended in polyaspartic resin — poured, manipulated, and sealed for a one-of-a-kind liquid-metal floor. No two metallic floors are ever identical. Available in 59 signature pigments across 6 color families.</p>
+    <div class="info-box" style="margin-bottom:36px">
+      <p>🌊 <strong>Every metallic floor is one of a kind.</strong> Pigments are swirled, blended, and layered during installation to create depth and movement impossible to replicate. Colors can be mixed — ask Arturo about custom two-tone pours at your free consultation. <a href="contact.html" style="color:var(--red-lt);text-decoration:underline">Schedule yours →</a></p>
     </div>
 
-    <div class="info-box" style="margin-top:40px">
+    <div class="family-hdr">Whites, Grays &amp; Metals — 8 Pigments</div>
+    <div class="pigment-grid">
+      <div class="pigment-card" style="background:#e8e8e8"><div class="pigment-circle" style="background:linear-gradient(135deg,#f0f0f0,#d0d0d0)"></div><div class="pigment-name" style="color:#111">Bright White</div></div>
+      <div class="pigment-card" style="background:#c8c8c8"><div class="pigment-circle" style="background:linear-gradient(135deg,#d8d8d8,#b0b0b0)"></div><div class="pigment-name" style="color:#111">Pearl</div></div>
+      <div class="pigment-card" style="background:#b0b0a8"><div class="pigment-circle" style="background:linear-gradient(135deg,#c0c0b8,#989890)"></div><div class="pigment-name" style="color:#111">Oyster</div></div>
+      <div class="pigment-card" style="background:#a0a8b0"><div class="pigment-circle" style="background:linear-gradient(135deg,#b0b8c0,#888fa0)"></div><div class="pigment-name" style="color:#111">Aluminum</div></div>
+      <div class="pigment-card" style="background:#888888"><div class="pigment-circle" style="background:linear-gradient(135deg,#999,#666)"></div><div class="pigment-name" style="color:#fff">Smoke Gray</div></div>
+      <div class="pigment-card" style="background:#606060"><div class="pigment-circle" style="background:linear-gradient(135deg,#707070,#484848)"></div><div class="pigment-name" style="color:#fff">Graphite</div></div>
+      <div class="pigment-card" style="background:#444"><div class="pigment-circle" style="background:linear-gradient(135deg,#555,#2a2a2a)"></div><div class="pigment-name" style="color:#fff">Charcoal</div></div>
+      <div class="pigment-card" style="background:#222"><div class="pigment-circle" style="background:linear-gradient(135deg,#333,#0a0a0a)"></div><div class="pigment-name" style="color:#fff">Black Pearl</div></div>
+    </div>
+
+    <div class="family-hdr">Golds, Browns &amp; Earth Tones — 11 Pigments</div>
+    <div class="pigment-grid">
+      <div class="pigment-card" style="background:#c8a020"><div class="pigment-circle" style="background:linear-gradient(135deg,#d4ae28,#a08010)"></div><div class="pigment-name" style="color:#fff">Gold Rush</div></div>
+      <div class="pigment-card" style="background:#c8c020"><div class="pigment-circle" style="background:linear-gradient(135deg,#d4cc28,#a0a010)"></div><div class="pigment-name" style="color:#fff">Aztec Gold</div></div>
+      <div class="pigment-card" style="background:#d07818"><div class="pigment-circle" style="background:linear-gradient(135deg,#dc8820,#a05808)"></div><div class="pigment-name" style="color:#fff">Marigold</div></div>
+      <div class="pigment-card" style="background:#c06030"><div class="pigment-circle" style="background:linear-gradient(135deg,#cc7040,#a04818)"></div><div class="pigment-name" style="color:#fff">Copper</div></div>
+      <div class="pigment-card" style="background:#8b4010"><div class="pigment-circle" style="background:linear-gradient(135deg,#a05018,#6a2c08)"></div><div class="pigment-name" style="color:#fff">Chestnut Brown</div></div>
+      <div class="pigment-card" style="background:#6b4820"><div class="pigment-circle" style="background:linear-gradient(135deg,#7a5528,#4a3010)"></div><div class="pigment-name" style="color:#fff">Walnut Brown</div></div>
+      <div class="pigment-card" style="background:#7a5030"><div class="pigment-circle" style="background:linear-gradient(135deg,#886040,#5a3818)"></div><div class="pigment-name" style="color:#fff">Mocha Brown</div></div>
+      <div class="pigment-card" style="background:#7a6030"><div class="pigment-circle" style="background:linear-gradient(135deg,#887040,#5a4810)"></div><div class="pigment-name" style="color:#fff">Bronze</div></div>
+      <div class="pigment-card" style="background:#c8c830"><div class="pigment-circle" style="background:linear-gradient(135deg,#d4d440,#a0a018)"></div><div class="pigment-name" style="color:#333">Lemonade</div></div>
+      <div class="pigment-card" style="background:#7a8830"><div class="pigment-circle" style="background:linear-gradient(135deg,#8a9840,#5a6818)"></div><div class="pigment-name" style="color:#fff">Olive</div></div>
+      <div class="pigment-card" style="background:#e07818"><div class="pigment-circle" style="background:linear-gradient(135deg,#ec8820,#b85808)"></div><div class="pigment-name" style="color:#fff">Bright Orange</div></div>
+    </div>
+
+    <div class="family-hdr">Greens &amp; Teals — 11 Pigments</div>
+    <div class="pigment-grid">
+      <div class="pigment-card" style="background:#80d040"><div class="pigment-circle" style="background:linear-gradient(135deg,#90e050,#60a828)"></div><div class="pigment-name" style="color:#fff">Lime</div></div>
+      <div class="pigment-card" style="background:#70c030"><div class="pigment-circle" style="background:linear-gradient(135deg,#80d040,#509818)"></div><div class="pigment-name" style="color:#fff">Apple Green</div></div>
+      <div class="pigment-card" style="background:#88c878"><div class="pigment-circle" style="background:linear-gradient(135deg,#98d888,#68a858)"></div><div class="pigment-name" style="color:#333">Pistachio</div></div>
+      <div class="pigment-card" style="background:#48c8a0"><div class="pigment-circle" style="background:linear-gradient(135deg,#58d8b0,#28a880)"></div><div class="pigment-name" style="color:#fff">Sea Green</div></div>
+      <div class="pigment-card" style="background:#38b888"><div class="pigment-circle" style="background:linear-gradient(135deg,#48c898,#189868)"></div><div class="pigment-name" style="color:#fff">Minter Green</div></div>
+      <div class="pigment-card" style="background:#28a870"><div class="pigment-circle" style="background:linear-gradient(135deg,#38b880,#108850)"></div><div class="pigment-name" style="color:#fff">Jade</div></div>
+      <div class="pigment-card" style="background:#50a870"><div class="pigment-circle" style="background:linear-gradient(135deg,#60b880,#308850)"></div><div class="pigment-name" style="color:#fff">Sage Green</div></div>
+      <div class="pigment-card" style="background:#20c0b0"><div class="pigment-circle" style="background:linear-gradient(135deg,#30d0c0,#00a090)"></div><div class="pigment-name" style="color:#fff">Turquoise</div></div>
+      <div class="pigment-card" style="background:#20a8c0"><div class="pigment-circle" style="background:linear-gradient(135deg,#30b8d0,#0088a0)"></div><div class="pigment-name" style="color:#fff">Peacock</div></div>
+      <div class="pigment-card" style="background:#109898"><div class="pigment-circle" style="background:linear-gradient(135deg,#20a8a8,#007878)"></div><div class="pigment-name" style="color:#fff">Teal Green</div></div>
+      <div class="pigment-card" style="background:#107050"><div class="pigment-circle" style="background:linear-gradient(135deg,#208060,#005030)"></div><div class="pigment-name" style="color:#fff">Dark Emerald</div></div>
+    </div>
+
+    <div class="family-hdr">Blues — 8 Pigments</div>
+    <div class="pigment-grid">
+      <div class="pigment-card" style="background:#2890e0"><div class="pigment-circle" style="background:linear-gradient(135deg,#38a0f0,#0870c0)"></div><div class="pigment-name" style="color:#fff">Luster Blue</div></div>
+      <div class="pigment-card" style="background:#3098d0"><div class="pigment-circle" style="background:linear-gradient(135deg,#40a8e0,#1078b0)"></div><div class="pigment-name" style="color:#fff">Surf Blue</div></div>
+      <div class="pigment-card" style="background:#60a8c8"><div class="pigment-circle" style="background:linear-gradient(135deg,#70b8d8,#4088a8)"></div><div class="pigment-name" style="color:#fff">Shimmer Blue</div></div>
+      <div class="pigment-card" style="background:#1060d0"><div class="pigment-circle" style="background:linear-gradient(135deg,#2070e0,#0040b0)"></div><div class="pigment-name" style="color:#fff">Electric Blue</div></div>
+      <div class="pigment-card" style="background:#1048c0"><div class="pigment-circle" style="background:linear-gradient(135deg,#2058d0,#0030a0)"></div><div class="pigment-name" style="color:#fff">Cobalt</div></div>
+      <div class="pigment-card" style="background:#2038c0"><div class="pigment-circle" style="background:linear-gradient(135deg,#3048d0,#0820a0)"></div><div class="pigment-name" style="color:#fff">Royal Blue</div></div>
+      <div class="pigment-card" style="background:#3040a8"><div class="pigment-circle" style="background:linear-gradient(135deg,#4050b8,#182888)"></div><div class="pigment-name" style="color:#fff">Twilight Blue</div></div>
+      <div class="pigment-card" style="background:#1828a0"><div class="pigment-circle" style="background:linear-gradient(135deg,#2838b0,#081880)"></div><div class="pigment-name" style="color:#fff">Sapphire</div></div>
+    </div>
+
+    <div class="family-hdr">Reds, Pinks &amp; Purples — 11 Pigments</div>
+    <div class="pigment-grid">
+      <div class="pigment-card" style="background:#c02020"><div class="pigment-circle" style="background:linear-gradient(135deg,#d03030,#a00808)"></div><div class="pigment-name" style="color:#fff">Crimson</div></div>
+      <div class="pigment-card" style="background:#c03040"><div class="pigment-circle" style="background:linear-gradient(135deg,#d04050,#a01020)"></div><div class="pigment-name" style="color:#fff">Red Blossom</div></div>
+      <div class="pigment-card" style="background:#c84060"><div class="pigment-circle" style="background:linear-gradient(135deg,#d85070,#a02040)"></div><div class="pigment-name" style="color:#fff">Rose</div></div>
+      <div class="pigment-card" style="background:#d02840"><div class="pigment-circle" style="background:linear-gradient(135deg,#e03850,#b00820)"></div><div class="pigment-name" style="color:#fff">Scarlet</div></div>
+      <div class="pigment-card" style="background:#900830"><div class="pigment-circle" style="background:linear-gradient(135deg,#a01840,#700018)"></div><div class="pigment-name" style="color:#fff">Cabernet</div></div>
+      <div class="pigment-card" style="background:#980830"><div class="pigment-circle" style="background:linear-gradient(135deg,#a81840,#780018)"></div><div class="pigment-name" style="color:#fff">Merlot</div></div>
+      <div class="pigment-card" style="background:#c86080"><div class="pigment-circle" style="background:linear-gradient(135deg,#d87090,#a84060)"></div><div class="pigment-name" style="color:#fff">Pink</div></div>
+      <div class="pigment-card" style="background:#c020a0"><div class="pigment-circle" style="background:linear-gradient(135deg,#d030b0,#a00080)"></div><div class="pigment-name" style="color:#fff">Magenta</div></div>
+      <div class="pigment-card" style="background:#8020c0"><div class="pigment-circle" style="background:linear-gradient(135deg,#9030d0,#6000a0)"></div><div class="pigment-name" style="color:#fff">Violet</div></div>
+      <div class="pigment-card" style="background:#a0a0d0"><div class="pigment-circle" style="background:linear-gradient(135deg,#b0b0e0,#8080b0)"></div><div class="pigment-name" style="color:#333">Lavender</div></div>
+      <div class="pigment-card" style="background:#7020c0"><div class="pigment-circle" style="background:linear-gradient(135deg,#8030d0,#5000a0)"></div><div class="pigment-name" style="color:#fff">Purple</div></div>
+    </div>
+
+    <div class="family-hdr">Neon Pigments — 10 Pigments</div>
+    <div class="pigment-grid">
+      <div class="pigment-card" style="background:#e0f020;box-shadow:0 0 20px rgba(224,240,32,.35)"><div class="pigment-circle" style="background:#e0f020;box-shadow:0 0 14px rgba(224,240,32,.65)"></div><div class="pigment-name" style="color:#333">Neon Yellow</div></div>
+      <div class="pigment-card" style="background:#f0a000;box-shadow:0 0 20px rgba(240,160,0,.35)"><div class="pigment-circle" style="background:#f0a000;box-shadow:0 0 14px rgba(240,160,0,.65)"></div><div class="pigment-name" style="color:#fff">Neon Orange Yellow</div></div>
+      <div class="pigment-card" style="background:#f07010;box-shadow:0 0 20px rgba(240,112,16,.35)"><div class="pigment-circle" style="background:#f07010;box-shadow:0 0 14px rgba(240,112,16,.65)"></div><div class="pigment-name" style="color:#fff">Neon Orange</div></div>
+      <div class="pigment-card" style="background:#f02010;box-shadow:0 0 20px rgba(240,32,16,.35)"><div class="pigment-circle" style="background:#f02010;box-shadow:0 0 14px rgba(240,32,16,.65)"></div><div class="pigment-name" style="color:#fff">Neon Red</div></div>
+      <div class="pigment-card" style="background:#e010e0;box-shadow:0 0 20px rgba(224,16,224,.35)"><div class="pigment-circle" style="background:#e010e0;box-shadow:0 0 14px rgba(224,16,224,.65)"></div><div class="pigment-name" style="color:#fff">Neon Purple</div></div>
+      <div class="pigment-card" style="background:#f010c0;box-shadow:0 0 20px rgba(240,16,192,.35)"><div class="pigment-circle" style="background:#f010c0;box-shadow:0 0 14px rgba(240,16,192,.65)"></div><div class="pigment-name" style="color:#fff">Neon Bright Red</div></div>
+      <div class="pigment-card" style="background:#f010a0;box-shadow:0 0 20px rgba(240,16,160,.35)"><div class="pigment-circle" style="background:#f010a0;box-shadow:0 0 14px rgba(240,16,160,.65)"></div><div class="pigment-name" style="color:#fff">Neon Pink</div></div>
+      <div class="pigment-card" style="background:#f020e0;box-shadow:0 0 20px rgba(240,32,224,.35)"><div class="pigment-circle" style="background:#f020e0;box-shadow:0 0 14px rgba(240,32,224,.65)"></div><div class="pigment-name" style="color:#fff">Neon Magenta</div></div>
+      <div class="pigment-card" style="background:#30f040;box-shadow:0 0 20px rgba(48,240,64,.35)"><div class="pigment-circle" style="background:#30f040;box-shadow:0 0 14px rgba(48,240,64,.65)"></div><div class="pigment-name" style="color:#333">Neon Green</div></div>
+      <div class="pigment-card" style="background:#10d0f0;box-shadow:0 0 20px rgba(16,208,240,.35)"><div class="pigment-circle" style="background:#10d0f0;box-shadow:0 0 14px rgba(16,208,240,.65)"></div><div class="pigment-name" style="color:#333">Neon Blue</div></div>
+    </div>
+
+    <div class="info-box" style="margin-top:8px">
       <p>💡 <strong>Pro tip:</strong> Colors look very different under garage lighting vs. natural daylight. Arturo brings physical sample chips to every free consultation — you see the exact blend in your actual space before any work begins. <a href="contact.html" style="color:var(--red-lt);text-decoration:underline">Schedule your free consultation →</a></p>
     </div>
   </div>
@@ -768,21 +629,6 @@ function toggleMenu(){
 <a href="contact.html" class="float-cta">🚀 Free Quote</a>
 
 <script>
-function filterSwatches(cat, btn) {
-  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-  btn.classList.add('active');
-  var cards = document.querySelectorAll('.swatch-card');
-  var visible = 0;
-  cards.forEach(function(c) {
-    if (cat === 'all' || c.dataset.cat === cat) {
-      c.style.display = '';
-      visible++;
-    } else {
-      c.style.display = 'none';
-    }
-  });
-  document.getElementById('count').textContent = visible;
-}
 function openColorModal(name, img, desc) {
   document.getElementById('lb-img').src = img;
   document.getElementById('lb-name').textContent = name;
