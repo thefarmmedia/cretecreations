@@ -20,8 +20,8 @@ nav{background:var(--black);position:sticky;top:0;z-index:1000;border-bottom:2px
 .nav-inner{max-width:1300px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 24px;height:72px;}
 .nav-logo{display:flex;align-items:center;gap:13px;}
 .nav-logo img{width:50px;height:50px;border-radius:50%;border:2px solid var(--red);object-fit:contain;}
-.nl-top{font-family:var(--fh);font-size:16px;letter-spacing:.07em;color:var(--white);font-weight:700;display:block;}
-.nl-bot{font-family:var(--fc);font-size:10px;letter-spacing:.2em;color:var(--silver);text-transform:uppercase;display:block;margin-top:1px;}
+.nl-top{font-family:var(--fh);font-size:16px;letter-spacing:.07em;color:var(--white);font-weight:700;display:block;white-space:nowrap;}
+.nl-bot{font-family:var(--fc);font-size:10px;letter-spacing:.2em;color:var(--silver);text-transform:uppercase;display:block;margin-top:1px;white-space:nowrap;}
 .nav-links{display:flex;align-items:center;gap:1px;list-style:none;}
 .nav-links a{color:var(--silver-lt);font-family:var(--fc);font-size:13px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;padding:8px 11px;border-radius:2px;transition:all .18s;}
 .nav-links a:hover,.nav-links a.active{color:var(--red-lt);background:rgba(196,30,30,.1);}
