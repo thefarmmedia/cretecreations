@@ -481,18 +481,18 @@ function toggleMenu(){
       <div class="feat"><span>📧</span><div><strong>Email</strong><em><a href="mailto:artvette68@yahoo.com">artvette68@yahoo.com</a> — responds within one business day.</em></div></div>
       <div class="feat"><span>✅</span><div><strong>Written Quote</strong><em>Every project receives a detailed written quote — system, prep scope, timeline, and fixed price. No surprises.</em></div></div>
     </div>
-    <form onsubmit="handleForm(event)" style="background:var(--charcoal);border:1px solid var(--rim);border-top:3px solid var(--red);padding:32px">
+    <form id="quoteForm" onsubmit="handleForm(event)" style="background:var(--charcoal);border:1px solid var(--rim);border-top:3px solid var(--red);padding:32px">
       <div style="font-family:var(--fh);font-size:20px;color:var(--white);margin-bottom:6px;font-weight:700">Free Quote Request</div>
       <div style="font-family:var(--fc);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--silver);margin-bottom:20px">No obligation · Arturo responds personally</div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
-        <input type="text" placeholder="First Name" style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
-        <input type="text" placeholder="Last Name" style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
+        <input id="firstName" name="first_name" type="text" placeholder="First Name" style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
+        <input id="lastName" name="last_name" type="text" placeholder="Last Name" style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
-        <input type="tel" placeholder="Phone Number *" required style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
-        <input type="email" placeholder="Email" style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
+        <input id="phone" name="phone" type="tel" placeholder="Phone Number *" required style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
+        <input id="email" name="email" type="email" placeholder="Email" style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
       </div>
-      <select required aria-label="Select a service" style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--silver);font-family:var(--fc);font-size:13px;letter-spacing:.04em;outline:none;margin-bottom:12px">
+      <select id="service" name="service" required aria-label="Select a service" style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--silver);font-family:var(--fc);font-size:13px;letter-spacing:.04em;outline:none;margin-bottom:12px">
         <option value="">Select a service...</option>
         <option>Epoxy Garage Floor</option><option>Polyaspartic Floor Coating</option><option>Metallic Epoxy Floor</option>
         <option>Driveway Overlay</option><option>Decorative Overlay</option><option>Commercial Floor Coating</option>
@@ -500,15 +500,48 @@ function toggleMenu(){
         <option>Concrete Countertops</option><option>Water Feature / Fountain</option><option>Concrete Repair</option><option>Custom / Not Sure</option>
       </select>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
-        <select aria-label="Approximate square footage" style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--silver);font-family:var(--fc);font-size:13px;letter-spacing:.04em;outline:none">
-          <option>Approx Square Footage...</option><option>Under 300 sq ft</option><option>300-500 sq ft</option><option>500-800 sq ft</option><option>800-1,200 sq ft</option><option>1,200-2,000 sq ft</option><option>2,000+ sq ft</option>
+        <select id="sqft" name="sq_ft" aria-label="Approximate square footage" style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--silver);font-family:var(--fc);font-size:13px;letter-spacing:.04em;outline:none">
+          <option value="">Approx Square Footage...</option><option>Under 300 sq ft</option><option>300-500 sq ft</option><option>500-800 sq ft</option><option>800-1,200 sq ft</option><option>1,200-2,000 sq ft</option><option>2,000+ sq ft</option>
         </select>
-        <input type="text" placeholder="City / ZIP Code" style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
+        <input id="city" name="city" type="text" placeholder="City / ZIP Code" style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
       </div>
-      <textarea placeholder="Project details — describe your concrete, any cracks or damage, what you're hoping for..." rows="4" style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;resize:vertical;outline:none;margin-bottom:14px"></textarea>
+      <textarea id="message" name="message" placeholder="Project details — describe your concrete, any cracks or damage, what you're hoping for..." rows="4" style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;resize:vertical;outline:none;margin-bottom:14px"></textarea>
       <button id="formBtn" type="submit" class="btn btn-red" style="width:100%;font-size:15px">Submit Free Quote Request →</button>
     </form>
-    <script>function handleForm(e){e.preventDefault();var b=document.getElementById('formBtn');b.textContent='✓ Submitted! Arturo will be in touch within 1 business day.';b.style.background='#1a6e1a';b.disabled=true;}</script>
+    <script>
+    async function handleForm(e) {
+      e.preventDefault();
+      var b = document.getElementById('formBtn');
+      b.textContent = 'Sending...';
+      b.disabled = true;
+      var firstName = document.getElementById('firstName').value.trim();
+      var lastName = document.getElementById('lastName').value.trim();
+      var phone = document.getElementById('phone').value.trim().replace(/[^\d+]/g, '');
+      var email = document.getElementById('email').value.trim();
+      var service = document.getElementById('service').value;
+      var sqft = document.getElementById('sqft').value;
+      var city = document.getElementById('city').value.trim();
+      var message = document.getElementById('message').value.trim();
+      var fd = new FormData();
+      fd.append('first_name', firstName);
+      fd.append('last_name', lastName);
+      fd.append('name', (firstName + ' ' + lastName).trim());
+      fd.append('phone', phone);
+      fd.append('email', email);
+      fd.append('service', service);
+      fd.append('sq_ft', sqft);
+      fd.append('city', city);
+      fd.append('message', message);
+      fd.append('source', 'Crete Creations Contact Form');
+      fd.append('company', 'Crete Creations LLC');
+      try {
+        await fetch('https://services.leadconnectorhq.com/hooks/lox6fivr9xQwDSwatx9d/webhook-trigger/1069527f-0ff3-4af4-8cd6-9cc422bbfd1b', { method: 'POST', body: fd });
+      } catch(err) { console.error('Form submission error:', err); }
+      b.textContent = '✓ Submitted! Arturo will be in touch within 1 business day.';
+      b.style.background = '#1a6e1a';
+      b.disabled = true;
+    }
+    </script>
   </div>
   <div class="sidebar">
   <div class="sb-card">
