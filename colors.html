@@ -199,8 +199,13 @@ nav{background:var(--black);position:sticky;top:0;z-index:1000;border-bottom:2px
     @media(max-width:960px){.foot-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:600px){.foot-grid{grid-template-columns:1fr}}
   @media(max-width:700px){.nav-links{display:none!important}.hamburger{display:flex!important}
-  .float-cta{display:none}}
-  </style>
+  body{padding-bottom:66px}
+  }
+  .mob-cta-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--red-dk);border-top:2px solid var(--red);padding:12px 16px;gap:10px;align-items:center}
+@media(max-width:700px){.mob-cta-bar{display:flex}.float-cta{display:none}}
+.mob-cta-call{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;background:var(--red);color:#fff;font-family:var(--fc);font-size:15px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:13px 10px;text-decoration:none;border-radius:2px}
+.mob-cta-quote{flex:1;display:flex;align-items:center;justify-content:center;gap:8px;background:var(--white);color:var(--red-dk);font-family:var(--fc);font-size:15px;font-weight:900;letter-spacing:.06em;text-transform:uppercase;padding:13px 10px;text-decoration:none;border-radius:2px}
+</style>
 </head>
 <body>
 <div class="topbar">📍 Joplin, MO &amp; The Four State Area &nbsp;·&nbsp; 24+ Years Experience &nbsp;·&nbsp; <a href="tel:4174837082">(417) 483-7082</a></div>
@@ -636,6 +641,11 @@ function toggleMenu(){
 </div>
 </footer>
 <a href="contact.html" class="float-cta">🚀 Free Quote</a>
+
+<div class="mob-cta-bar">
+  <a href="tel:4174837082" class="mob-cta-call">📞 Tap to Call</a>
+  <a href="contact.html" class="mob-cta-quote">🚀 Free Quote</a>
+</div>
 
 <script>
 function openColorModal(name, img, desc) {
