@@ -82,6 +82,10 @@ nav{background:var(--black);position:sticky;top:0;z-index:1000;border-bottom:2px
 .btn{font-family:var(--fc);font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:14px 28px;border-radius:2px;display:inline-block;transition:all .18s;cursor:pointer;border:none}
 .btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--red-lt)}
 .btn-out{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.3)}.btn-out:hover{border-color:var(--red-lt);color:var(--red-lt)}
+.btn-red,.btn-out{text-decoration:none!important}
+.btn-red{color:#fff!important}
+.btn-out{color:var(--white)!important}
+.btn-out:hover{color:var(--red-lt)!important;border-color:var(--red-lt)!important}
 .btn-sm{font-size:12px;padding:11px 20px}
 .btn-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
 
@@ -194,7 +198,8 @@ nav{background:var(--black);position:sticky;top:0;z-index:1000;border-bottom:2px
     .foot-links a:hover{color:var(--red-lt)}
     @media(max-width:960px){.foot-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:600px){.foot-grid{grid-template-columns:1fr}}
-  @media(max-width:700px){.nav-links{display:none!important}.hamburger{display:flex!important}}
+  @media(max-width:700px){.nav-links{display:none!important}.hamburger{display:flex!important}
+  .float-cta{display:none}}
   </style>
 </head>
 <body>
@@ -530,7 +535,7 @@ function toggleMenu(){
         <span class="sl">Ready to Get Started?</span>
         <h2 class="sh">Pick a Color.<br><em>We'll Do the Rest.</em></h2>
         <div class="rule"></div>
-        <p style="font-size:15px;font-weight:300;color:var(--silver-lt);line-height:1.75;margin-bottom:20px">Use the <a href="contact.html" style="color:var(--red-lt);text-decoration:underline">free quote form</a> for a fast price estimate, then call Arturo at <a href="tel:4174837082" style="color:var(--red-lt);text-decoration:underline">(417) 483-7082</a> to schedule a free on-site consultation. He brings physical sample chips — you'll make your final decision in your actual garage, not on a screen.</p>
+        <p style="font-size:15px;font-weight:300;color:var(--silver-lt);line-height:1.75;margin-bottom:20px">Use the <a href="contact.html" style="color:var(--red-lt);text-decoration:underline">free quote form</a> for a fast price estimate, then call Arturo at <a href="tel:4174837082" style="color:var(--red-lt);text-decoration:underline">(417) 483-7082</a> to schedule a free consultation. He brings physical sample chips — you'll make your final decision in your actual garage, not on a screen.</p>
         <a href="contact.html" class="btn btn-red" style="display:block;text-align:center;margin-bottom:10px">Get a Free Quote →</a>
         <a href="contact.html" class="btn btn-out" style="display:block;text-align:center;margin-bottom:10px">Request Free Consultation</a>
         <a href="tel:4174837082" class="btn btn-out" style="display:block;text-align:center">📞 (417) 483-7082</a>

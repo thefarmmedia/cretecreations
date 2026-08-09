@@ -121,6 +121,10 @@ nav{background:var(--black);position:sticky;top:0;z-index:1000;border-bottom:2px
 .btn{font-family:var(--fc);font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:14px 28px;border-radius:2px;display:inline-block;transition:all .18s;cursor:pointer;border:none}
 .btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--red-lt)}
 .btn-out{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.3)}.btn-out:hover{border-color:var(--red-lt);color:var(--red-lt)}
+.btn-red,.btn-out{text-decoration:none!important}
+.btn-red{color:#fff!important}
+.btn-out{color:var(--white)!important}
+.btn-out:hover{color:var(--red-lt)!important;border-color:var(--red-lt)!important}
 .btn-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:20px}
 .sl{font-family:var(--fc);font-size:11px;font-weight:700;letter-spacing:.26em;text-transform:uppercase;color:var(--red-lt);margin-bottom:10px;display:block}
 .sh{font-family:var(--fh);font-size:clamp(28px,4vw,46px);line-height:.95;color:var(--white);margin-bottom:14px;font-weight:700}
@@ -183,7 +187,8 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
 .float-cta:hover{background:var(--red-lt)}
 
 @media(max-width:900px){.cities-grid{grid-template-columns:1fr}.foot-grid{grid-template-columns:1fr 1fr}}
-@media(max-width:700px){.nav-links{display:none!important}.hamburger{display:flex!important}.map-overview{height:320px}.foot-grid{grid-template-columns:1fr}}
+@media(max-width:700px){.nav-links{display:none!important}.hamburger{display:flex!important}
+  .float-cta{display:none}.map-overview{height:320px}.foot-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>

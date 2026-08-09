@@ -84,6 +84,10 @@ nav{background:var(--black);position:sticky;top:0;z-index:1000;border-bottom:2px
 .btn{font-family:var(--fc);font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:14px 28px;border-radius:2px;display:inline-block;transition:all .18s;cursor:pointer;border:none}
 .btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--red-lt)}
 .btn-out{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.3)}.btn-out:hover{border-color:var(--red-lt);color:var(--red-lt)}
+.btn-red,.btn-out{text-decoration:none!important}
+.btn-red{color:#fff!important}
+.btn-out{color:var(--white)!important}
+.btn-out:hover{color:var(--red-lt)!important;border-color:var(--red-lt)!important}
 .btn-sm{font-size:12px;padding:11px 20px}
 .btn-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
 
@@ -329,6 +333,7 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
 @media(max-width:700px){
   .nav-links{display:none!important}
   .hamburger{display:flex!important}
+  .float-cta{display:none}
   .stats-inner{grid-template-columns:repeat(3,1fr)}
   .svc-grid{grid-template-columns:repeat(2,1fr)}
   .why-grid,.proc-grid,.rev-grid{grid-template-columns:1fr}
@@ -487,11 +492,11 @@ function toggleMenu(){
 <div class="divider"></div>
 <h2>Why the Cheapest Quote Is Almost Never the Right Quote</h2><p>In 24 years, Arturo has re-coated more floors initially done by budget contractors than he can count. The pattern is consistent: a homeowner gets a below-market quote, the floor looks fine for six months, then it starts peeling. The low quote is almost always low because corners were cut — no diamond grinding, no moisture vapor barrier, low-quality base coat, or a topcoat that isn't true high-solids polyaspartic. Read more in our <a href="blog-surface-prep-matters.html">surface prep guide →</a></p>
 <div class="divider"></div>
-<h2>Get a Fast Estimate</h2><p>Use the <a href="contact.html">free quote form</a> — select your project type, square footage, system, and concrete condition. Get a realistic ballpark in under 60 seconds. Then call Arturo at <a href="tel:4174837082">(417) 483-7082</a> for a free on-site quote with exact measurements.</p>
+<h2>Get a Fast Estimate</h2><p>Use the <a href="contact.html">free quote form</a> — select your project type, square footage, system, and concrete condition. Get a realistic ballpark in under 60 seconds. Then call Arturo at <a href="tel:4174837082">(417) 483-7082</a> for a free quote with exact measurements.</p>
 <div class="divider"></div>
 
       <div class="info-box">
-        <p>Ready to estimate your project? Use the <a href="contact.html">free quote form</a> for a fast ballpark — then call Arturo at <a href="tel:4174837082">(417) 483-7082</a> for a free on-site quote.</p>
+        <p>Ready to estimate your project? Use the <a href="contact.html">free quote form</a> for a fast ballpark — then call Arturo at <a href="tel:4174837082">(417) 483-7082</a> for a free quote.</p>
         <a href="contact.html" class="btn btn-red btn-sm">Get a Free Quote →</a>
         <a href="contact.html" class="btn btn-out btn-sm" style="margin-left:10px">Request Free Quote</a>
       </div>
