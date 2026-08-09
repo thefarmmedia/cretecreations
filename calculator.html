@@ -81,6 +81,10 @@ nav{background:var(--black);position:sticky;top:0;z-index:1000;border-bottom:2px
 .btn{font-family:var(--fc);font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:14px 28px;border-radius:2px;display:inline-block;transition:all .18s;cursor:pointer;border:none}
 .btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--red-lt)}
 .btn-out{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.3)}.btn-out:hover{border-color:var(--red-lt);color:var(--red-lt)}
+.btn-red,.btn-out{text-decoration:none!important}
+.btn-red{color:#fff!important}
+.btn-out{color:var(--white)!important}
+.btn-out:hover{color:var(--red-lt)!important;border-color:var(--red-lt)!important}
 .btn-sm{font-size:12px;padding:11px 20px}
 .btn-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
 
@@ -168,7 +172,8 @@ nav{background:var(--black);position:sticky;top:0;z-index:1000;border-bottom:2px
     .foot-links a:hover{color:var(--red-lt)}
     @media(max-width:960px){.foot-grid{grid-template-columns:1fr 1fr}}
     @media(max-width:600px){.foot-grid{grid-template-columns:1fr}}
-  @media(max-width:700px){.nav-links{display:none!important}.hamburger{display:flex!important}}
+  @media(max-width:700px){.nav-links{display:none!important}.hamburger{display:flex!important}
+  .float-cta{display:none}}
   </style>
 </head>
 <body>
@@ -465,7 +470,7 @@ function toggleMenu(){
         </div>
         <div class="feature">
           <h3>It keeps expectations clear</h3>
-          <p>This is a ballpark estimate, not a rushed guess. Final pricing is confirmed after an on-site visit, measurements, and slab evaluation.</p>
+          <p>This is a ballpark estimate, not a rushed guess. Final pricing is confirmed after an visit, measurements, and slab evaluation.</p>
         </div>
       </div>
     </div>
@@ -476,7 +481,7 @@ function toggleMenu(){
       <div class="card" style="padding:28px;">
         <h2>Serving Southwest Missouri, Southeast Kansas &amp; Grand Lake Oklahoma</h2>
         <p class="muted">Crete Creations LLC serves Joplin, Lamar, Webb City, Mount Vernon, Springfield, Carthage, Neosho, Grove, Grand Lake Oklahoma, Pittsburg Kansas and surrounding areas.</p>
-        <p class="muted" style="margin-bottom:0;">Whether you need a garage floor coating, shop floor, basement floor, commercial floor, metallic epoxy system, or decorative concrete coating, this calculator gives you a fast starting point before scheduling an on-site estimate.</p>
+        <p class="muted" style="margin-bottom:0;">Whether you need a garage floor coating, shop floor, basement floor, commercial floor, metallic epoxy system, or decorative concrete coating, this calculator gives you a fast starting point before scheduling an estimate.</p>
       </div>
     </div>
   </section>
@@ -627,7 +632,7 @@ function toggleMenu(){
       unlockBtn.disabled = true; unlockBtn.textContent = 'Revealing Price...';
       try { await fetch(WEBHOOK_URL, { method: 'POST', body: formData }); } catch (error) { console.error('Webhook submission error:', error); }
       document.getElementById('priceRange').textContent = data.estimatedRange;
-      document.getElementById('resultText').innerHTML = `Based on <strong>${Number(data.sqft).toLocaleString()} sq ft</strong>, your selected <strong>${data.system}</strong> system, the condition of the concrete, and the amount of preparation required, your project currently falls within the range above.<br><br>The next step is a free on-site consultation so Crete Creations LLC can confirm measurements, evaluate the slab, review your finish options, and finalize the best system for your space.`;
+      document.getElementById('resultText').innerHTML = `Based on <strong>${Number(data.sqft).toLocaleString()} sq ft</strong>, your selected <strong>${data.system}</strong> system, the condition of the concrete, and the amount of preparation required, your project currently falls within the range above.<br><br>The next step is a free consultation so Crete Creations LLC can confirm measurements, evaluate the slab, review your finish options, and finalize the best system for your space.`;
       resultBox.classList.remove('hidden');
       resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
       unlockBtn.disabled = false; unlockBtn.textContent = 'Reveal My Exact Ballpark Price';

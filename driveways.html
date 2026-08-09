@@ -84,6 +84,10 @@ nav{background:var(--black);position:sticky;top:0;z-index:1000;border-bottom:2px
 .btn{font-family:var(--fc);font-size:14px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:14px 28px;border-radius:2px;display:inline-block;transition:all .18s;cursor:pointer;border:none}
 .btn-red{background:var(--red);color:#fff}.btn-red:hover{background:var(--red-lt)}
 .btn-out{background:transparent;color:var(--white);border:1px solid rgba(255,255,255,.3)}.btn-out:hover{border-color:var(--red-lt);color:var(--red-lt)}
+.btn-red,.btn-out{text-decoration:none!important}
+.btn-red{color:#fff!important}
+.btn-out{color:var(--white)!important}
+.btn-out:hover{color:var(--red-lt)!important;border-color:var(--red-lt)!important}
 .btn-sm{font-size:12px;padding:11px 20px}
 .btn-row{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
 
@@ -329,6 +333,7 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
 @media(max-width:700px){
   .nav-links{display:none!important}
   .hamburger{display:flex!important}
+  .float-cta{display:none}
   .stats-inner{grid-template-columns:repeat(3,1fr)}
   .svc-grid{grid-template-columns:repeat(2,1fr)}
   .why-grid,.proc-grid,.rev-grid{grid-template-columns:1fr}
@@ -535,7 +540,7 @@ function toggleMenu(){
     <div class="sb-title">Get a Free Quote</div>
     <p style="font-size:14px;color:var(--silver);margin-bottom:16px;line-height:1.6">Request a free quote to get a ballpark price in under 60 seconds — before you call.</p>
     <a href="contact.html" class="sb-cta">🚀 Get a Free Quote →</a>
-    <a href="contact.html" class="sb-cta">Request Free On-Site Quote</a>
+    <a href="contact.html" class="sb-cta">Request Free Quote</a>
     <a href="tel:4174837082" class="sb-cta alt">📞 (417) 483-7082</a>
     <a href="gallery.html" class="sb-cta alt">View Our Gallery</a>
     <span class="sb-hl">Services Available</span>
