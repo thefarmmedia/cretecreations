@@ -1,7 +1,77 @@
+# Force canonical host + protocol: https://cretecreationsllc.com (non-www)
+# These must stay first -- Netlify evaluates rules top to bottom, first match wins.
+http://www.cretecreationsllc.com/*   https://cretecreationsllc.com/:splat   301!
+https://www.cretecreationsllc.com/*  https://cretecreationsllc.com/:splat  301!
+http://cretecreationsllc.com/*       https://cretecreationsllc.com/:splat  301!
+
+# Legacy / old-URL redirects -> canonical extensionless URLs
 /calculator                    /contact          301
+/calculator.html               /contact          301
 /epoxy-floors-rogers-ar        /rogers-ar        301
 /epoxy-floors-rogers-ar.html   /rogers-ar        301
 /epoxy-floors-fayetteville-ar      /fayetteville      301
 /epoxy-floors-fayetteville-ar.html /fayetteville      301
 /epoxy-floors-grand-lake-ok        /grove             301
 /epoxy-floors-grand-lake-ok.html   /grove             301
+
+# .html -> canonical extensionless URL for every page (closes GSC duplicate-URL
+# reports for /bentonville.html, /contact.html, /gallery.html, etc.)
+/about.html  /about  301
+/anderson.html  /anderson  301
+/basement-floors.html  /basement-floors  301
+/bentonville.html  /bentonville  301
+/blog-choosing-your-floor.html  /blog-choosing-your-floor  301
+/blog-complete-system-guide.html  /blog-complete-system-guide  301
+/blog-cost-guide-joplin.html  /blog-cost-guide-joplin  301
+/blog-diy-vs-hire-epoxy.html  /blog-diy-vs-hire-epoxy  301
+/blog-driveway-overlays-guide.html  /blog-driveway-overlays-guide  301
+/blog-epoxy-floor-longevity.html  /blog-epoxy-floor-longevity  301
+/blog-epoxy-garage-use.html  /blog-epoxy-garage-use  301
+/blog-epoxy-installation-timeline.html  /blog-epoxy-installation-timeline  301
+/blog-epoxy-types-explained.html  /blog-epoxy-types-explained  301
+/blog-epoxy-vs-polyaspartic.html  /blog-epoxy-vs-polyaspartic  301
+/blog-surface-prep-matters.html  /blog-surface-prep-matters  301
+/blog.html  /blog  301
+/carl-junction.html  /carl-junction  301
+/carthage.html  /carthage  301
+/colors.html  /colors  301
+/columbus-ks.html  /columbus-ks  301
+/commercial.html  /commercial  301
+/concrete-countertops.html  /concrete-countertops  301
+/concrete-repair.html  /concrete-repair  301
+/contact.html  /contact  301
+/driveway-overlay-joplin.html  /driveway-overlay-joplin  301
+/driveways.html  /driveways  301
+/epoxy-floors-near-me.html  /epoxy-floors-near-me  301
+/epoxy-floors-springfield-mo.html  /epoxy-floors-springfield-mo  301
+/epoxy-floors.html  /epoxy-floors  301
+/epoxy-garage-floor-cost-joplin.html  /epoxy-garage-floor-cost-joplin  301
+/faq.html  /faq  301
+/fayetteville.html  /fayetteville  301
+/four-state-epoxy-contractor.html  /four-state-epoxy-contractor  301
+/galena.html  /galena  301
+/gallery.html  /gallery  301
+/garage-floor-coating-joplin-mo.html  /garage-floor-coating-joplin-mo  301
+/granby.html  /granby  301
+/grove.html  /grove  301
+/index.html  /  301
+/joplin.html  /joplin  301
+/lamar.html  /lamar  301
+/locations.html  /locations  301
+/metallic-epoxy-joplin.html  /metallic-epoxy-joplin  301
+/metallic-epoxy.html  /metallic-epoxy  301
+/miami-ok.html  /miami-ok  301
+/neosho.html  /neosho  301
+/overlays.html  /overlays  301
+/pittsburg.html  /pittsburg  301
+/polished-concrete.html  /polished-concrete  301
+/polyaspartic.html  /polyaspartic  301
+/pool-deck-coatings.html  /pool-deck-coatings  301
+/pryor.html  /pryor  301
+/rogers-ar.html  /rogers-ar  301
+/services.html  /services  301
+/shop-barn-floors.html  /shop-barn-floors  301
+/stamped.html  /stamped  301
+/vinita.html  /vinita  301
+/water-features.html  /water-features  301
+/webb-city.html  /webb-city  301
