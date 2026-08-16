@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/jpeg" href="/logo.png" />
   <title>Service Areas | Epoxy Floors & Driveways Near Me | Crete Creations LLC | (417) 483-7082</title>
   <meta name="description" content="Crete Creations LLC serves Joplin MO and a 75-mile radius — epoxy floors, driveway overlays, and metallic epoxy in Missouri, Kansas, Oklahoma, and Arkansas. Find your city." />
   <link rel="canonical" href="https://cretecreationsllc.com/locations" />
@@ -11,6 +12,8 @@
   <meta name="geo.position" content="37.0842;-94.5133" />
   <meta property="og:title" content="Service Areas | Crete Creations LLC | Four State Epoxy Contractor" />
   <meta property="og:description" content="Serving Joplin MO and 75-mile radius across Missouri, Kansas, Oklahoma, and Arkansas." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cretecreationsllc.com/locations" />
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cretecreationsllc.com/"},{"@type":"ListItem","position":2,"name":"Service Areas","item":"https://cretecreationsllc.com/locations"}]}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -228,6 +231,7 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
           <a href="/water-features">Water Features</a>
           <a href="/concrete-repair">Concrete Repair</a>
           <a href="/polished-concrete">Polished Concrete</a>
+          <a href="/stamped">Stamped &amp; Stained Concrete</a>
           <div class="drop-divider"></div>
           <a href="/services">All Services →</a>
         </div>
@@ -739,7 +743,7 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
         <span class="sl">Don't See Your City?</span>
         <h2 class="sh">Arturo Travels for <em>the Right Project</em></h2>
         <div class="rule"></div>
-        <p style="font-size:15px;font-weight:300;color:var(--silver-lt);line-height:1.8;margin-bottom:16px">The 18 cities above represent Arturo's regular service territory — but they're not a hard limit. He considers projects beyond the standard radius based on scope, project type, and scheduling. If you're in the Four State region and don't see your city listed, call and ask.</p>
+        <p style="font-size:15px;font-weight:300;color:var(--silver-lt);line-height:1.8;margin-bottom:16px">The 18 cities above represent Arturo's regular service territory — but they're not a hard limit. He considers projects beyond the standard radius based on scope, project type, and scheduling, including <a href="/epoxy-floors-springfield-mo" style="color:var(--red-lt);text-decoration:underline">Springfield, MO</a>. If you're in the Four State region and don't see your city listed, call and ask — see the full <a href="/four-state-epoxy-contractor" style="color:var(--red-lt);text-decoration:underline">Four State service overview</a> or search <a href="/epoxy-floors-near-me" style="color:var(--red-lt);text-decoration:underline">epoxy floors near me</a> to check your area.</p>
         <p style="font-size:15px;font-weight:300;color:var(--silver-lt);line-height:1.8;margin-bottom:24px">Use the <a href="/contact" style="color:var(--red-lt);text-decoration:underline">free quote form</a> to get a ballpark on your project — then call <a href="tel:4174837082" style="color:var(--red-lt);text-decoration:underline">(417) 483-7082</a> and ask about your specific location. Arturo answers personally.</p>
         <div class="btn-row">
           <a href="tel:4174837082" class="btn btn-red">📞 (417) 483-7082</a>
@@ -748,11 +752,11 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
       </div>
       <div style="background:var(--charcoal);border:1px solid var(--rim);border-top:3px solid var(--red);padding:32px">
         <div style="font-family:var(--fh);font-size:20px;color:var(--white);margin-bottom:16px;font-weight:700">Quick Quote Request</div>
-        <form onsubmit="handleForm(event)">
-          <input type="text" placeholder="Name" style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none;margin-bottom:10px" />
-          <input type="tel" placeholder="Phone *" required style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none;margin-bottom:10px" />
-          <input type="text" placeholder="City / ZIP you're located in" style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none;margin-bottom:10px" />
-          <select aria-label="Select a service" style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--silver);font-family:var(--fc);font-size:13px;outline:none;margin-bottom:14px">
+        <form onsubmit="handleLocForm(event)">
+          <input id="locName" type="text" placeholder="Name" style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none;margin-bottom:10px" />
+          <input id="locPhone" type="tel" placeholder="Phone *" required style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none;margin-bottom:10px" />
+          <input id="locCity" type="text" placeholder="City / ZIP you're located in" style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none;margin-bottom:10px" />
+          <select id="locService" aria-label="Select a service" style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--silver);font-family:var(--fc);font-size:13px;outline:none;margin-bottom:14px">
             <option>Select a service...</option>
             <option>Epoxy Garage Floor</option><option>Polyaspartic Coating</option><option>Metallic Epoxy</option>
             <option>Driveway Overlay</option><option>Commercial Floor</option><option>Basement Floor</option>
@@ -760,7 +764,31 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
           </select>
           <button id="locBtn" type="submit" class="btn btn-red" style="width:100%">Submit Quote Request →</button>
         </form>
-        <script>function handleForm(e){e.preventDefault();var b=document.getElementById('locBtn');b.textContent='✓ Submitted! Arturo will be in touch.';b.style.background='#1a6e1a';b.disabled=true;}</script>
+        <script>
+        async function handleLocForm(e){
+          e.preventDefault();
+          var b=document.getElementById('locBtn');
+          b.textContent='Sending...';
+          b.disabled=true;
+          var name=document.getElementById('locName').value.trim();
+          var phone=document.getElementById('locPhone').value.trim().replace(/[^\d+]/g,'');
+          var city=document.getElementById('locCity').value.trim();
+          var service=document.getElementById('locService').value;
+          var fd=new FormData();
+          fd.append('name', name);
+          fd.append('phone', phone);
+          fd.append('city', city);
+          fd.append('service', service);
+          fd.append('source', 'Crete Creations Locations Page Quick Quote');
+          fd.append('company', 'Crete Creations LLC');
+          try {
+            await fetch('https://services.leadconnectorhq.com/hooks/lox6fivr9xQwDSwatx9d/webhook-trigger/1069527f-0ff3-4af4-8cd6-9cc422bbfd1b', { method: 'POST', body: fd });
+          } catch(err) { console.error('Form submission error:', err); }
+          b.textContent='✓ Submitted! Arturo will be in touch.';
+          b.style.background='#1a6e1a';
+          b.disabled=true;
+        }
+        </script>
       </div>
     </div>
   </div>
@@ -803,6 +831,7 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
       <a href="/water-features">Water Features</a>
       <a href="/concrete-repair">Concrete Repair</a>
       <a href="/polished-concrete">Polished Concrete</a>
+      <a href="/stamped">Stamped &amp; Stained Concrete</a>
     </div>
     <div class="foot-col">
       <h3>Missouri</h3>
