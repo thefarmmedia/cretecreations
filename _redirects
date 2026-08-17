@@ -14,6 +14,10 @@ http://cretecreationsllc.com/*       https://cretecreationsllc.com/:splat  301!
 /epoxy-floors-grand-lake-ok        /grove             301
 /epoxy-floors-grand-lake-ok.html   /grove             301
 
+# Page consolidation redirects (thin/duplicate pages → canonical)
+/metallic-epoxy-joplin         /metallic-epoxy   301
+/driveway-overlay-joplin       /driveways        301
+
 # .html -> canonical extensionless URL for every page (closes GSC duplicate-URL
 # reports for /bentonville.html, /contact.html, /gallery.html, etc.)
 /about.html  /about  301
@@ -40,7 +44,7 @@ http://cretecreationsllc.com/*       https://cretecreationsllc.com/:splat  301!
 /concrete-countertops.html  /concrete-countertops  301
 /concrete-repair.html  /concrete-repair  301
 /contact.html  /contact  301
-/driveway-overlay-joplin.html  /driveway-overlay-joplin  301
+/driveway-overlay-joplin.html  /driveways  301
 /driveways.html  /driveways  301
 /epoxy-floors-near-me.html  /epoxy-floors-near-me  301
 /epoxy-floors-springfield-mo.html  /epoxy-floors-springfield-mo  301
@@ -58,7 +62,7 @@ http://cretecreationsllc.com/*       https://cretecreationsllc.com/:splat  301!
 /joplin.html  /joplin  301
 /lamar.html  /lamar  301
 /locations.html  /locations  301
-/metallic-epoxy-joplin.html  /metallic-epoxy-joplin  301
+/metallic-epoxy-joplin.html  /metallic-epoxy  301
 /metallic-epoxy.html  /metallic-epoxy  301
 /miami-ok.html  /miami-ok  301
 /neosho.html  /neosho  301
