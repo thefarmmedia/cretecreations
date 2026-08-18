@@ -501,6 +501,10 @@ function toggleMenu(){
       <div class="feat"><span>✅</span><div><strong>Written Quote</strong><em>Every project receives a detailed written quote — system, prep scope, timeline, and fixed price. No surprises.</em></div></div>
     </div>
     <form id="quoteForm" onsubmit="handleForm(event)" style="background:var(--charcoal);border:1px solid var(--rim);border-top:3px solid var(--red);padding:32px">
+      <!-- honeypot: bots fill this, humans never see it -->
+      <div style="position:absolute;left:-9999px;top:-9999px;opacity:0;pointer-events:none" aria-hidden="true">
+        <input id="hp_website" name="website" type="text" tabindex="-1" autocomplete="off" />
+      </div>
       <div style="font-family:var(--fh);font-size:20px;color:var(--white);margin-bottom:6px;font-weight:700">Free Quote Request</div>
       <div style="font-family:var(--fc);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--silver);margin-bottom:20px">No obligation · Arturo responds personally</div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
@@ -528,11 +532,21 @@ function toggleMenu(){
       <button id="formBtn" type="submit" class="btn btn-red" style="width:100%;font-size:15px">Submit Free Quote Request →</button>
     </form>
     <script>
+    var _formLoadTime = Date.now();
     async function handleForm(e) {
       e.preventDefault();
       var b = document.getElementById('formBtn');
       b.textContent = 'Sending...';
       b.disabled = true;
+      // Bot detection: honeypot filled or form submitted in under 3 seconds
+      var hp = document.getElementById('hp_website').value;
+      var elapsed = Date.now() - _formLoadTime;
+      if (hp || elapsed < 3000) {
+        setTimeout(function() {
+          b.textContent = '✓ Submitted! Arturo will be in touch within 1 business day.';
+        }, 800);
+        return;
+      }
       var firstName = document.getElementById('firstName').value.trim();
       var lastName = document.getElementById('lastName').value.trim();
       var phone = document.getElementById('phone').value.trim().replace(/[^\d+]/g, '');
