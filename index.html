@@ -104,13 +104,24 @@ nav{background:var(--black);position:sticky;top:0;z-index:1000;border-bottom:2px
 .stat-l{font-family:var(--fc);font-size:10px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--silver);margin-top:4px}
 
 /* HERO */
-.hero{position:relative;height:92vh;min-height:600px;max-height:940px;overflow:hidden;display:flex;align-items:flex-end}
+.hero{position:relative;min-height:600px;overflow:hidden;display:flex;align-items:center}
 .hero-bg{position:absolute;inset:0;background-size:cover;background-position:center 40%;animation:hz 9s ease-out forwards;will-change:transform}
 @keyframes hz{from{transform:scale(1.1)}to{transform:scale(1)}}
-.hero-ov{position:absolute;inset:0;background:linear-gradient(130deg,rgba(0,0,0,.88) 0%,rgba(139,16,16,.18) 45%,rgba(0,0,0,.55) 100%)}
-.hero-dial{position:absolute;top:50%;right:-4%;transform:translateY(-50%);width:min(600px,68vw);height:min(600px,68vw);animation:spin 75s linear infinite;opacity:.11;pointer-events:none;border-radius:50%;object-fit:contain}
-@keyframes spin{to{transform:translateY(-50%) rotate(360deg)}}
-.hero-content{position:relative;max-width:1300px;margin:0 auto;padding:0 48px 72px;width:100%}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(130deg,rgba(0,0,0,.9) 0%,rgba(139,16,16,.2) 50%,rgba(0,0,0,.7) 100%)}
+@keyframes spin{to{transform:rotate(360deg)}}
+.hero-content{position:relative;width:100%;z-index:2}
+.hero-inner{display:grid;grid-template-columns:1fr 390px;gap:48px;align-items:center;max-width:1300px;margin:0 auto;padding:56px 48px}
+.hero-left{display:flex;flex-direction:column}
+.hero-form-card{background:rgba(6,6,6,.93);border:1px solid var(--rim);border-top:3px solid var(--red);padding:26px 22px;backdrop-filter:blur(12px)}
+.hf-title{font-family:var(--fh);font-size:18px;color:var(--white);font-weight:700;margin-bottom:3px}
+.hf-sub{font-family:var(--fc);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--silver);margin-bottom:16px}
+.hf-row{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:0}
+.hf-field{display:block;width:100%;padding:11px 12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:13px;letter-spacing:.02em;outline:none;margin-bottom:8px}
+.hf-field:focus{border-color:var(--red)}
+.hf-btn{display:block;width:100%;background:var(--red);color:#fff;font-family:var(--fc);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:14px;border:none;cursor:pointer;transition:background .2s;margin-top:2px}
+.hf-btn:hover{background:var(--red-lt)}
+.hf-btn:disabled{opacity:.7;cursor:default}
+.hf-note{font-family:var(--fc);font-size:11px;color:var(--silver);text-align:center;margin-top:9px;letter-spacing:.03em}
 .hero-eye{font-family:var(--fc);font-size:12px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--silver);margin-bottom:14px;animation:fu .7s .2s both}
 .hero-h1{font-family:var(--fh);font-size:clamp(52px,9.5vw,114px);line-height:.88;color:var(--white);margin-bottom:22px;animation:fu .7s .3s both;font-weight:900}
 .hero-h1 .acc{color:var(--red-lt)}
@@ -325,6 +336,8 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
 /* RESPONSIVE */
 @media(max-width:1000px){
   .hero-h1{font-size:clamp(48px,10vw,90px)}
+  .hero-inner{grid-template-columns:1fr;padding:48px 32px}
+  .hero-form-card{display:none}
   .foot-grid{grid-template-columns:1fr 1fr}
   .why-grid,.proc-grid{grid-template-columns:repeat(2,1fr)}
   .rev-grid{grid-template-columns:repeat(2,1fr)}
@@ -347,8 +360,7 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
   .g-grid{grid-template-columns:repeat(2,1fr)}
   .blog-grid{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr}
-  .hero-content{padding:0 20px 48px}
-  .hero{height:88vh}
+  .hero-inner{padding:32px 20px 40px}
 }
 
 .mob-cta-bar{display:none;position:fixed;bottom:0;left:0;right:0;z-index:999;background:var(--red-dk);border-top:2px solid var(--red);padding:12px 16px;gap:10px;align-items:center}
@@ -485,21 +497,48 @@ function toggleMenu(){
 <div class="hero">
   <div class="hero-bg" style="background-image:url('hero_car.jpg')"></div>
   <div class="hero-ov"></div>
-  <img class="hero-dial" src="logo.png" alt="" aria-hidden="true" />
   <div class="hero-content">
-    <p class="hero-eye">Arturo Escalante · Concrete Studio · Joplin, Missouri · Est. 2000</p>
-    <h1 class="hero-h1">JOPLIN, MO<br><span class="acc">CONCRETE CONTRACTOR</span></h1>
-    <p class="hero-sub">Epoxy floors, driveway overlays, metallic pours & decorative concrete — serving Joplin, MO and the Four-State area since 2000.</p>
-    <div class="hero-badges">
-      <span class="badge r">Serving Since 2000</span>
-      <span class="badge">100% Solids Epoxy</span>
-      <span class="badge">Full Flake · Polyaspartic</span>
-      <span class="badge">MO · KS · OK · AR</span>
-    </div>
-    <div class="hero-btns">
-      <a href="tel:4174837082" class="btn btn-red">📞 (417) 483-7082</a>
-      <a href="/contact" class="btn btn-red">🚀 Get a Free Quote</a>
-      <a href="/gallery" class="btn btn-out">View Our Work</a>
+    <div class="hero-inner">
+      <div class="hero-left">
+        <p class="hero-eye">Arturo Escalante · Concrete Studio · Joplin, Missouri · Est. 2000</p>
+        <h1 class="hero-h1">JOPLIN, MO<br><span class="acc">CONCRETE CONTRACTOR</span></h1>
+        <p class="hero-sub">Epoxy floors, driveway overlays, metallic pours & decorative concrete — serving Joplin, MO and the Four-State area since 2000.</p>
+        <div class="hero-badges">
+          <span class="badge r">Serving Since 2000</span>
+          <span class="badge">100% Solids Epoxy</span>
+          <span class="badge">Full Flake · Polyaspartic</span>
+          <span class="badge">MO · KS · OK · AR</span>
+        </div>
+        <div class="hero-btns">
+          <a href="tel:4174837082" class="btn btn-red">📞 (417) 483-7082</a>
+          <a href="/contact" class="btn btn-out">View Our Work</a>
+        </div>
+      </div>
+      <div class="hero-form-card">
+        <p class="hf-title">Request a Free Quote</p>
+        <p class="hf-sub">Arturo responds within 1 business day</p>
+        <input type="text" name="website" id="hp_hf" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="hf-row">
+          <input class="hf-field" type="text" id="hf_name" placeholder="Full Name" autocomplete="name">
+          <input class="hf-field" type="tel" id="hf_phone" placeholder="Phone Number" autocomplete="tel">
+        </div>
+        <input class="hf-field" type="email" id="hf_email" placeholder="Email Address" autocomplete="email">
+        <div class="hf-row">
+          <input class="hf-field" type="text" id="hf_zip" placeholder="ZIP Code" maxlength="10">
+          <select class="hf-field" id="hf_service">
+            <option value="" disabled selected>Project Type</option>
+            <option value="Epoxy Garage Floor">Epoxy Garage Floor</option>
+            <option value="Metallic Epoxy">Metallic Epoxy</option>
+            <option value="Driveway Overlay">Driveway Overlay</option>
+            <option value="Commercial Flooring">Commercial Flooring</option>
+            <option value="Patio / Outdoor">Patio / Outdoor</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <textarea class="hf-field" id="hf_message" rows="3" placeholder="Tell us about your project (optional)" style="resize:none"></textarea>
+        <button class="hf-btn" id="hf_btn" onclick="submitHeroForm()">Get My Free Quote →</button>
+        <p class="hf-note">No obligation · No spam · We respond within 1 business day</p>
+      </div>
     </div>
   </div>
 </div>
@@ -868,4 +907,40 @@ async function handleForm(e){
   <a href="tel:4174837082" class="mob-cta-call">📞 Tap to Call</a>
   <a href="/contact" class="mob-cta-quote">🚀 Free Quote</a>
 </div>
+<script>
+var _hfLoad=Date.now();
+function submitHeroForm(){
+  var hp=document.getElementById('hp_hf').value;
+  var elapsed=Date.now()-_hfLoad;
+  var btn=document.getElementById('hf_btn');
+  var name=document.getElementById('hf_name').value.trim();
+  var phone=document.getElementById('hf_phone').value.trim();
+  var email=document.getElementById('hf_email').value.trim();
+  var zip=document.getElementById('hf_zip').value.trim();
+  var service=document.getElementById('hf_service').value;
+  var message=document.getElementById('hf_message').value.trim();
+  if(!name||!phone||!email){
+    alert('Please fill in your name, phone, and email.');
+    return;
+  }
+  if(hp||elapsed<3000){
+    btn.disabled=true;
+    btn.textContent='✓ Sent!';
+    return;
+  }
+  btn.disabled=true;
+  btn.textContent='Sending…';
+  fetch('https://services.leadconnectorhq.com/hooks/lox6fivr9xQwDSwatx9d/webhook-trigger/1069527f-0ff3-4af4-8cd6-9cc422bbfd1b',{
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({firstName:name,phone:phone,email:email,zip:zip,service:service,message:message,source:'Hero Form'})
+  }).then(function(){
+    btn.textContent='✓ Sent! Arturo will be in touch soon.';
+  }).catch(function(){
+    btn.disabled=false;
+    btn.textContent='Get My Free Quote →';
+    alert('Something went wrong. Please call us at (417) 483-7082.');
+  });
+}
+</script>
 </body></html>
