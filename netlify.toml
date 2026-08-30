@@ -1,0 +1,23 @@
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/gallery.html"
+  to = "/gallery"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/bentonville.html"
+  to = "/bentonville"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/polished-concrete.html"
+  to = "/polished-concrete"
+  status = 301
+  force = true
