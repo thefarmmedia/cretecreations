@@ -1,23 +1,23 @@
 [[redirects]]
   from = "/index.html"
-  to = "/"
+  to = "https://cretecreationsllc.com/"
   status = 301
   force = true
 
 [[redirects]]
   from = "/gallery.html"
-  to = "/gallery"
+  to = "https://cretecreationsllc.com/gallery"
   status = 301
   force = true
 
 [[redirects]]
   from = "/bentonville.html"
-  to = "/bentonville"
+  to = "https://cretecreationsllc.com/bentonville"
   status = 301
   force = true
 
 [[redirects]]
   from = "/polished-concrete.html"
-  to = "/polished-concrete"
+  to = "https://cretecreationsllc.com/polished-concrete"
   status = 301
   force = true
