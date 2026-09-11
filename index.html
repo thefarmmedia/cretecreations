@@ -126,6 +126,7 @@ nav{background:var(--black);position:sticky;top:0;z-index:1000;border-bottom:2px
 .hf-btn{display:block;width:100%;background:var(--red);color:#fff;font-family:var(--fc);font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:14px;border:none;cursor:pointer;transition:background .2s;margin-top:2px}
 .hf-btn:hover{background:var(--red-lt)}
 .hf-btn:disabled{opacity:.7;cursor:default}
+@keyframes hf-shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-5px)}75%{transform:translateX(5px)}}
 .hf-note{font-family:var(--fc);font-size:11px;color:var(--silver);text-align:center;margin-top:9px;letter-spacing:.03em}
 .hero-eye{font-family:var(--fc);font-size:12px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:var(--silver);margin-bottom:14px;animation:fu .7s .2s both}
 .hero-h1{font-family:var(--fh);font-size:clamp(52px,9.5vw,114px);line-height:.88;color:var(--white);margin-bottom:22px;animation:fu .7s .3s both;font-weight:900}
@@ -934,16 +935,26 @@ function submitHeroForm(){
   var hp=document.getElementById('hp_hf').value;
   var elapsed=Date.now()-_hfLoad;
   var btn=document.getElementById('hf_btn');
+  var checks=[
+    {id:'hf_name'},{id:'hf_phone'},{id:'hf_email'},{id:'hf_zip'},{id:'hf_service'}
+  ];
+  var missing=false;
+  checks.forEach(function(f){
+    var el=document.getElementById(f.id);
+    if(!el.value.trim()){el.style.borderColor='#C41E1E';missing=true;}
+    else{el.style.borderColor='';}
+  });
+  if(missing){
+    btn.style.animation='hf-shake .3s';
+    setTimeout(function(){btn.style.animation='';},350);
+    return;
+  }
   var name=document.getElementById('hf_name').value.trim();
   var phone=document.getElementById('hf_phone').value.trim();
   var email=document.getElementById('hf_email').value.trim();
   var zip=document.getElementById('hf_zip').value.trim();
   var service=document.getElementById('hf_service').value;
   var message=document.getElementById('hf_message').value.trim();
-  if(!name||!phone||!email){
-    alert('Please fill in your name, phone, and email.');
-    return;
-  }
   if(hp||elapsed<3000){
     btn.disabled=true;
     btn.textContent='✓ Sent!';

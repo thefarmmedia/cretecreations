@@ -518,12 +518,12 @@ function toggleMenu(){
       <div style="font-family:var(--fh);font-size:20px;color:var(--white);margin-bottom:6px;font-weight:700">Free Quote Request</div>
       <div style="font-family:var(--fc);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--silver);margin-bottom:20px">No obligation · Arturo responds personally</div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
-        <input id="firstName" name="first_name" type="text" placeholder="First Name" style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
-        <input id="lastName" name="last_name" type="text" placeholder="Last Name" style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
+        <input id="firstName" name="first_name" type="text" placeholder="First Name *" required style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
+        <input id="lastName" name="last_name" type="text" placeholder="Last Name *" required style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
         <input id="phone" name="phone" type="tel" placeholder="Phone Number *" required style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
-        <input id="email" name="email" type="email" placeholder="Email" style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
+        <input id="email" name="email" type="email" placeholder="Email *" required style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
       </div>
       <select id="service" name="service" required aria-label="Select a service" style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--silver);font-family:var(--fc);font-size:13px;letter-spacing:.04em;outline:none;margin-bottom:12px">
         <option value="">Select a service...</option>
@@ -536,7 +536,7 @@ function toggleMenu(){
         <select id="sqft" name="sq_ft" aria-label="Approximate square footage" style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--silver);font-family:var(--fc);font-size:13px;letter-spacing:.04em;outline:none">
           <option value="">Approx Square Footage...</option><option>Under 300 sq ft</option><option>300-500 sq ft</option><option>500-800 sq ft</option><option>800-1,200 sq ft</option><option>1,200-2,000 sq ft</option><option>2,000+ sq ft</option>
         </select>
-        <input id="city" name="city" type="text" placeholder="City / ZIP Code" style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
+        <input id="city" name="city" type="text" placeholder="City / ZIP Code *" required style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
       </div>
       <textarea id="message" name="message" placeholder="Project details — describe your concrete, any cracks or damage, what you're hoping for..." rows="4" style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;resize:vertical;outline:none;margin-bottom:14px"></textarea>
       <button id="formBtn" type="submit" class="btn btn-red" style="width:100%;font-size:15px">Submit Free Quote Request →</button>
@@ -546,6 +546,21 @@ function toggleMenu(){
     async function handleForm(e) {
       e.preventDefault();
       var b = document.getElementById('formBtn');
+      // Validate required fields and highlight any empty ones
+      var required = [
+        {id:'firstName'},{id:'lastName'},{id:'phone'},{id:'email'},{id:'service'},{id:'city'}
+      ];
+      var missing = false;
+      required.forEach(function(f){
+        var el = document.getElementById(f.id);
+        if (!el.value.trim()) { el.style.borderColor = '#C41E1E'; missing = true; }
+        else { el.style.borderColor = ''; }
+      });
+      if (missing) {
+        b.textContent = 'Please fill in all required fields';
+        setTimeout(function(){ b.textContent = 'Submit Free Quote Request →'; }, 2500);
+        return;
+      }
       b.textContent = 'Sending...';
       b.disabled = true;
       // Bot detection: honeypot filled or form submitted in under 3 seconds
