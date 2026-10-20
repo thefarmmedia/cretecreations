@@ -87,9 +87,23 @@ async function verify(target) {
   assert.equal(missing.status, 404, 'Unknown URLs must return 404');
   if (!preview) {
     for (const variant of ['http://cretecreationsllc.com/', 'http://www.cretecreationsllc.com/', 'https://www.cretecreationsllc.com/']) {
-      const r = await request(variant);
-      assert.ok([301, 308].includes(r.status), variant);
-      assert.equal(new URL(r.headers.get('location'), variant).href, base + '/', variant);
+      let current = variant;
+      let hops = 0;
+      const seen = new Set();
+      while (current !== base + '/' && hops < 3) {
+        assert.ok(!seen.has(current), 'Redirect loop: ' + variant);
+        seen.add(current);
+        const r = await request(current);
+        assert.ok([301, 308].includes(r.status), current + ' must permanently redirect');
+        assert.ok(r.headers.get('location'), current + ' has no destination');
+        const next = new URL(r.headers.get('location'), current);
+        assert.ok(['cretecreationsllc.com', 'www.cretecreationsllc.com'].includes(next.hostname), current);
+        assert.equal(next.pathname, '/', current);
+        current = next.href;
+        hops++;
+      }
+      assert.equal(current, base + '/', variant + ' does not reach the canonical host');
+      console.log('Canonical host verified: ' + variant + ' in ' + hops + ' permanent redirect(s)');
     }
   }
   console.log('Verified ' + pageCount + ' exact HTML matches, ' + aliasCount + ' permanent path redirects, robots.txt, sitemap.xml and 404 handling at ' + target);
