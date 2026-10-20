@@ -293,7 +293,7 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
     <a href="/locations">All Locations →</a>
     <div class="mob-section">More</div>
     <a href="/gallery">Gallery</a>
-    <a href="/contact">💲 Price Free Quote</a>
+    <a href="/contact">Free Quote</a>
     <a href="/contact" style="color:var(--red-lt);text-decoration:underline">→ Get Free Quote</a>
   </div>
 </nav>
@@ -346,7 +346,7 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
     <div style="font-size:36px">🚀</div>
     <div class="cta-strip-text" style="flex:1">
       <strong>Get a Free Quote for Your Location</strong>
-      <span>Use the free quote form — works for every service and every city we serve. Takes under 60 seconds.</span>
+      <span>Use the free quote form to share your project details and location. Arturo will follow up personally.</span>
     </div>
     <a href="/contact" class="btn btn-red">Get a Free Quote →</a>
   </div>
@@ -753,7 +753,7 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
         <h2 class="sh">Arturo Travels for <em>the Right Project</em></h2>
         <div class="rule"></div>
         <p style="font-size:15px;font-weight:300;color:var(--silver-lt);line-height:1.8;margin-bottom:16px">The 18 cities above represent Arturo's regular service territory — but they're not a hard limit. He considers projects beyond the standard radius based on scope, project type, and scheduling, including <a href="/epoxy-floors-springfield-mo" style="color:var(--red-lt);text-decoration:underline">Springfield, MO</a>. If you're in the Four State region and don't see your city listed, call and ask — see the full <a href="/four-state-epoxy-contractor" style="color:var(--red-lt);text-decoration:underline">Four State service overview</a> or search <a href="/epoxy-floors-near-me" style="color:var(--red-lt);text-decoration:underline">epoxy floors near me</a> to check your area.</p>
-        <p style="font-size:15px;font-weight:300;color:var(--silver-lt);line-height:1.8;margin-bottom:24px">Use the <a href="/contact" style="color:var(--red-lt);text-decoration:underline">free quote form</a> to get a ballpark on your project — then call <a href="tel:4174837082" style="color:var(--red-lt);text-decoration:underline">(417) 483-7082</a> and ask about your specific location. Arturo answers personally.</p>
+        <p style="font-size:15px;font-weight:300;color:var(--silver-lt);line-height:1.8;margin-bottom:24px">Use the <a href="/contact" style="color:var(--red-lt);text-decoration:underline">free quote form</a> to request a quote for your project — then call <a href="tel:4174837082" style="color:var(--red-lt);text-decoration:underline">(417) 483-7082</a> and ask about your specific location. Arturo answers personally.</p>
         <div class="btn-row">
           <a href="tel:4174837082" class="btn btn-red">📞 (417) 483-7082</a>
           <a href="/contact" class="btn btn-out">Get a Free Quote</a>
@@ -762,42 +762,52 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
       <div style="background:var(--charcoal);border:1px solid var(--rim);border-top:3px solid var(--red);padding:32px">
         <div style="font-family:var(--fh);font-size:20px;color:var(--white);margin-bottom:16px;font-weight:700">Quick Quote Request</div>
         <form onsubmit="handleLocForm(event)">
-          <input id="locName" type="text" placeholder="Name" style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none;margin-bottom:10px" />
-          <input id="locPhone" type="tel" placeholder="Phone *" required style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none;margin-bottom:10px" />
-          <input id="locCity" type="text" placeholder="City / ZIP you're located in" style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none;margin-bottom:10px" />
+          <input aria-label="Name" id="locName" type="text" placeholder="Name" style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none;margin-bottom:10px" />
+          <input aria-label="Phone *" id="locPhone" type="tel" placeholder="Phone *" required style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none;margin-bottom:10px" />
+          <input aria-label="City / ZIP you're located in" id="locCity" type="text" placeholder="City / ZIP you're located in" style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none;margin-bottom:10px" />
           <select id="locService" aria-label="Select a service" style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--silver);font-family:var(--fc);font-size:13px;outline:none;margin-bottom:14px">
-            <option>Select a service...</option>
+            <option value="">Select a service...</option>
             <option>Epoxy Garage Floor</option><option>Polyaspartic Coating</option><option>Metallic Epoxy</option>
             <option>Driveway Overlay</option><option>Commercial Floor</option><option>Basement Floor</option>
             <option>Shop / Barn Floor</option><option>Pool Deck</option><option>Other</option>
           </select>
           <button id="locBtn" type="submit" class="btn btn-red" style="width:100%">Submit Quote Request →</button>
+<p id="locationQuoteStatus" role="status" aria-live="polite" style="margin-top:12px;font-size:14px;line-height:1.5"></p>
         </form>
         <script>
-        async function handleLocForm(e){
-          e.preventDefault();
-          var b=document.getElementById('locBtn');
-          b.textContent='Sending...';
-          b.disabled=true;
-          var name=document.getElementById('locName').value.trim();
-          var phone=document.getElementById('locPhone').value.trim().replace(/[^\d+]/g,'');
-          var city=document.getElementById('locCity').value.trim();
-          var service=document.getElementById('locService').value;
-          var fd=new FormData();
-          fd.append('name', name);
-          fd.append('phone', phone);
-          fd.append('city', city);
-          fd.append('service', service);
-          fd.append('source', 'Crete Creations Locations Page Quick Quote');
-          fd.append('company', 'Crete Creations LLC');
-          try {
-            await fetch('https://services.leadconnectorhq.com/hooks/lox6fivr9xQwDSwatx9d/webhook-trigger/1069527f-0ff3-4af4-8cd6-9cc422bbfd1b', { method: 'POST', body: fd });
-          } catch(err) { console.error('Form submission error:', err); }
-          b.textContent='✓ Submitted! Arturo will be in touch.';
-          b.style.background='#1a6e1a';
-          b.disabled=true;
-        }
-        </script>
+async function handleLocForm(e) {
+  e.preventDefault();
+  var b = document.getElementById('locBtn');
+  var status = document.getElementById('locationQuoteStatus');
+  if (b.disabled) return;
+  status.textContent = '';
+  var phone = document.getElementById('locPhone');
+  if (!phone.value.trim() || !phone.checkValidity()) {
+    status.textContent = 'Please enter your phone number.';
+    return;
+  }
+  var fd = new FormData();
+  fd.append('name', document.getElementById('locName').value.trim());
+  fd.append('phone', phone.value.trim().replace(/[^\d+]/g, ''));
+  fd.append('city', document.getElementById('locCity').value.trim());
+  fd.append('service', document.getElementById('locService').value);
+  fd.append('source', 'Crete Creations Locations Page Quick Quote');
+  fd.append('company', 'Crete Creations LLC');
+  b.textContent = 'Sending...';
+  b.disabled = true;
+  try {
+    var response = await fetch('https://services.leadconnectorhq.com/hooks/lox6fivr9xQwDSwatx9d/webhook-trigger/1069527f-0ff3-4af4-8cd6-9cc422bbfd1b', { method: 'POST', body: fd });
+    if (!response.ok) throw new Error('Request rejected');
+    b.textContent = 'Request Sent';
+    b.style.background = '#1a6e1a';
+    status.textContent = 'Your request was sent. Arturo will be in touch.';
+  } catch (err) {
+    b.textContent = 'Submit Quote Request →';
+    b.disabled = false;
+    status.textContent = 'We could not send your request. Please try again or call (417) 483-7082.';
+  }
+}
+</script>
       </div>
     </div>
   </div>
@@ -860,7 +870,7 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
       <h3 style="margin-top:16px">Company</h3>
       <a href="/about">About Arturo</a><a href="/gallery">Gallery</a>
       <a href="/blog">Blog &amp; Guides</a><a href="/faq">FAQ</a>
-      <a href="/colors">Color Palette</a><a href="/contact">Price Free Quote</a>
+      <a href="/colors">Color Palette</a><a href="/contact">Request a Quote</a>
       <a href="/contact">Free Quote</a>
     </div>
   </div>

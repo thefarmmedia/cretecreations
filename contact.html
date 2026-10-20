@@ -477,7 +477,7 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
     <a href="/gallery">Gallery</a>
     <a href="/blog">Blog</a>
     <a href="/faq">FAQ</a>
-    <a href="/contact">💲 Price Free Quote</a>
+    <a href="/contact">Free Quote</a>
     <a href="/contact" style="color:var(--red-lt);font-weight:700">→ Get Free Quote</a>
   </div>
 </nav>
@@ -497,7 +497,7 @@ function toggleMenu(){
   <div class="page-hero-inner">
     <span class="eyebrow">Crete Creations LLC · Free Consultation</span>
     <h1>We Answer.<br><em>We Show Up.</em></h1>
-    <p class="lead">Call Arturo directly, use the form below, or try the <a href="/contact" style="color:var(--red-lt);text-decoration:underline">free quote form</a> for a ballpark first. Free consultation — no obligation.</p>
+    <p class="lead">Call Arturo directly or use the form below to describe your project. Arturo will follow up personally to discuss the scope and provide a written quote. Free consultation — no obligation.</p>
   </div>
 </div>
 <div class="page-body">
@@ -505,7 +505,7 @@ function toggleMenu(){
     <h2>Free Consultation</h2>
     <p>Every Crete Creations project starts with a free visit. Arturo comes to your property, assesses the concrete personally, brings physical <a href="/colors">color sample chips</a> and driveway style photos, and gives you a precise written quote with no hidden costs. He answers questions directly and doesn't leave until you understand exactly what will happen and what it will cost.</p>
     <div class="feats" style="margin-bottom:28px">
-      <div class="feat"><span>🚀</span><div><strong>Get a Ballpark First</strong><em>Use the <a href="/contact">free quote form</a> for a realistic price range before Arturo visits — takes under 60 seconds.</em></div></div>
+      <div class="feat"><span>🚀</span><div><strong>Tell Us About Your Project</strong><em>Share the service, approximate size, location, and condition of your concrete. Arturo will follow up with you.</em></div></div>
       <div class="feat"><span>📞</span><div><strong>Call Directly</strong><em><a href="tel:4174837082">(417) 483-7082</a> — Arturo answers and talks through your project personally.</em></div></div>
       <div class="feat"><span>📧</span><div><strong>Email</strong><em><a href="mailto:artvette68@yahoo.com">artvette68@yahoo.com</a> — responds within one business day.</em></div></div>
       <div class="feat"><span>✅</span><div><strong>Written Quote</strong><em>Every project receives a detailed written quote — system, prep scope, timeline, and fixed price. No surprises.</em></div></div>
@@ -518,12 +518,12 @@ function toggleMenu(){
       <div style="font-family:var(--fh);font-size:20px;color:var(--white);margin-bottom:6px;font-weight:700">Free Quote Request</div>
       <div style="font-family:var(--fc);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--silver);margin-bottom:20px">No obligation · Arturo responds personally</div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
-        <input id="firstName" name="first_name" type="text" placeholder="First Name *" required style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
-        <input id="lastName" name="last_name" type="text" placeholder="Last Name *" required style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
+        <input aria-label="First Name *" id="firstName" name="first_name" type="text" placeholder="First Name *" required style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
+        <input aria-label="Last Name *" id="lastName" name="last_name" type="text" placeholder="Last Name *" required style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
       </div>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px">
-        <input id="phone" name="phone" type="tel" placeholder="Phone Number *" required style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
-        <input id="email" name="email" type="email" placeholder="Email *" required style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
+        <input aria-label="Phone Number *" id="phone" name="phone" type="tel" placeholder="Phone Number *" required style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
+        <input aria-label="Email *" id="email" name="email" type="email" placeholder="Email *" required style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
       </div>
       <select id="service" name="service" required aria-label="Select a service" style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--silver);font-family:var(--fc);font-size:13px;letter-spacing:.04em;outline:none;margin-bottom:12px">
         <option value="">Select a service...</option>
@@ -536,70 +536,66 @@ function toggleMenu(){
         <select id="sqft" name="sq_ft" aria-label="Approximate square footage" style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--silver);font-family:var(--fc);font-size:13px;letter-spacing:.04em;outline:none">
           <option value="">Approx Square Footage...</option><option>Under 300 sq ft</option><option>300-500 sq ft</option><option>500-800 sq ft</option><option>800-1,200 sq ft</option><option>1,200-2,000 sq ft</option><option>2,000+ sq ft</option>
         </select>
-        <input id="city" name="city" type="text" placeholder="City / ZIP Code *" required style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
+        <input aria-label="City / ZIP Code *" id="city" name="city" type="text" placeholder="City / ZIP Code *" required style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
       </div>
-      <textarea id="message" name="message" placeholder="Project details — describe your concrete, any cracks or damage, what you're hoping for..." rows="4" style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;resize:vertical;outline:none;margin-bottom:14px"></textarea>
+      <textarea aria-label="Project details — describe your concrete, any cracks or damage, what you're hoping for..." id="message" name="message" placeholder="Project details — describe your concrete, any cracks or damage, what you're hoping for..." rows="4" style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;resize:vertical;outline:none;margin-bottom:14px"></textarea>
       <button id="formBtn" type="submit" class="btn btn-red" style="width:100%;font-size:15px">Submit Free Quote Request →</button>
+<p id="quoteStatus" role="status" aria-live="polite" style="margin-top:12px;font-size:14px;line-height:1.5"></p>
     </form>
     <script>
-    var _formLoadTime = Date.now();
-    async function handleForm(e) {
-      e.preventDefault();
-      var b = document.getElementById('formBtn');
-      // Validate required fields and highlight any empty ones
-      var required = [
-        {id:'firstName'},{id:'lastName'},{id:'phone'},{id:'email'},{id:'service'},{id:'city'}
-      ];
-      var missing = false;
-      required.forEach(function(f){
-        var el = document.getElementById(f.id);
-        if (!el.value.trim()) { el.style.borderColor = '#C41E1E'; missing = true; }
-        else { el.style.borderColor = ''; }
-      });
-      if (missing) {
-        b.textContent = 'Please fill in all required fields';
-        setTimeout(function(){ b.textContent = 'Submit Free Quote Request →'; }, 2500);
-        return;
-      }
-      b.textContent = 'Sending...';
-      b.disabled = true;
-      // Bot detection: honeypot filled or form submitted in under 3 seconds
-      var hp = document.getElementById('hp_website').value;
-      var elapsed = Date.now() - _formLoadTime;
-      if (hp || elapsed < 3000) {
-        setTimeout(function() {
-          b.textContent = '✓ Submitted! Arturo will be in touch within 1 business day.';
-        }, 800);
-        return;
-      }
-      var firstName = document.getElementById('firstName').value.trim();
-      var lastName = document.getElementById('lastName').value.trim();
-      var phone = document.getElementById('phone').value.trim().replace(/[^\d+]/g, '');
-      var email = document.getElementById('email').value.trim();
-      var service = document.getElementById('service').value;
-      var sqft = document.getElementById('sqft').value;
-      var city = document.getElementById('city').value.trim();
-      var message = document.getElementById('message').value.trim();
-      var fd = new FormData();
-      fd.append('first_name', firstName);
-      fd.append('last_name', lastName);
-      fd.append('name', (firstName + ' ' + lastName).trim());
-      fd.append('phone', phone);
-      fd.append('email', email);
-      fd.append('service', service);
-      fd.append('sq_ft', sqft);
-      fd.append('city', city);
-      fd.append('message', message);
-      fd.append('source', 'Crete Creations Contact Form');
-      fd.append('company', 'Crete Creations LLC');
-      try {
-        await fetch('https://services.leadconnectorhq.com/hooks/lox6fivr9xQwDSwatx9d/webhook-trigger/1069527f-0ff3-4af4-8cd6-9cc422bbfd1b', { method: 'POST', body: fd });
-      } catch(err) { console.error('Form submission error:', err); }
-      b.textContent = '✓ Submitted! Arturo will be in touch within 1 business day.';
-      b.style.background = '#1a6e1a';
-      b.disabled = true;
-    }
-    </script>
+var _formLoadTime = Date.now();
+async function handleForm(e) {
+  e.preventDefault();
+  var b = document.getElementById('formBtn');
+  var status = document.getElementById('quoteStatus');
+  if (b.disabled) return;
+  status.textContent = '';
+  var required = ['firstName', 'lastName', 'phone', 'email', 'service', 'city'];
+  var missing = false;
+  required.forEach(function(id) {
+    var el = document.getElementById(id);
+    var invalid = !el.value.trim() || !el.checkValidity();
+    el.style.borderColor = invalid ? '#C41E1E' : '';
+    if (invalid) missing = true;
+  });
+  if (missing) {
+    status.textContent = 'Please complete all required fields with valid details.';
+    return;
+  }
+  if (document.getElementById('hp_website').value) return;
+  if (Date.now() - _formLoadTime < 3000) {
+    status.textContent = 'Please wait a moment, then submit your request again.';
+    return;
+  }
+  var firstName = document.getElementById('firstName').value.trim();
+  var lastName = document.getElementById('lastName').value.trim();
+  var fd = new FormData();
+  fd.append('first_name', firstName);
+  fd.append('last_name', lastName);
+  fd.append('name', (firstName + ' ' + lastName).trim());
+  fd.append('phone', document.getElementById('phone').value.trim().replace(/[^\d+]/g, ''));
+  fd.append('email', document.getElementById('email').value.trim());
+  fd.append('service', document.getElementById('service').value);
+  fd.append('sq_ft', document.getElementById('sqft').value);
+  fd.append('city', document.getElementById('city').value.trim());
+  fd.append('message', document.getElementById('message').value.trim());
+  fd.append('source', 'Crete Creations Contact Form');
+  fd.append('company', 'Crete Creations LLC');
+  b.textContent = 'Sending...';
+  b.disabled = true;
+  try {
+    var response = await fetch('https://services.leadconnectorhq.com/hooks/lox6fivr9xQwDSwatx9d/webhook-trigger/1069527f-0ff3-4af4-8cd6-9cc422bbfd1b', { method: 'POST', body: fd });
+    if (!response.ok) throw new Error('Request rejected');
+    b.textContent = 'Request Sent';
+    b.style.background = '#1a6e1a';
+    status.textContent = 'Your request was sent. Arturo will be in touch within 1 business day.';
+  } catch (err) {
+    b.textContent = 'Submit Free Quote Request →';
+    b.disabled = false;
+    status.textContent = 'We could not send your request. Please try again or call (417) 483-7082.';
+  }
+}
+</script>
 
     <h2 style="margin-top:40px">Find Us on Google</h2>
     <p>See our location, get directions, and read verified reviews from past clients.</p>
@@ -616,7 +612,7 @@ function toggleMenu(){
   <div class="sb-card">
     <div style="text-align:center;margin-bottom:16px"><img src="logo.png" alt="Crete Creations LLC" style="width:70px;height:70px;border-radius:50%;border:2px solid var(--red);object-fit:contain" width="956" height="956"></div>
     <div class="sb-title">Get a Free Quote</div>
-    <p style="font-size:14px;color:var(--silver);margin-bottom:16px;line-height:1.6">Request a free quote to get a ballpark price in under 60 seconds — before you call.</p>
+    <p style="font-size:14px;color:var(--silver);margin-bottom:16px;line-height:1.6">Tell Arturo about your project and request a free written quote.</p>
     <a href="/contact" class="sb-cta">🚀 Get a Free Quote →</a>
     <a href="/contact" class="sb-cta">Request Free Quote</a>
     <a href="tel:4174837082" class="sb-cta alt">📞 (417) 483-7082</a>
@@ -713,7 +709,7 @@ function toggleMenu(){
       <a href="/blog">Blog &amp; Guides</a>
       <a href="/faq">FAQ</a>
       <a href="/colors">Color Palette</a>
-      <a href="/contact">Price Free Quote</a>
+      <a href="/contact">Request a Quote</a>
       <a href="/contact">Free Quote</a>
     </div>
   </div>
