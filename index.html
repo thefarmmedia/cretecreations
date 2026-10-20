@@ -14,7 +14,7 @@
   <meta name="twitter:card" content="summary_large_image" />
   <meta property="og:url" content="https://cretecreationsllc.com/" />
   <link rel="preload" as="image" href="hero_car.jpg" fetchpriority="high" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Crete Creations LLC","description":"Professional epoxy floors, driveway overlays, and decorative concrete coatings serving Joplin, Missouri and the Four-State area.","url":"https://cretecreationsllc.com/","telephone":"+14174837082","sameAs":["https://www.facebook.com/CreteCreationsllc","https://maps.app.goo.gl/gRzLBDTQTEk1XETM9"],"address":{"@type":"PostalAddress","addressLocality":"Joplin","addressRegion":"MO","addressCountry":"US"},"areaServed":{"@type":"State","name":"Missouri"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"5.0","reviewCount":"6"},"review":[{"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"author":{"@type":"Person","name":"Richard Joseph, Jr."},"reviewBody":"I am happy to provide a letter of reference for Arturo Escalante. He has consistently delivered outstanding results \u2014 on time and within budget. I would not hesitate to recommend Crete Creations to anyone."},{"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"author":{"@type":"Person","name":"Homeowner"},"reviewBody":"Our driveway overlay is stunning \u2014 people slow down just to look at it. Arturo designed the whole thing and it came out exactly like he described. Professional, clean, done on schedule."},{"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"author":{"@type":"Person","name":"Homeowner"},"reviewBody":"Our garage floor looks incredible \u2014 we've gotten more compliments on it than anything else in our home. Arturo's attention to detail is second to none in the Joplin area."},{"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"author":{"@type":"Person","name":"Business Owner"},"reviewBody":"Seamless from start to finish. Showed up when he said he would, finished on schedule, and the floor has held up beautifully under heavy commercial use."},{"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"author":{"@type":"Person","name":"Restaurant Owner"},"reviewBody":"The metallic floor Arturo created is genuinely a piece of art. People walk in and it's the first thing they notice. Referred multiple people since \u2014 all had the same exceptional experience."},{"@type":"Review","reviewRating":{"@type":"Rating","ratingValue":"5","bestRating":"5"},"author":{"@type":"Person","name":"Lake Homeowner"},"reviewBody":"Had Arturo coat our garage and redo our driveway at our Grand Lake property. Both turned out amazing. The brick inlay driveway looks like it belongs on an estate."}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Crete Creations LLC","description":"Professional epoxy floors, driveway overlays, and decorative concrete coatings serving Joplin, Missouri and the Four-State area.","url":"https://cretecreationsllc.com/","telephone":"+14174837082","sameAs":["https://www.facebook.com/CreteCreationsllc","https://maps.app.goo.gl/gRzLBDTQTEk1XETM9"],"address":{"@type":"PostalAddress","addressLocality":"Joplin","addressRegion":"MO","addressCountry":"US"},"areaServed":[{"@type":"State","name":"Missouri"},{"@type":"State","name":"Kansas"},{"@type":"State","name":"Oklahoma"},{"@type":"State","name":"Arkansas"}],"@id":"https://cretecreationsllc.com/#business","image":"https://cretecreationsllc.com/hero_main.jpg"}</script>
 
   
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;600;700&display=swap"><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"><noscript><link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Barlow:ital,wght@0,300;0,400;0,600;0,700;1,300&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet"></noscript>
@@ -501,7 +501,7 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
     <a href="/gallery">Gallery</a>
     <a href="/blog">Blog</a>
     <a href="/faq">FAQ</a>
-    <a href="/contact">💲 Price Free Quote</a>
+    <a href="/contact">Free Quote</a>
     <a href="/contact" style="color:var(--red-lt);font-weight:700">→ Get Free Quote</a>
   </div>
 </nav>
@@ -533,21 +533,21 @@ function toggleMenu(){
         </div>
         <div class="hero-btns">
           <a href="tel:4174837082" class="btn btn-red">📞 (417) 483-7082</a>
-          <a href="/contact" class="btn btn-out">View Our Work</a>
+          <a href="/gallery" class="btn btn-out">View Our Work</a>
         </div>
       </div>
-      <div class="hero-form-card">
+      <form class="hero-form-card" onsubmit="submitHeroForm(event)">
         <p class="hf-title">Request a Free Quote</p>
         <p class="hf-sub">Arturo responds within 1 business day</p>
         <input type="text" name="website" id="hp_hf" style="display:none" tabindex="-1" autocomplete="off">
         <div class="hf-row">
-          <input class="hf-field" type="text" id="hf_name" placeholder="Full Name" autocomplete="name">
-          <input class="hf-field" type="tel" id="hf_phone" placeholder="Phone Number" autocomplete="tel">
+          <input aria-label="Full Name" class="hf-field" type="text" id="hf_name" placeholder="Full Name" autocomplete="name" required>
+          <input aria-label="Phone Number" class="hf-field" type="tel" id="hf_phone" placeholder="Phone Number" autocomplete="tel" required>
         </div>
-        <input class="hf-field" type="email" id="hf_email" placeholder="Email Address" autocomplete="email">
+        <input aria-label="Email Address" class="hf-field" type="email" id="hf_email" placeholder="Email Address" autocomplete="email" required>
         <div class="hf-row">
-          <input class="hf-field" type="text" id="hf_zip" placeholder="ZIP Code" maxlength="10">
-          <select class="hf-field" id="hf_service">
+          <input aria-label="ZIP Code" class="hf-field" type="text" id="hf_zip" placeholder="ZIP Code" maxlength="10" required>
+          <select class="hf-field" id="hf_service" aria-label="Project type" required>
             <option value="" disabled selected>Project Type</option>
             <option value="Epoxy Garage Floor">Epoxy Garage Floor</option>
             <option value="Metallic Epoxy">Metallic Epoxy</option>
@@ -557,10 +557,11 @@ function toggleMenu(){
             <option value="Other">Other</option>
           </select>
         </div>
-        <textarea class="hf-field" id="hf_message" rows="3" placeholder="Tell us about your project (optional)" style="resize:none"></textarea>
-        <button class="hf-btn" id="hf_btn" onclick="submitHeroForm()">Get My Free Quote →</button>
+        <textarea aria-label="Tell us about your project (optional)" class="hf-field" id="hf_message" rows="3" placeholder="Tell us about your project (optional)" style="resize:none"></textarea>
+        <button class="hf-btn" id="hf_btn" type="submit">Get My Free Quote →</button>
+        <p id="heroQuoteStatus" role="status" aria-live="polite" style="margin-top:12px;font-size:14px;line-height:1.5"></p>
         <p class="hf-note">No obligation · No spam · We respond within 1 business day</p>
-      </div>
+      </form>
     </div>
   </div>
 </div>
@@ -569,8 +570,8 @@ function toggleMenu(){
   <div class="calc-strip-inner">
     <div class="calc-strip-icon">🚀</div>
     <div class="calc-strip-text">
-      <strong>Know Your Budget Before You Call</strong>
-      <span>Use the <a href="/contact">free quote form</a> — select your service, square footage, and system. Get a real ballpark in under 60 seconds. Covers every service we offer.</span>
+      <strong>Start With a Free Quote</strong>
+      <span>Use the <a href="/contact">free quote form</a> to share your service, approximate project size, and concrete condition. Arturo will follow up with a project-specific written estimate.</span>
     </div>
     <a href="/contact" class="btn btn-red">Get a Free Quote →</a>
   </div>
@@ -639,13 +640,13 @@ function toggleMenu(){
     <div class="two-col" style="align-items:center">
       <div>
         <span class="sl">Free Quote Form</span>
-        <h2 class="sh">Know Your Number<br><span class="a">Before You Call.</span></h2>
+        <h2 class="sh">Tell Us About<br><span class="a">Your Project.</span></h2>
         <div class="rule"></div>
-        <p class="sb">Most homeowners want a ballpark price before scheduling anything. Our free quote form gives you a realistic range in under 60 seconds based on your specific project — service type, square footage, system, and concrete condition. Covers <a href="/epoxy-floors">garage floors</a>, <a href="/driveways">driveway overlays</a>, <a href="/metallic-epoxy">metallic epoxy</a>, <a href="/commercial">commercial spaces</a>, <a href="/basement-floors">basements</a>, pool decks, and every service we offer.</p>
+        <p class="sb">Every floor is different. Share your service type, approximate square footage, and concrete condition in our free quote form. Arturo will review the details with you and provide a written estimate for your project. We handle <a href="/epoxy-floors">garage floors</a>, <a href="/driveways">driveway overlays</a>, <a href="/metallic-epoxy">metallic epoxy</a>, <a href="/commercial">commercial spaces</a>, <a href="/basement-floors">basements</a>, pool decks, and every service we offer.</p>
         <div class="feats" style="margin-top:18px">
-          <div class="feat"><span>⏱</span><div><strong>Under 60 Seconds</strong><em>Select service, enter square footage, pick system. Done.</em></div></div>
-          <div class="feat"><span>🔒</span><div><strong>Price Revealed After Step 2</strong><em>Build your project first so the estimate is accurate — then unlock your range.</em></div></div>
-          <div class="feat"><span>📋</span><div><strong>All 12 Services Covered</strong><em>From standard garage floors to custom metallic pours and commercial systems.</em></div></div>
+          <div class="feat"><span>⏱</span><div><strong>Share Your Project</strong><em>Tell us the service, approximate size, location, and condition of your concrete.</em></div></div>
+          <div class="feat"><span>🔒</span><div><strong>A Project-Specific Quote</strong><em>Arturo reviews the scope and concrete condition before preparing a written estimate.</em></div></div>
+          <div class="feat"><span>📋</span><div><strong>Services for Every Surface</strong><em>From standard garage floors to custom metallic pours and commercial systems.</em></div></div>
         </div>
         <div class="btn-row">
           <a href="/contact" class="btn btn-red" style="font-size:16px;padding:16px 32px">Get a Free Quote →</a>
@@ -655,8 +656,8 @@ function toggleMenu(){
         <div style="font-size:64px;margin-bottom:16px">🚀</div>
         <div style="font-family:var(--fh);font-size:24px;color:var(--white);margin-bottom:8px;font-weight:700">Free Quote</div>
         <div style="font-size:15px;font-weight:300;color:var(--silver);margin-bottom:28px;line-height:1.6">Every service · All project sizes<br>Garage floors to commercial spaces</div>
-        <a href="/contact" class="btn btn-red" style="display:block;text-align:center;font-size:15px">Get My Estimate →</a>
-        <div style="font-family:var(--fc);font-size:11px;letter-spacing:.1em;color:var(--silver);margin-top:14px;text-transform:uppercase">No obligation · Under 60 seconds</div>
+        <a href="/contact" class="btn btn-red" style="display:block;text-align:center;font-size:15px">Request My Quote →</a>
+        <div style="font-family:var(--fc);font-size:11px;letter-spacing:.1em;color:var(--silver);margin-top:14px;text-transform:uppercase">No obligation · Arturo responds personally</div>
       </div>
     </div>
   </div>
@@ -780,7 +781,7 @@ function toggleMenu(){
         <h2 class="sh">Ready for the <span class="a">Best Floor of Your Life?</span></h2>
         <div class="rule"></div>
         <div class="feats">
-          <div class="feat"><span>🚀</span><div><strong>Get a Ballpark First</strong><em>Use the <a href="/contact">free quote form</a> — realistic price range in under 60 seconds before you call.</em></div></div>
+          <div class="feat"><span>🚀</span><div><strong>Request a Written Quote</strong><em>Use the <a href="/contact">free quote form</a> to tell Arturo about your project.</em></div></div>
           <div class="feat"><span>📞</span><div><strong>Call Arturo Directly</strong><em><a href="tel:4174837082">(417) 483-7082</a> — he answers and talks through your project personally.</em></div></div>
           <div class="feat"><span>📧</span><div><strong>Email</strong><em><a href="mailto:artvette68@yahoo.com">artvette68@yahoo.com</a> — responds within one business day.</em></div></div>
           <div class="feat"><span>📍</span><div><strong>Free Consultation</strong><em>Arturo comes to you, assesses the concrete in person, brings <a href="/colors">color samples</a>, and gives a precise written quote.</em></div></div>
@@ -791,10 +792,10 @@ function toggleMenu(){
         <div style="font-family:var(--fc);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--silver);margin-bottom:20px">No obligation · Arturo responds personally</div>
         <form onsubmit="handleForm(event)">
           <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:10px">
-            <input id="hpFirstName" type="text" placeholder="First Name" style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
-            <input id="hpLastName" type="text" placeholder="Last Name" style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
+            <input aria-label="First Name" id="hpFirstName" type="text" placeholder="First Name" style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
+            <input aria-label="Last Name" id="hpLastName" type="text" placeholder="Last Name" style="width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none" />
           </div>
-          <input id="hpPhone" type="tel" placeholder="Phone Number *" required style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none;margin-bottom:10px" />
+          <input aria-label="Phone Number *" id="hpPhone" type="tel" placeholder="Phone Number *" required style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none;margin-bottom:10px" />
           <select id="hpService" required aria-label="Select a service" style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--silver);font-family:var(--fc);font-size:13px;letter-spacing:.04em;outline:none;margin-bottom:10px">
             <option value="">Select a service...</option>
             <option>Epoxy Garage Floor</option><option>Polyaspartic Floor Coating</option><option>Metallic Epoxy Floor</option>
@@ -802,39 +803,53 @@ function toggleMenu(){
             <option>Basement Floor</option><option>Pool Deck Coating</option><option>Shop / Barn Floor</option>
             <option>Concrete Countertops</option><option>Water Feature / Fountain</option><option>Concrete Repair</option><option>Custom / Not Sure</option>
           </select>
-          <input id="hpCity" type="text" placeholder="City / ZIP Code" style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none;margin-bottom:14px" />
+          <input aria-label="City / ZIP Code" id="hpCity" type="text" placeholder="City / ZIP Code" style="display:block;width:100%;padding:12px;background:var(--dark);border:1px solid var(--rim);color:var(--white);font-family:var(--fc);font-size:14px;outline:none;margin-bottom:14px" />
           <button id="formBtn" type="submit" class="btn btn-red" style="width:100%;font-size:14px">Submit Free Quote Request →</button>
+<p id="quickQuoteStatus" role="status" aria-live="polite" style="margin-top:12px;font-size:14px;line-height:1.5"></p>
         </form>
       </div>
     </div>
   </div>
 </div>
 <script>
-async function handleForm(e){
+async function handleForm(e) {
   e.preventDefault();
-  var b=document.getElementById('formBtn');
-  b.textContent='Sending...';
-  b.disabled=true;
-  var firstName=document.getElementById('hpFirstName').value.trim();
-  var lastName=document.getElementById('hpLastName').value.trim();
-  var phone=document.getElementById('hpPhone').value.trim().replace(/[^\d+]/g,'');
-  var service=document.getElementById('hpService').value;
-  var city=document.getElementById('hpCity').value.trim();
-  var fd=new FormData();
+  var b = document.getElementById('formBtn');
+  var status = document.getElementById('quickQuoteStatus');
+  if (b.disabled) return;
+  status.textContent = '';
+  var required = ['hpPhone', 'hpService'];
+  if (required.some(function(id) {
+    var el = document.getElementById(id);
+    return !el.value.trim() || !el.checkValidity();
+  })) {
+    status.textContent = 'Please enter your phone number and select a service.';
+    return;
+  }
+  var firstName = document.getElementById('hpFirstName').value.trim();
+  var lastName = document.getElementById('hpLastName').value.trim();
+  var fd = new FormData();
   fd.append('first_name', firstName);
   fd.append('last_name', lastName);
-  fd.append('name', (firstName+' '+lastName).trim());
-  fd.append('phone', phone);
-  fd.append('service', service);
-  fd.append('city', city);
+  fd.append('name', (firstName + ' ' + lastName).trim());
+  fd.append('phone', document.getElementById('hpPhone').value.trim().replace(/[^\d+]/g, ''));
+  fd.append('service', document.getElementById('hpService').value);
+  fd.append('city', document.getElementById('hpCity').value.trim());
   fd.append('source', 'Crete Creations Homepage Quick Quote');
   fd.append('company', 'Crete Creations LLC');
+  b.textContent = 'Sending...';
+  b.disabled = true;
   try {
-    await fetch('https://services.leadconnectorhq.com/hooks/lox6fivr9xQwDSwatx9d/webhook-trigger/1069527f-0ff3-4af4-8cd6-9cc422bbfd1b', { method: 'POST', body: fd });
-  } catch(err) { console.error('Form submission error:', err); }
-  b.textContent='✓ Submitted! Arturo will be in touch.';
-  b.style.background='#1a6e1a';
-  b.disabled=true;
+    var response = await fetch('https://services.leadconnectorhq.com/hooks/lox6fivr9xQwDSwatx9d/webhook-trigger/1069527f-0ff3-4af4-8cd6-9cc422bbfd1b', { method: 'POST', body: fd });
+    if (!response.ok) throw new Error('Request rejected');
+    b.textContent = 'Request Sent';
+    b.style.background = '#1a6e1a';
+    status.textContent = 'Your request was sent. Arturo will be in touch.';
+  } catch (err) {
+    b.textContent = 'Submit Free Quote Request →';
+    b.disabled = false;
+    status.textContent = 'We could not send your request. Please try again or call (417) 483-7082.';
+  }
 }
 </script>
 
@@ -908,7 +923,7 @@ async function handleForm(e){
       <a href="/blog">Blog &amp; Guides</a>
       <a href="/faq">FAQ</a>
       <a href="/colors">Color Palette</a>
-      <a href="/contact">Price Free Quote</a>
+      <a href="/contact">Request a Quote</a>
       <a href="/contact">Free Quote</a>
     </div>
   </div>
@@ -930,49 +945,55 @@ async function handleForm(e){
   <a href="/contact" class="mob-cta-quote">🚀 Free Quote</a>
 </div>
 <script>
-var _hfLoad=Date.now();
-function submitHeroForm(){
-  var hp=document.getElementById('hp_hf').value;
-  var elapsed=Date.now()-_hfLoad;
-  var btn=document.getElementById('hf_btn');
-  var checks=[
-    {id:'hf_name'},{id:'hf_phone'},{id:'hf_email'},{id:'hf_zip'},{id:'hf_service'}
-  ];
-  var missing=false;
-  checks.forEach(function(f){
-    var el=document.getElementById(f.id);
-    if(!el.value.trim()){el.style.borderColor='#C41E1E';missing=true;}
-    else{el.style.borderColor='';}
+var _hfLoad = Date.now();
+async function submitHeroForm(e) {
+  e.preventDefault();
+  var btn = document.getElementById('hf_btn');
+  var status = document.getElementById('heroQuoteStatus');
+  if (btn.disabled) return;
+  status.textContent = '';
+  var required = ['hf_name', 'hf_phone', 'hf_email', 'hf_zip', 'hf_service'];
+  var missing = false;
+  required.forEach(function(id) {
+    var el = document.getElementById(id);
+    var invalid = !el.value.trim() || !el.checkValidity();
+    el.style.borderColor = invalid ? '#C41E1E' : '';
+    if (invalid) missing = true;
   });
-  if(missing){
-    btn.style.animation='hf-shake .3s';
-    setTimeout(function(){btn.style.animation='';},350);
+  if (missing) {
+    status.textContent = 'Please complete all required fields with valid details.';
     return;
   }
-  var name=document.getElementById('hf_name').value.trim();
-  var phone=document.getElementById('hf_phone').value.trim();
-  var email=document.getElementById('hf_email').value.trim();
-  var zip=document.getElementById('hf_zip').value.trim();
-  var service=document.getElementById('hf_service').value;
-  var message=document.getElementById('hf_message').value.trim();
-  if(hp||elapsed<3000){
-    btn.disabled=true;
-    btn.textContent='✓ Sent!';
+  if (document.getElementById('hp_hf').value) return;
+  if (Date.now() - _hfLoad < 3000) {
+    status.textContent = 'Please wait a moment, then submit your request again.';
     return;
   }
-  btn.disabled=true;
-  btn.textContent='Sending…';
-  fetch('https://services.leadconnectorhq.com/hooks/lox6fivr9xQwDSwatx9d/webhook-trigger/1069527f-0ff3-4af4-8cd6-9cc422bbfd1b',{
-    method:'POST',
-    headers:{'Content-Type':'application/json'},
-    body:JSON.stringify({firstName:name,phone:phone,email:email,zip:zip,service:service,message:message,source:'Hero Form'})
-  }).then(function(){
-    btn.textContent='✓ Sent! Arturo will be in touch soon.';
-  }).catch(function(){
-    btn.disabled=false;
-    btn.textContent='Get My Free Quote →';
-    alert('Something went wrong. Please call us at (417) 483-7082.');
-  });
+  var payload = {
+    firstName: document.getElementById('hf_name').value.trim(),
+    phone: document.getElementById('hf_phone').value.trim(),
+    email: document.getElementById('hf_email').value.trim(),
+    zip: document.getElementById('hf_zip').value.trim(),
+    service: document.getElementById('hf_service').value,
+    message: document.getElementById('hf_message').value.trim(),
+    source: 'Hero Form'
+  };
+  btn.disabled = true;
+  btn.textContent = 'Sending...';
+  try {
+    var response = await fetch('https://services.leadconnectorhq.com/hooks/lox6fivr9xQwDSwatx9d/webhook-trigger/1069527f-0ff3-4af4-8cd6-9cc422bbfd1b', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
+    if (!response.ok) throw new Error('Request rejected');
+    btn.textContent = 'Request Sent';
+    status.textContent = 'Your request was sent. Arturo will be in touch within 1 business day.';
+  } catch (err) {
+    btn.disabled = false;
+    btn.textContent = 'Get My Free Quote →';
+    status.textContent = 'We could not send your request. Please try again or call (417) 483-7082.';
+  }
 }
 </script>
 </body></html>

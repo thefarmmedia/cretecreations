@@ -1,0 +1,43 @@
+name: Site checks
+on:
+  pull_request:
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  site-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24'
+      - run: node --test tests/site.test.mjs
+      - name: Inspect current production routing
+        if: github.event_name == 'pull_request'
+        run: node scripts/verify-production.mjs --inspect
+  production:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    needs: site-checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24'
+      - run: node scripts/verify-production.mjs
+  preview:
+    if: github.event_name == 'pull_request'
+    needs: site-checks
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      PREVIEW_URL: https://deploy-preview-${{ github.event.pull_request.number }}--cretecreationsllc.netlify.app
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+      - uses: actions/setup-node@249970729cb0ef3589644e2896645e5dc5ba9c38 # v6
+        with:
+          node-version: '24'
+      - run: node scripts/verify-production.mjs
