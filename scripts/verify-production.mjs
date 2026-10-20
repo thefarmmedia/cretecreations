@@ -22,6 +22,20 @@ async function batch(items, fn, limit = 6) {
   }));
 }
 async function inspectCurrent() {
+  if (preview) {
+    const r = await request(preview + '/?inspect=current');
+    const body = await r.text();
+    const expected = read('index.html');
+    let diff = 0;
+    while (diff < Math.min(body.length, expected.length) && body[diff] === expected[diff]) diff++;
+    console.log(JSON.stringify({
+      preview, status: r.status, location: r.headers.get('location'),
+      bytes: body.length, expectedBytes: expected.length, firstDifference: diff,
+      actual: body.slice(Math.max(0, diff - 40), diff + 300),
+      expected: expected.slice(Math.max(0, diff - 40), diff + 200),
+      tail: body.slice(-500)
+    }));
+  }
   for (const path of ['/', '/joplin', '/joplin.html', '/epoxy-floors', '/calculator', '/calculator.html']) {
     const r = await request(base + path);
     const body = await r.text();
