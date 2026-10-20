@@ -5,7 +5,10 @@ import { createHash } from 'node:crypto';
 const base = process.env.SITE_URL || 'https://cretecreationsllc.com';
 const inspect = process.argv.includes('--inspect');
 const preview = process.env.PREVIEW_URL;
-const hash = text => createHash('sha256').update(text).digest('hex');
+// Netlify adds this exact collaboration helper to previews at the edge.
+// Production must still match the committed bytes without normalization.
+const withoutPreviewDrawer = text => preview ? text.replace(/<div data-netlify-deploy-id="[0-9a-f]{24}" data-netlify-site-id="[0-9a-f-]{36}" data-vcs="github" style="position:fixed">\s*<script async src="\/\.netlify\/scripts\/cdp"><\/script>\s*<\/div>\n(?=<\/body>)/, '') : text;
+const hash = text => createHash('sha256').update(withoutPreviewDrawer(text)).digest('hex');
 const read = path => readFileSync(path, 'utf8');
 const paths = [...read('sitemap.xml').matchAll(/<loc>https:\/\/cretecreationsllc.com(.*?)<\/loc>/g)].map(m => m[1]);
 const rows = read('_redirects').split('\n').filter(line => line.startsWith('/')).map(line => line.trim().split(/\s+/));
@@ -31,9 +34,8 @@ async function inspectCurrent() {
     console.log(JSON.stringify({
       preview, status: r.status, location: r.headers.get('location'),
       bytes: body.length, expectedBytes: expected.length, firstDifference: diff,
-      actual: body.slice(Math.max(0, diff - 40), diff + 300),
-      expected: expected.slice(Math.max(0, diff - 40), diff + 200),
-      tail: body.slice(-500)
+      matchesSource: hash(body) === hash(expected),
+      netlifyDrawer: body.includes('/.netlify/scripts/cdp')
     }));
   }
   for (const path of ['/', '/joplin', '/joplin.html', '/epoxy-floors', '/calculator', '/calculator.html']) {
