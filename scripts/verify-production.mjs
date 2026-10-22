@@ -13,6 +13,9 @@ const read = path => readFileSync(path, 'utf8');
 const paths = [...read('sitemap.xml').matchAll(/<loc>https:\/\/cretecreationsllc.com(.*?)<\/loc>/g)].map(m => m[1]);
 const rows = read('_redirects').split('\n').filter(line => line.startsWith('/')).map(line => line.trim().split(/\s+/));
 const sourceFor = path => read(path === '/' ? 'index.html' : path.slice(1) + '.html');
+const assetPaths = [...new Set(paths.flatMap(path =>
+  [...sourceFor(path).matchAll(/(['"])(\/[\w-]+\.(?:jpe?g|png|webp|css))\1/g)].map(match => match[2])
+))];
 const request = (url, follow = false) => fetch(url, {
   redirect: follow ? 'follow' : 'manual',
   signal: AbortSignal.timeout(20000),
@@ -38,7 +41,7 @@ async function inspectCurrent() {
       netlifyDrawer: body.includes('/.netlify/scripts/cdp')
     }));
   }
-  for (const path of ['/', '/joplin', '/joplin.html', '/epoxy-floors', '/calculator', '/calculator.html']) {
+  for (const path of ['/', '/index', '/index/', '/joplin', '/joplin/', '/joplin.html', '/epoxy-floors/', '/calculator', '/calculator.html']) {
     const r = await request(base + path);
     const body = await r.text();
     console.log(JSON.stringify({
@@ -78,6 +81,29 @@ async function verify(target) {
     assert.equal(location.searchParams.get('probe'), 'canonical', from + ' drops query parameters');
     aliasCount++;
   });
+  const indexSlash = await request(target + '/index/?probe=canonical');
+  assert.equal(indexSlash.status, 301, '/index/ must permanently redirect');
+  const indexDestination = new URL(indexSlash.headers.get('location'), target);
+  assert.equal(indexDestination.pathname, '/');
+  assert.equal(indexDestination.searchParams.get('probe'), 'canonical');
+  // Netlify normalizes slashes before redirect rules. Both served forms must
+  // retain the canonical HTML and usable root-relative assets.
+  await batch(paths.filter(path => path !== '/'), async path => {
+    const r = await request(target + path + '/');
+    assert.equal(r.status, 200, path + '/ must remain accessible without a redirect loop');
+    if (!preview) assert.doesNotMatch(r.headers.get('x-robots-tag') || '', /noindex/i, path + '/');
+    assert.equal(hash(await r.text()), hash(sourceFor(path)), path + '/ differs from its canonical page');
+  });
+  await batch(assetPaths, async path => {
+    const r = await request(target + path);
+    assert.equal(r.status, 200, path + ' asset is missing');
+    assert.match(r.headers.get('content-type') || '', path.endsWith('.css') ? /^text\/css/i : /^image\//i, path);
+    if (path.endsWith('.css')) {
+      assert.match(r.headers.get('cache-control') || '', /max-age=0/);
+      assert.doesNotMatch(r.headers.get('cache-control') || '', /immutable/);
+    }
+    await r.arrayBuffer();
+  });
   for (const path of ['robots.txt', 'sitemap.xml']) {
     const r = await request(target + '/' + path);
     assert.equal(r.status, 200, path);
@@ -106,7 +132,7 @@ async function verify(target) {
       console.log('Canonical host verified: ' + variant + ' in ' + hops + ' permanent redirect(s)');
     }
   }
-  console.log('Verified ' + pageCount + ' exact HTML matches, ' + aliasCount + ' permanent path redirects, robots.txt, sitemap.xml and 404 handling at ' + target);
+  console.log('Verified ' + pageCount + ' exact HTML matches, ' + (pageCount - 1) + ' slash variants, ' + aliasCount + ' permanent path redirects, /index/, ' + assetPaths.length + ' assets, robots.txt, sitemap.xml and 404 handling at ' + target);
 }
 if (inspect) await inspectCurrent();
 else await verify(preview || base);

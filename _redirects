@@ -6,6 +6,8 @@ https://www.cretecreationsllc.com/*  https://cretecreationsllc.com/:splat  301!
 http://cretecreationsllc.com/*       https://cretecreationsllc.com/:splat  301!
 
 # Legacy / old-URL redirects -> canonical extensionless URLs
+# Netlify applies this rule to both /index and /index/.
+/index                         /                  301!
 /calculator                    /contact           301!
 /calculator.html               /contact           301!
 /epoxy-floors-rogers-ar        /rogers-ar         301!
