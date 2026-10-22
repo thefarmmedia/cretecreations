@@ -86,6 +86,40 @@ test('page assets and image dialogs resolve identically on slash variants', () =
   assert.doesNotMatch(cssHeaders, /immutable/);
 });
 
+test('closing a color preview restores scrolling using the close button, backdrop or Escape', () => {
+  const html = read('colors.html');
+  const elements = {};
+  const classes = new Set();
+  const listeners = {};
+  const document = {
+    body: { style: { overflow: '' } },
+    getElementById(id) {
+      return elements[id] ||= { classList: {
+        add: name => classes.add(name), remove: name => classes.delete(name),
+        contains: name => classes.has(name)
+      } };
+    },
+    addEventListener: (event, handler) => { listeners[event] = handler; }
+  };
+  const sandbox = { document };
+  const source = scripts(html).find(([, , body]) => body.includes('function openColorModal'))[2];
+  vm.runInNewContext(source, sandbox);
+  const buttonAction = html.match(/<button class="lb-close"[^>]*onclick="([^"]+)"/)[1];
+  for (const close of [
+    () => vm.runInNewContext(buttonAction, sandbox),
+    () => sandbox.closeLB({ target: elements.lb }),
+    () => listeners.keydown({ key: 'Escape' })
+  ]) {
+    sandbox.openColorModal('Safari', '/example.jpg', 'Sample');
+    assert.equal(document.body.style.overflow, 'hidden');
+    assert.ok(classes.has('open'));
+    assert.equal(elements['lb-img'].alt, 'Safari epoxy flake color sample');
+    close();
+    assert.equal(document.body.style.overflow, '');
+    assert.ok(!classes.has('open'));
+  }
+});
+
 test('metadata, structured data and scripts remain valid', () => {
   const titles = new Set();
   const descriptions = new Set();
