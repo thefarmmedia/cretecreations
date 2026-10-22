@@ -38,6 +38,7 @@ test('existing HTML aliases permanently redirect without shadowing, chains or lo
     assert.ok(!redirects.has(rule[1]), path + ' creates a chain');
   }
   for (const [from, to] of [
+    ['/index', '/'],
     ['/calculator', '/contact'], ['/metallic-epoxy-joplin', '/metallic-epoxy'],
     ['/driveway-overlay-joplin', '/driveways'], ['/epoxy-floors-grand-lake-ok', '/grove'],
     ['/epoxy-floors-fayetteville-ar', '/fayetteville'], ['/epoxy-floors-rogers-ar', '/rogers-ar']
@@ -55,6 +56,8 @@ test('internal page links go directly to canonical pages', () => {
     for (const match of html.matchAll(/<a\b[^>]*href=["']([^"']+)["']/g)) {
       const url = match[1].split(/[?#]/)[0];
       if (!url.startsWith('/') || url.startsWith('//')) continue;
+      // Gallery links open original image files; they are checked as assets.
+      if (/\.(?:jpe?g|png|webp|css)$/i.test(url)) continue;
       assert.ok(paths.has(url), path + ' links to ' + url);
       inbound.add(url);
     }
@@ -62,6 +65,59 @@ test('internal page links go directly to canonical pages', () => {
   }
   for (const path of paths) assert.ok(inbound.has(path), 'No incoming link: ' + path);
   assert.match(read('index.html'), /href="\/gallery"[^>]*>View Our Work<\/a>/);
+});
+
+test('page assets and image dialogs resolve identically on slash variants', () => {
+  for (const path of active) {
+    const html = read(path);
+    const url = canonical(html);
+    const slashUrl = url.endsWith('/') ? url : url + '/';
+    const assets = [...html.matchAll(/(['"])(\/?[\w-]+\.(?:jpe?g|png|webp|css))\1/g)];
+    assert.ok(assets.length, path + ' has no asset references to verify');
+    for (const [, , asset] of assets) {
+      assert.equal(new URL(asset, slashUrl).href, new URL(asset, url).href,
+        path + ': ' + asset + ' breaks on the trailing-slash URL');
+      assert.ok(asset.startsWith('/'), path + ': ' + asset + ' must resolve from the site root');
+    }
+    assert.doesNotMatch(html, /<link[^>]*rel="icon"[^>]*type="image\/jpeg"/, path);
+  }
+  const cssHeaders = read('_headers').split('/*.css\n')[1];
+  assert.match(cssHeaders, /Cache-Control:.*max-age=0.*must-revalidate/);
+  assert.doesNotMatch(cssHeaders, /immutable/);
+});
+
+test('closing a color preview restores scrolling using the close button, backdrop or Escape', () => {
+  const html = read('colors.html');
+  const elements = {};
+  const classes = new Set();
+  const listeners = {};
+  const document = {
+    body: { style: { overflow: '' } },
+    getElementById(id) {
+      return elements[id] ||= { classList: {
+        add: name => classes.add(name), remove: name => classes.delete(name),
+        contains: name => classes.has(name)
+      } };
+    },
+    addEventListener: (event, handler) => { listeners[event] = handler; }
+  };
+  const sandbox = { document };
+  const source = scripts(html).find(([, , body]) => body.includes('function openColorModal'))[2];
+  vm.runInNewContext(source, sandbox);
+  const buttonAction = html.match(/<button class="lb-close"[^>]*onclick="([^"]+)"/)[1];
+  for (const close of [
+    () => vm.runInNewContext(buttonAction, sandbox),
+    () => sandbox.closeLB({ target: elements.lb }),
+    () => listeners.keydown({ key: 'Escape' })
+  ]) {
+    sandbox.openColorModal('Safari', '/example.jpg', 'Sample');
+    assert.equal(document.body.style.overflow, 'hidden');
+    assert.ok(classes.has('open'));
+    assert.equal(elements['lb-img'].alt, 'Safari epoxy flake color sample');
+    close();
+    assert.equal(document.body.style.overflow, '');
+    assert.ok(!classes.has('open'));
+  }
 });
 
 test('metadata, structured data and scripts remain valid', () => {
