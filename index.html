@@ -217,12 +217,12 @@ nav{background:var(--black);position:sticky;top:0;z-index:1000;border-bottom:2px
 
 /* SERVICE CARDS */
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px}
-.svc-card{position:relative;overflow:hidden;display:block}
-.svc-card img{width:100%;aspect-ratio:4/3;object-fit:cover;display:block;transition:transform .4s;filter:brightness(.55)}
+.svc-card{position:relative;overflow:hidden;display:block;padding-bottom:75%}
+.svc-card img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;transition:transform .4s;filter:brightness(.55)}
 .svc-card:hover img{transform:scale(1.06);filter:brightness(.45)}
 .svc-info{position:absolute;bottom:0;left:0;right:0;padding:20px;background:linear-gradient(to top,rgba(0,0,0,.88),transparent)}
 .svc-tag{font-family:var(--fc);font-size:10px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;color:var(--red-lt);margin-bottom:4px}
-.svc-name{font-family:var(--fh);font-size:20px;letter-spacing:.04em;color:var(--white);line-height:1;font-weight:700}
+.svc-name{font-family:var(--fh);font-size:20px;letter-spacing:.04em;color:var(--white);line-height:1.15;font-weight:700;word-break:break-word;overflow-wrap:break-word}
 
 /* WHY CARDS */
 .why-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
@@ -364,6 +364,8 @@ footer{background:var(--black);border-top:2px solid var(--red-dk);padding:60px 0
   body{padding-bottom:66px}
   .stats-inner{grid-template-columns:repeat(3,1fr)}
   .svc-grid{grid-template-columns:repeat(2,1fr)}
+  .svc-name{font-size:15px;letter-spacing:.02em}
+  .svc-tag{font-size:9px;letter-spacing:.15em}
   .why-grid,.proc-grid,.rev-grid{grid-template-columns:1fr}
   .three-col,.four-col{grid-template-columns:1fr}
   .city-grid{grid-template-columns:repeat(3,1fr)}
